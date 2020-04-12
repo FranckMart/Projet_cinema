@@ -32,11 +32,13 @@ h5 {
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.952);
 }
+
 label {
     font-family: 'Archivo Narrow', sans-serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.952);
 }
+
 p {
     font-size: 1.3rem;
     font-family: 'Archivo Narrow', sans-serif;
@@ -74,14 +76,16 @@ header {
     height: 100%;
 }
 
-.login{
+.login {
     padding: 1%;
     margin-top: auto;
     margin-bottom: auto;
 }
+
 .login img {
     width: 80%;
 }
+
 .nav_categorie {
 
     width: 100%;
@@ -97,7 +101,7 @@ header {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
 }
 
@@ -186,7 +190,8 @@ header {
     display: flex;
 }
 
-.dropdown-child li:hover,.showMore:hover {
+.dropdown-child li:hover,
+.showMore:hover {
     color: white;
     text-decoration: underline;
 }
@@ -223,29 +228,33 @@ header {
 
 
 /* Modal */
-
-.btn-news-account, .btn-modal{
+.btn-news-account:active,.btn-modal {
+    background-color: #026173;
+}
+.btn-news-account,
+.btn-modal {
     background-color: #026173;
     opacity: 0.8;
     border: none;
 }
 
-.btn-news-account:hover , .btn-modal:hover{
+.btn-news-account:hover,
+.btn-modal:hover {
     opacity: 1;
     background-color: #026173;
     border: none;
 }
 
-.btn-close-modal{
+.btn-close-modal {
     opacity: 0.5;
     background-color: #C51300;
     border: none;
 }
 
-.btn-close-modal:hover{
+.btn-close-modal:hover {
     background-color: #C51300;
     opacity: 1;
-   
+
 }
 
 .modal-content {
@@ -261,20 +270,36 @@ header {
     background-color: white;
 }
 
-#intro-content > h2 ,  #intro-content > p  {
-    
+#intro-content>h2,
+#intro-content>p {
+
     text-align: center;
     color: black;
 }
 
-#news_content,#critique_content{
+#news_content,
+#critique_content,
+#partage_content,
+#commerce_content{
     padding: 4%;
     display: flex;
     width: 100%;
+    transition: all 300ms ease-in;
+    transform: scale(1);
+    z-index: 1;
 
 }
 
-#critique_content{
+#news_content:hover,
+#critique_content:hover,
+#partage_content:hover,
+#commerce_content:hover{
+    z-index: 100;
+    transition: all 300ms ease-in;
+    transform: scale(1.07);
+}
+
+#critique_content,#commerce_content {
     background-color: #5C5C5C;
 }
 
@@ -282,24 +307,60 @@ header {
     width: 35%;
 }
 
-.critique_contentRight {
+.partage_contentLeft {
     width: 50%;
 }
 
-.critique_contentLeft {
+.critique_contentRight,.commerce_contentRight {
+
+    width: 50%;
+}
+
+.critique_contentLeft,.commerce_contentLeft {
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
     padding: 2%;
     width: 50%;
 }
 
-.news_contentLeft img, .critique_contentRight img{
+.news_contentLeft img,
+.critique_contentRight img,
+.partage_contentLeft img,
+.commerce_contentRight img{
     width: 100%;
 }
 
-.news_contentRight{
+.news_contentRight {
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
     padding: 2%;
     width: 65%;
+}
+.partage_contentRight {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    padding: 2%;
+    width: 50%;
+}
+.btn_show {
+    margin-top: 5%;
+    padding: 0.5%;
+    width: 150px;
+    background-color: #026173;
+    border: 0.5px solid white;
+    transition: all 300ms ease-in;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.btn_show:hover, .btn_show a:hover{
+  color: white;
+  z-index: 100;
+    transition: all 300ms ease-in;
+    transform: scale(1.1);
 }
 
 @media screen and (max-width:1024px) {
@@ -307,8 +368,18 @@ header {
         overflow-x: hidden;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.952);
+    }
+
     p {
-        font-size: 10px;
+        font-size: 1rem;
         font-family: "Geometria";
         color: rgba(255, 255, 255, 0.952);
     }
@@ -325,7 +396,7 @@ header {
         font-size: 12px;
     }
 
-    
+
 
     .nav_categorie {
         position: absolute;
@@ -357,20 +428,30 @@ header {
     .content-right {
         display: none;
     }
+
     .dropdown-child {
         display: none;
         position: absolute;
         width: 430px;
         background-color: #026173;
     }
+
     .dropdown:hover .dropdown-child {
         display: flex;
     }
-    
-    .dropdown-child li:hover,.showMore:hover {
+
+    .dropdown-child li:hover,
+    .showMore:hover {
         color: white;
         text-decoration: underline;
     }
 
-}
+    #news_content,#critique_content{
+        flex-direction: column;
+    }
 
+    .critique_contentRight,.critique_contentLeft,.news_contentLeft,.news_contentRight{
+        width: 100%;
+    }
+
+}
