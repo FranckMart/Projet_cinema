@@ -135,7 +135,7 @@
                 <img src="IMG/partage.jpg" alt="Photo paratage">
             </div>
             <div class="partage_contentRight">
-                <h2>Vous êtes le future</h2>
+                <h2>Vous êtes le futur !</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro,
                     beatae neque quos aspernatur perspiciatis doloremque consequuntur?
                     Voluptatum atque qui labore. Tempora quos cum nihil animi, fuga accusamus voluptate dolor at!
@@ -173,7 +173,7 @@
                 <button class="btn_show"><a href="#">Voir les articles</a></button>
             </div>
             <div class="commerce_contentRight">
-                <!--Photo by Corina Rainer on Unsplash-->
+                <!--PPhoto by Cytonn Photography on Unsplash-->
                 <img src="IMG/selling.jpg" alt="Photo commerce">
             </div>
 
