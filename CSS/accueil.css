@@ -7,6 +7,8 @@
 html {
     height: 100%;
     width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 div {
@@ -20,7 +22,12 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-color: black;
+
 }
 
 h1,
@@ -263,6 +270,28 @@ nav {
     background-color: #5C5C5C;
 }
 
+#modalcomeUp_content {
+    width: 100%;
+}
+
+.modalcomeUp_contentLeft {
+    width: 100%;
+}
+
+.modalcomeUp_contentLeft img {
+    width: 100%;
+}
+
+.modalcomeUp_contentRight {
+    text-align: center;
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 25%;
+}
+
+
 /* Section */
 
 #intro-content {
@@ -272,8 +301,17 @@ nav {
     background-color: white;
 }
 
+#comeUp-content {
+    width: 100%;
+    margin: auto;
+    padding: 2%;
+    background-color: white;
+}
+
 #intro-content>h2,
-#intro-content>p {
+#intro-content>p,
+#comeUp-content>h2,
+#comeUp-content>p {
 
     text-align: center;
     color: black;
@@ -283,23 +321,35 @@ nav {
 #critique_content,
 #partage_content,
 #commerce_content {
-    padding: 4%;
-    display: flex;
     width: 100%;
-    max-width: 100%;
+    margin: auto;
+
+}
+
+.news-content-body,
+.critique-content-body,
+.partage-content-body,
+.commerce-content-body {
+    padding: 3.5%;
+    display: flex;
+    width: 90%;
+    margin: auto;
     transition: all 300ms ease-in;
     transform: scale(1);
     z-index: 1;
 
 }
 
-#news_content:hover,
-#critique_content:hover,
-#partage_content:hover,
-#commerce_content:hover {
+
+
+
+.news-content-body:hover,
+.critique-content-body:hover,
+.commerce-content-body:hover,
+.partage-content-body:hover {
     z-index: 100;
-    transition: all 300ms ease-in;
-    transform: scale(1.07);
+    transition: all 400ms ease-in;
+    transform: scale(1.08);
 }
 
 #critique_content,
@@ -328,11 +378,11 @@ nav {
 
 .critique_contentLeft,
 .commerce_contentLeft {
-   
+
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    padding: 2%;
+    padding: 4%;
     width: 50%;
 }
 
@@ -347,7 +397,7 @@ nav {
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    padding: 2%;
+    padding: 4%;
     width: 65%;
 }
 
@@ -355,7 +405,7 @@ nav {
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    padding: 2%;
+    padding: 4%;
     width: 50%;
 }
 
@@ -368,6 +418,7 @@ nav {
     transition: all 300ms ease-in;
     transform: scale(1);
     z-index: 1;
+    text-decoration: none;
 }
 
 .btn_show:hover,
@@ -377,6 +428,121 @@ nav {
     transition: all 300ms ease-in;
     transform: scale(1.1);
 }
+
+/* Arrow */
+.arrow_content {
+    width: 100%;
+}
+
+.arrows {
+    display: block;
+    width: 60px;
+    height: 72px;
+    margin: auto;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.arrows path {
+    stroke: #026173;
+    fill: transparent;
+    stroke-width: 3px;
+    animation: bounce 2s infinite, arrow 2s infinite;
+    ;
+    -webkit-animation: bounce arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes arrow
+
+/*Safari and Chrome*/
+    {
+    0% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+.arrows path.a1 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    /* Safari 和 Chrome */
+}
+
 
 @media screen and (max-width:1024px) {
     body {
@@ -461,15 +627,21 @@ nav {
         text-decoration: underline;
     }
 
-    #news_content,
-    #critique_content {
+    .news-content-body,
+    .critique-content-body,
+    .partage-content-body,
+    .commerce-content-body {
         flex-direction: column;
     }
 
     .critique_contentRight,
     .critique_contentLeft,
     .news_contentLeft,
-    .news_contentRight {
+    .news_contentRight,
+    .partage_contentLeft,
+    .partage_contentRight,
+    .commerce_contentRight,
+    .commerce_contentLeft {
         width: 100%;
     }
 
