@@ -3,9 +3,7 @@
 ?>    
 
 <body>
-
     <?php
-
         include("include/modal.php");  
         require "include/navbar.php";
     ?>

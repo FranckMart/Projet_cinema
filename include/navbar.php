@@ -4,7 +4,6 @@
         </div>
         <div id="content-header-right">
             <ul class="nav_categorie">
-            </li><a href="formulaire_film_serie.php">Formulaire</a><li>
                 <li><a href="accueil.html">News</a></li>
                 <div class="dropdown">
                     </li><a href="tuto.html">Film/série</a><li>

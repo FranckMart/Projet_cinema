@@ -4,7 +4,7 @@
 ?>    
 
 
-    <form action="" method="">
+    <form action="" method="" class="form-film-serie">
 
         <a href="#modal1" class="js-modal a-modal">Ouvrir la boite modal</a>
         <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none"> <!-- definir le nom de mes modal --> 
@@ -16,7 +16,7 @@
             <button class="js-modal-close">Fermer la boite modal</button>
         </aside>
 
-        <a href="#modal1" class="js-modal">Ouvrir la boite modal</a>
+        <a href="#modal1" class="js-modal a-modal">Ouvrir la boite modal</a>
         <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none"> <!-- definir le nom de mes modal --> 
             <h3 id="premierFormulaire">1er partie du formulaire</h3>
             <div class="modal-wrapper js-modal-stop">
@@ -26,7 +26,7 @@
             <button class="js-modal-close">Fermer la boite modal</button>
         </aside>
 
-        <a href="#modal1" class="js-modal">Ouvrir la boite modal</a>
+        <a href="#modal1" class="js-modal a-modal">Ouvrir la boite modal</a>
         <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none"> <!-- definir le nom de mes modal --> 
             <h3 id="premierFormulaire">1er partie du formulaire</h3>
             <div class="modal-wrapper js-modal-stop">
