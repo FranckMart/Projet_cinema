@@ -2,7 +2,6 @@
     include("include/head.php");
 ?>    
 <body>
-
             
 
     <?php include("include/modal.php"); ?>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/kit_UI.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/modal_user.css">
-    <link rel="stylesheet" href="css/form_new_movie.css">
+    <link rel="stylesheet" href="css/form_ajout_film.css">
     <title></title>
 </head>
 
@@ -24,7 +24,7 @@
         
     </header>
 
-    <form action="" method="">
+    <form action="" method="" class="form-film-serie">
 
         <a href="#modal1" class="js-modal a-modal">Ouvrir la boite modal</a>
         <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none">
