@@ -24,7 +24,7 @@
 
         #les getters
         public function getTitre(){
-            return $this->epreuve;
+            return $this->titre;
         }
 
         public function getGenre(){
