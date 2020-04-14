@@ -10,12 +10,12 @@
 </head>
 
 <body>
-<<<<<<< HEAD
+
     <?php include("include/modal.php"); 
           require "include/navbar.php";  
     ?>
             
-=======
+
     <?php include("include/modal.php"); ?>
     <header>
         <div id="logo">
@@ -68,7 +68,7 @@
                 </div>
         </div>
     </header>
->>>>>>> d9774ca2d3d298879a57d4877341505396ceb101
+
     <section>
         <div id="intro-content">
             <h2>Pourquoi MovieDvice ?</h2>
