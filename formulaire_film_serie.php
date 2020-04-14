@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/modal_user.css">
     <link rel="stylesheet" href="css/form_new_movie.css">
-    <title><?= $title ?></title>
+    <title></title>
 </head>
 
 
@@ -19,7 +19,9 @@
 <?php include("include/modal.php"); ?>
 
     <header>
+
         <?php include("include/header_nav.php"); ?> 
+        
     </header>
 
     <form action="" method="">

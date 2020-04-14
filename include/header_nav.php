@@ -1,4 +1,4 @@
-<header>
+
     <nav id="header_nav">
         <div id="logo">
             <a href="index.php"><img src="../img/logo.png" alt="logo myIMMO"></a>
@@ -51,4 +51,3 @@
             </div>
         </div>
     </nav>
-</header>

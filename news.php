@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/modal_user.css">
     <link rel="stylesheet" href="css/news.css">
-    <title><?= $title ?></title>
+    <title></title>
 </head>
 
 
