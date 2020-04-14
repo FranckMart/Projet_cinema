@@ -8,27 +8,27 @@
                 <li><a href="news.php">News</a></li>
                 <div class="dropdown">
                     <li><a href="critique.php">Film/série</a></li>
-                        <div class="dropdown-child">
-                            <div class="bloc">
-                                <ul>
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Aventure</a></li>
-                                    <li><a href="#">Animation</a></li>
-                                    <li><a href="#">Drame</a></li>
-                                    <li><a href="#">Comédie</a></li>
-                                </ul>
-                            </div>
-                            <div class="bloc">
-                                <ul>
-                                    <li><a href="#">Famille</a></li>
-                                    <li><a href="#">Guerre</a></li>
-                                    <li><a href="#">Science-fiction</a></li>
-                                    <li><a href="#">Musical</a></li>
-                                    <li><a href="#">Policer</a></li>
-                                </ul>
-                            </div>
-                            <a href="#" class="showMore">Voir Plus >></a>
+                    <div class="dropdown-child">
+                        <div class="bloc">
+                            <ul>
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Aventure</a></li>
+                                <li><a href="#">Animation</a></li>
+                                <li><a href="#">Drame</a></li>
+                                <li><a href="#">Comédie</a></li>
+                            </ul>
                         </div>
+                        <div class="bloc">
+                            <ul>
+                                <li><a href="#">Famille</a></li>
+                                <li><a href="#">Guerre</a></li>
+                                <li><a href="#">Science-fiction</a></li>
+                                <li><a href="#">Musical</a></li>
+                                <li><a href="#">Policer</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="showMore">Voir Plus >></a>
+                    </div>
 
                 </div>
                 <li><a href="formulaire_film_serie.php">Formulaire</a>
@@ -43,12 +43,12 @@
                         </a>
                     </li>
                 </div>
-</ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </nav>
 </header>

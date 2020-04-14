@@ -1,20 +1,15 @@
 <?php
-    require "include/head.php";
+    include("include/head.php");
 ?>    
 <body>
 
             
 
     <?php include("include/modal.php"); ?>
-    <?php include("include/modal_comeUp.php"); ?>
 
     <header>
 
-        <?php
-
-        include("include/modal.php");  
-        require "include/header_nav.php";
-    ?>
+        <?php include("include/header_nav.php"); ?>
 
     </header>
     <section>

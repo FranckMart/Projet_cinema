@@ -1,0 +1,56 @@
+/* Modal */
+.btn-news-account:active,
+.btn-modal {
+    background-color: #026173;
+}
+
+.btn-news-account,
+.btn-modal {
+    background-color: #026173;
+    opacity: 0.8;
+    border: none;
+}
+
+.btn-news-account:hover,
+.btn-modal:hover {
+    opacity: 1;
+    background-color: #026173;
+    border: none;
+}
+
+.btn-close-modal {
+    opacity: 0.5;
+    background-color: #C51300;
+    border: none;
+}
+
+.btn-close-modal:hover {
+    background-color: #C51300;
+    opacity: 1;
+
+}
+
+.modal-content {
+    background-color: #5C5C5C;
+}
+
+#modalcomeUp_content {
+    width: 100%;
+}
+
+.modalcomeUp_contentLeft {
+    width: 100%;
+}
+
+.modalcomeUp_contentLeft img {
+    width: 100%;
+}
+
+.modalcomeUp_contentRight {
+    text-align: center;
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 25%;
+}
