@@ -1,36 +1,42 @@
-<!-- ma balise a va servir a ouvrir le modal en cliquant dessus -->
 <a href="#modal1" class="js-modal a-modal">Ouvrir la boite modal</a>
-
-<!-- mon aside est sera mon modal -->
-<aside id="modal1" class="modal-content" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none">
-
-<!-- le titre de la première partie de mon formulaire -->
-<h3>1er partie du formulaire</h3>
-
-    <!-- l'intérieur de mon modal et ce qu'il va contenir -->
+<aside id="modal1" class="modal-content" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: flex">
     <div class="modal-wrapper js-modal-stop">
-        <!-- mon formulaire -->
-        <label class="label-ffe" for="titre">titre de la vidéo : </label>
-        <input type="text" name="titre" id="titre"><br>
+    <h3 id="titre-formulaire">1er partie du formulaire</h3>
 
-        <label for="type" class="label-ffe">Type de la vidéo : </label>
-        <input type="text" name="type" id="type"><br>
+    <div class="wrapper-elements-ffs">
 
-        <label for="genre" class="label-ffe">genre : </label><br>
-        <?php 
+        <div class="wrapper-lab-input-ffs">
+            <label class="label-ffs" for="titre">titre de la vidéo : </label>
+            <input type="text" name="titre" id="titre" class="input-ffs">
+        </div>
 
-            $tabGenre = [
-                "genre" => "Comédie", "Drame", "Action", "Historique", "Western", "Aventure", "Triller", "Policier", "Fantastique", "Science-Fiction", "Horreur", "Comédie-Dramatique", "Documentaire", "film-d'amour"
-            ];
-                foreach($tabGenre as $key => $genre){?>
-                    <input type="checkbox" name="genre" id="genre"><?= $genre . "</br>";}?>
-                       
-        <label for="couleur" class="label-ffe">couleur : </label>
-        <input type="radio" name="couleur" id="couleur" class="label-ffs">oui
-        <input type="radio" name="couleur" id="couleur" class="label-ffs">non<br>
+        <div class="wrapper-lab-input-ffs">
+            <label for="type" class="label-ffs">Type de la vidéo : </label>
+            <input type="text" name="type" id="type" class="input-ffs">
+        </div>
 
-        <button class="js-modal-close">Fermer la boite modal</button>
     </div>
+
+    <div id="wrapper">
+            <label for="genre" class="label-ffs-g">genre : </label>
+            <div class="wrapper-checkbox">
+
+            <?php $tabGenre = [
+                    "genre" => "Comédie : ", "Drame : ", "Action : ", "Historique : ", "Western : ", "Aventure : ", "Triller : ", "Policier : ", "Fantastique : ", "Science-Fiction : ", "Horreur : ", "Comédie-Dramatique : ", "Documentaire : ", "film-d'amour : "
+                    ];
+                    foreach($tabGenre as $key => $genre){
+                        echo "<div class=checkbox>".$genre."<input type=checkbox name=genre id=genre></div>"; }?>
+            </div>
+        </div>
+
+        <div class="wrapper-elements-ffs">
+            <label for="couleur">couleur : </label>
+            <div><input type="radio" name="couleur" id="couleur" class="label-ffs">oui</div>
+            <div><input type="radio" name="couleur" id="couleur" class="label-ffs">non</div>
+        </div><br>
+                    
+        <button class="js-modal-close">Fermer la boite modal</button>
+
                         
-    <!-- mon bouton de fermeture du modal -->
+    </div>  
 </aside>
