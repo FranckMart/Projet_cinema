@@ -23,7 +23,7 @@
         </div>
 
     <div class="submit">
-        <button class="js-modal-close">Fermer la boite modal</button>
+        <button class="js-modal-close">Fermer</button>
     </div>
 </aside>
 

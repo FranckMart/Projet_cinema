@@ -98,15 +98,15 @@
         <div class="wrapper-elements-ffs-2">
         <p class="titre-checkbox">Couleur :</p>
             <div class="custom-control custom-radio custom-control-inline margin2">
-                <input type="radio" id="oui" name="oui" value="oui" class="custom-control-input">
+                <input type="radio" id="oui" name="choix" value="oui" class="custom-control-input">
                 <label class="custom-control-label" for="oui">oui</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline margin2">
-                <input type="radio" id="non" name="non" value="non" class="custom-control-input">
+                <input type="radio" id="non" name="choix" value="non" class="custom-control-input">
                 <label class="custom-control-label" for="non">non</label>
             </div>
         </div>  
         <div class="submit">
-            <button class="js-modal-close">Fermer la boite modal</button>
+            <button class="js-modal-close">Fermer</button>
         </div>
 </aside>
