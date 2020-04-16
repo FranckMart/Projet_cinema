@@ -20,5 +20,5 @@ const navSlide = () => {
 });
 }
 
-// test commit //>
+// test commit //
 navSlide();

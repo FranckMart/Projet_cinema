@@ -201,7 +201,9 @@
         font-size: 12px;
     }
 
-
+#content-header-right {
+    justify-content: flex-end;
+}
 
     .nav_categorie {
         position: absolute;
@@ -222,11 +224,13 @@
     }
 
     .burger {
+        margin-right: 5%;
         display: block;
         cursor: pointer;
     }
 
     .nav-active {
+        z-index: 999;
         transform: translateX(0%);
     }
 
