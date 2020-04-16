@@ -15,7 +15,6 @@
 
                 </p>
             </div>
-        </div>
         <div id="news_content">
             <div class="news-content-body">
                 <div class="news_contentLeft">
@@ -38,7 +37,7 @@
                         Voluptatum atque qui labore. Tempora quos cum nihil animi, fuga accusamus voluptate dolor at!
 
                     </p>
-                    <button class="btn_show"><a href="#">Voir les news</a></button>
+                    <button class="btn_show"><a href="news.php">Voir les news</a></button>
                 </div>
             </div>
         </div>
@@ -60,7 +59,7 @@
                         Voluptatum atque qui labore. Tempora quos cum nihil animi, fuga accusamus voluptate dolor at!
 
                     </p>
-                    <button class="btn_show"><a href="#">Voir les critiques</a></button>
+                    <button class="btn_show"><a href="global_critique.php">Voir les critiques</a></button>
                 </div>
                 <div class="critique_contentRight">
                     <!--Photo by Corina Rainer on Unsplash-->

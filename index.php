@@ -16,6 +16,7 @@
             
 
     <?php include("include/modal.php"); ?>
+    <?php include("include/modal_comeUp.php"); ?>
 
     <header>
 

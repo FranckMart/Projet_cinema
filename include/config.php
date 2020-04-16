@@ -3,7 +3,7 @@
 
 // Configuration bdd
 $host = "localhost";
-$dbname = "";
+$dbname = "cinema";
 $userBdd = "root";
-$passBdd = "";
+$passBdd = "root";
 $optionBdd = [];

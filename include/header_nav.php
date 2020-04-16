@@ -7,7 +7,7 @@
             <ul class="nav_categorie">
                 <li><a href="news.php">News</a></li>
                 <div class="dropdown">
-                    <li><a href="critique.php">Film/série</a></li>
+                    <li><a href="global_critique.php">Film/série</a></li>
                     <div class="dropdown-child">
                         <div class="bloc">
                             <ul>
@@ -27,7 +27,7 @@
                                 <li><a href="#">Policer</a></li>
                             </ul>
                         </div>
-                        <a href="#" class="showMore">Voir Plus >></a>
+                        <a href="global_critique.php" class="showMore">Voir Plus >></a>
                     </div>
 
                 </div>
