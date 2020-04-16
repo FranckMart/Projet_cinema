@@ -24,9 +24,9 @@
 <!-- j'ouvre mon formulaire -->
     <form action="" method="" class="ffs">
 
-        <!-- ?php include("include/ffs_1.php"); ?>
+        <?php include("include/ffs_1.php"); ?>
         <?php include("include/ffs_2.php"); ?>
-        <!--?php include("include/ffs_3.php"); ?> -->
+        <?php include("include/ffs_3.php"); ?>
         
     </form>
 

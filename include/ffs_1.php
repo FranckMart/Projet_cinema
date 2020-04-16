@@ -1,7 +1,7 @@
 <a href="#modal1" class="js-modal a-modal">Ouvrir la boite modal</a>
-<aside id="modal1" class="modal-content" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: flex">
+<aside id="modal1" class="modal-content" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none">
     <div class="modal-wrapper js-modal-stop">
-    <h3 class="h3">1er partie du formulaire</h3>
+    <h3 class="h3">Première partie du formulaire</h3>
 
     <div class="wrapper-elements-ffs">
         <div class="form-group">
@@ -106,5 +106,7 @@
                 <label class="custom-control-label" for="non">non</label>
             </div>
         </div>  
-        <button class="js-modal-close">Fermer la boite modal</button>
+        <div class="submit">
+            <button class="js-modal-close">Fermer la boite modal</button>
+        </div>
 </aside>
