@@ -3,19 +3,14 @@
 
 <!-- mon aside est sera mon modal -->
 <aside id="modal1" class="modal-content" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: ">
-<div class="modal-wrapper-1 js-modal-stop">
-    <h3 id="titre-formulaire">Deuxième partie du formulaire</h3>  
-
-    <div class="ffs-participant">
-        <label for="nom" class="colorBlack">nom : </label>
-        <input type="text" name="nom" id="nom">
+<div class="modal-wrapper js-modal-stop">
+    <h3 class="h3">Deuxième partie du formulaire</h3>
+    <div class="wrapper-mid-ffs2">
+        <div class="form-group">
+            <label for="realisateur" class="margin1">réalisateur : </label>
+            <input type="text" class="form-control" id="realisateur" placeholder="ex : réalisateur">
+         </div>
     </div>
 
-    <div class="ffs-participant">
-        <label for="nom" class="colorBlack">nom : </label>
-        <input type="text" name="nom" id="nom">
-    </div>
-
-    <!-- mon bouton de fermeture du modal -->
     <button class="js-modal-close">Fermer la boite modal</button>
 </aside>

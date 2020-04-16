@@ -7,100 +7,84 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
 }
 .modal-wrapper{ /* la boite qui contient les parties de mon formulaire*/
     width: 60%;
-    height: 80%;
+    height: 60%;
     overflow: auto;
     max-height: calc(100vw - 20px);
     max-width: calc(100vw - 20px);
     padding: 20px;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.4);
     display: flex;
     flex-wrap: wrap;
 }
-.wrapper-elements-ffs{ /* wrapper des inputs */
-    width: 29%;
-    height: 80%;
-    background-color: rebeccapurple;
-}
-.wrapper-lab-input-ffs{
+.h3{
     height: 10%;
-    margin: 5px;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    border: 1px solid black;
-    background-color: darkgreen;
-} 
-.label-ffs{
-    width: 45%;
-    margin: 0;
-    color: black;
+    background-color: #5C5C5C;
 }
-.input-ffs{
-    width: 45%;
+.wrapper-elements-ffs{ /* wrapper des inputs */
+    width: 35%;
+    height: 50%;
+    margin: 5px;
+    padding: 2px;
     border-radius: 20px;
-}
-.label-ffs-g{
-    background-color: darkorange;
-    width: 100%;
-    height: 5%;
-    margin: 0px;
-    padding-left: 15px;
+    /* background-color: tomato; */
 }
 .wrapper-checkbox{
+    width: 30%;
+    height: 50%;
+    margin: 5px;
+    padding: 2px;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 20px;
+    /* background-color: turquoise; */
+}
+.titre-checkbox{
     width: 100%;
+    height: 12%;
+    margin: 0;
+    padding: 0;
+}
+.margin1{
+    margin-left: 5px;
+}
+
+.colonne{
+    width: 50%;
     height: 95%;
-    background-color: darkslategray;
 }
-.checkbox{
-    width: 47%;
-    height: 5%;
-    margin: 5px;
-    background-color: darksalmon;
+.colonne2{
+    width: 50%;
+    height: 95%;
 }
-/* 
-* Nique ta mère Bootstrap
-*/
-.colorBlack{
-    color: black;
-}
-/* 
-* id
-*/
-.modal-wrapper-1{
-    width: 60%;
-    height: 80%;
-    overflow: auto;
-    max-height: calc(100vw - 20px);
-    max-width: calc(100vw - 20px);
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-}
-#titre-formulaire{
-    width: 100%;
-    height: 10%;
-    margin: 0px;
-    text-align: center;
-    color: black;
-}
-#wrapper{
-    width: 40%;
-    height: 80%;
+.wrapper-elements-ffs-2{ /* wrapper des inputs */
+    width: 30%;
+    height: 50%;
     margin: 5px;
     border-radius: 20px;
-    background-color: darkgreen;
+    /* background-color: red; */
 }
-.ffs-realisateur{
-    width: 100%;
+.margin2{
+    margin-left: 20px;
+}
+
+/*
+* Deuxième partie du formulaire
+*/
+
+.wrapper-mid-ffs2{
+    width: 30%;
+    height: 50%;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: rosybrown;
 }
