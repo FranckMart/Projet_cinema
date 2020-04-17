@@ -77,7 +77,7 @@ require_once("include/bdd.php");
               </div>
             </div>
            
-            <a href="#" class="btn btn-primary">Voir la news</a>
+            <a href="news_inside.php?news=<?php echo $newsOK->news_id; ?>"class="btn btn-primary">Voir la news</a>
             <div class="content_date_news">
               <h5 class="date_news"><?php echo "16 Avril" ?></h5>
             </div>
