@@ -12,6 +12,15 @@
     <title></title>
 </head>
 <body>
+    <?php include("include/modal.php"); ?>
+
+<header>
+    <?php include("include/header_nav.php"); ?>
+</header>
+
+<main>
+
+</main>
     
 </body>
 </html>
