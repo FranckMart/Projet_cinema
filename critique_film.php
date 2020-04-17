@@ -8,10 +8,36 @@
     <link rel="stylesheet" href="css/kit_UI.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/modal_user.css">
-    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/critiqueFilm.css">
     <title></title>
 </head>
 <body>
-    
+<header>
+    <?php include("include/header_nav.php"); ?>
+</header>
+
+    <?php include("include/modal.php"); ?>
+
+    <section class="topCritique">
+        <h2 class="h2top">Titre de la vidéo : </h2>
+        <article class="wrapCrittop">
+            <p class="infoCritTop">nympho 1</p>
+            <p class="infoCritTop">nympho 2</p>
+            <p class="infoCritTop">nympho 3</p>
+            <p class="infoCritTop">nympho 4</p>
+            <p class="infoCritTop">nympho 5</p>
+        </article>
+        <div class="baCritique">
+        </div>
+    </section>
+
+    <section class="wrapCritique">
+        <article id="mid"></article>
+        <article></article>
+    </section>
+
+<section class="bottomCritique">
+</section>
+
 </body>
 </html>

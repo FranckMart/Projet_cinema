@@ -33,6 +33,7 @@
                 </div>
                 <li><a href="formulaire_film_serie.php">Formulaire</a>
                 <li><a href="annonces.php">Nous contacter</a></li>
+                <li><a href="critique_film.php">test</a></li>
                 <li><input type="search" name="recherche" id="recherche" placeholder="...Search"></li>
                 <div class="login">
                     <!-- Button trigger modal -->
