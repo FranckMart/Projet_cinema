@@ -1,0 +1,65 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.topCritique{
+  height: 50vh;
+    width: 98%;
+    margin: 20px;
+    justify-content: center;
+    background-color: chocolate;
+}
+.wrapCritique{
+    height: 65vh;
+    width: 98%;
+    margin: 20px;
+    background-color: red;
+}
+.bottomCritique{
+    height: 25vh;
+    width: 98%;
+    margin: 20px;
+    background-color: blue;
+}
+.h2top{
+    height: 10%;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    background-color: saddlebrown;
+}
+.wrapCrittop{
+    height: 90%;
+    width: 35%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: seagreen;
+}
+.baCritique{
+    height: 90%;
+    width: 65%;
+    background-color: slategray;
+}
+.infoCritTop{
+    height: 20%;
+    width: 100%;
+    margin: 0px;
+    padding: 5px 0px 0px 5px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.midCritiLeft{
+    height: 100%;
+    width: 70%;
+    background-color: steelblue;
+}
+.midCritiRight{
+    height: 100%;
+    width: 30%;
+    background-color: tomato;
+}
+/* 
+* carousel
+*/
+
+
