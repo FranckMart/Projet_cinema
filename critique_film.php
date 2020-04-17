@@ -13,21 +13,12 @@
     <title></title>
 </head>
 <body>
-<<<<<<< HEAD
     <?php include("include/modal.php"); ?>
 
-=======
->>>>>>> critique_film
 <header>
     <?php include("include/header_nav.php"); ?>
 </header>
 
-<<<<<<< HEAD
-<main>
-
-</main>
-    
-=======
     <?php include("include/modal.php"); ?>
 
     <section class="topCritique flex">
@@ -62,6 +53,5 @@
     </div>
 </section>
 
->>>>>>> critique_film
 </body>
 </html>
