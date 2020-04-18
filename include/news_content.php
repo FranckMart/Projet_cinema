@@ -4,7 +4,7 @@ require_once("include/bdd.php");
     try{
         // combien d'apprenants je veux sur une page
         // je vais le stocker das une variable afin de pouvoir m'adapter quelque soit le nb d'apprenants par promotion, le nb d'apprenants totals et de fait le nb d'apprenants à afficher
-        $nbCardPerPage = 4;
+        $nbCardPerPage = 2;
 
         // je récupère ici tous les apprenants de la promotion
         // la requete
@@ -30,7 +30,7 @@ require_once("include/bdd.php");
         
         // je stocke ma requete dans une variable que je vais utiliser plus tard 
         //$sqlApprenants = "SELECT * FROM `stagiaire` AS s JOIN `utilisateur` AS u ON (s.`stagiaire_utilisateur_id` = u.`utilisateur_id`) WHERE s.`stagiaire_formation_id` = 1 ORDER BY s.`stagiaire_prenom` ASC LIMIT ".$offset.",".$nbCardPerPage.";";
-        $sqlNews = "SELECT news_id,news_image,news_titre, news_micro, news_editeur, news_date FROM news ORDER BY news_date DESC";
+        $sqlNews = "SELECT news_id,news_image,news_titre, news_micro, news_editeur, news_date FROM news ORDER BY news_date DESC LIMIT ".$offset.",".$nbCardPerPage.";";
         // j'envoie la requete au serveur et je stocke son retour dans une autre variable
         $requeteNews = $bdd->query($sqlNews); 
         // dans la variable $apprenants je vais stocker un tableau d'objet correspondant à ma requete
@@ -49,7 +49,7 @@ require_once("include/bdd.php");
             # code...
             // Je génère donc un lien avec un numéro de page en variable dans l'url
             ?>
-        <a href="index.php?p=<?php echo $i;?>#cardNews" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $i;?></a>
+        <a href="news.php?<?php echo $i;?>#cardNews" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $i;?></a>
             <?php
         }
         ?>
@@ -62,7 +62,7 @@ require_once("include/bdd.php");
             // pour récupérer les apprenants j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un objet dans $apprenant d'où les -> pour appeler les champs de la table
             ?>
         <div class="news">
-        <div class="card">
+        <div class="card" id="cardNews">
           <img src="IMG_news/<?php echo $newsOK->news_image;?>.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <div class="card-text-top">
