@@ -33,7 +33,7 @@
                 </div>
                 <li><a href="formulaire_film_serie.php">Formulaire</a>
                 <li><a href="annonces.php">Nous contacter</a></li>
-                <li><input type="search" name="recherche" id="recherche" placeholder="...Search"></li>
+                <li class="search_content"><img src="IMG/search.png" alt="Recherche"><input type="search" name="recherche" id="recherche" placeholder="...Search"></li>
                 <div class="login">
                     <!-- Button trigger modal -->
                     <li>
