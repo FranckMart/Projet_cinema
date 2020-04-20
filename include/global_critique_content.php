@@ -72,71 +72,75 @@ $Genre = $requeteGenre->fetchAll(PDO::FETCH_OBJ);
     </div>
 </div>
 <div id="title-intro-critique">
-    <a href="#choice_content"><h2>Veuillez choisir le type de vidéo</h2></a>
-    
+    <a href="#choice_content">
+        <h2>Veuillez choisir le type de vidéo</h2>
+    </a>
+
     </p>
 </div>
-<nav id="content-nav-genre">
-    <div class="col-12">
-        <?php
-        // Je vais générer les boutons mais de combien en ai-je besoin ?
-        // autant que de page or le nb de page = au nombre toal d'apprenants divisé par le nombre d'apprenants qu'on veux sur une page le tout arrondi à l'unité supérieure
-        $nbPage = ceil(sizeof($allGenre) / $nbCardPerPage);
-        // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
-        // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
-        for ($i = 1; $i <= $nbPage; $i++) {
-            # code...
-            // Je génère donc un lien avec un numéro de page en variable dans l'url
-        ?>
-            <a href="global_critique.php?p=<?php echo $i; ?>#title-intro-critique" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $i; ?></a>
-        <?php
-        }
-        ?>
-    </div>
-    <div id="genre_content">
-        <?php
+<article id="global_content_center" style="display: none">
+    <nav id="content-nav-genre">
+        <div class="col-12">
+            <?php
+            // Je vais générer les boutons mais de combien en ai-je besoin ?
+            // autant que de page or le nb de page = au nombre toal d'apprenants divisé par le nombre d'apprenants qu'on veux sur une page le tout arrondi à l'unité supérieure
+            $nbPage = ceil(sizeof($allGenre) / $nbCardPerPage);
+            // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
+            // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
+            for ($i = 1; $i <= $nbPage; $i++) {
+                # code...
+                // Je génère donc un lien avec un numéro de page en variable dans l'url
+            ?>
+                <a href="global_critique.php?p=<?php echo $i; ?>#title-intro-critique" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $i; ?></a>
+            <?php
+            }
+            ?>
+        </div>
+        <div id="genre_content">
+            <?php
 
-        // maintenant j'affiche les apprenants que je veux avec les limit 
-        foreach ($Genre as $genre) {
-            # code...
-            // pour récupérer les apprenants j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un objet dans $apprenant d'où les -> pour appeler les champs de la table
-        ?>
-            <div class="genre">
-                <a href="#<?php echo $genre->genre_nom ?>"><?php echo $genre->genre_nom ?></a>
-            </div>
+            // maintenant j'affiche les apprenants que je veux avec les limit 
+            foreach ($Genre as $genre) {
+                # code...
+                // pour récupérer les apprenants j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un objet dans $apprenant d'où les -> pour appeler les champs de la table
+            ?>
+                <div class="genre">
+                    <a href="#<?php echo $genre->genre_nom ?>"><?php echo $genre->genre_nom ?></a>
+                </div>
 
-        <?php
-        }
+            <?php
+            }
 
-        ?>
+            ?>
+        </div>
+    </nav>
+    <div id="selection_content">
+        <div class="content_selection_trie">
+            <label for="selection_film">Sélectionné par :</label>
+            <select name="selection" id="selection_film">
+                <!--<option value="">--Please choose an option--</option>-->
+                <option value="popularité">Popularité</option>
+                <option value="date_sortie">Date de sortie</option>
+                <option value="note">Note</option>
+            </select>
+        </div>
     </div>
-</nav>
-<div id="selection_content">
-    <div class="content_selection_trie">
-        <label for="selection_film">Sélectionné par :</label>
-        <select name="selection" id="selection_film">
-            <!--<option value="">--Please choose an option--</option>-->
-            <option value="popularité">Popularité</option>
-            <option value="date_sortie">Date de sortie</option>
-            <option value="note">Note</option>
-        </select>
-    </div>
-</div>
-<div id="movies_content">
-    <div class="movieLeft">
-        <img src="IMG_Movie/LeParrain.jpg" alt="image le parrain">
-    </div>
-    <div class="movieRight">
-        <h3>Le parrain</h3>
-        <p>En 1945, à New York, les Corleone sont une des cinq familles de la mafia.
-            Don Vito Corleone, "parrain" de cette famille, marie sa fille à un bookmaker. Sollozzo, " parrain " de la famille Tattaglia,
-            propose à Don Vito une association dans le trafic de drogue, mais celui-ci refuse. Sonny, un de ses fils, y est quant à lui favorable.
-            Afin de traiter avec Sonny, Sollozzo tente de faire tuer Don Vito, mais celui-ci en réchappe. Michael, le frère cadet de Sonny, recherche alors les commanditaires de l'attentat
-            et tue Sollozzo et le chef de la police, en représailles.
-            Michael part alors en Sicile, où il épouse Apollonia, mais celle-ci est assassinée à sa place. De retour à New York, Michael épouse Kay Adams
-            et se prépare à devenir le successeur de son père... </p>
-            <span>Réalisateur:  Francis Ford Coppola</span>
+    <div id="movies_content">
+        <div class="movieLeft">
+            <img src="IMG_Movie/LeParrain.jpg" alt="image le parrain">
+        </div>
+        <div class="movieRight">
+            <h3>Le parrain</h3>
+            <p>En 1945, à New York, les Corleone sont une des cinq familles de la mafia.
+                Don Vito Corleone, "parrain" de cette famille, marie sa fille à un bookmaker. Sollozzo, " parrain " de la famille Tattaglia,
+                propose à Don Vito une association dans le trafic de drogue, mais celui-ci refuse. Sonny, un de ses fils, y est quant à lui favorable.
+                Afin de traiter avec Sonny, Sollozzo tente de faire tuer Don Vito, mais celui-ci en réchappe. Michael, le frère cadet de Sonny, recherche alors les commanditaires de l'attentat
+                et tue Sollozzo et le chef de la police, en représailles.
+                Michael part alors en Sicile, où il épouse Apollonia, mais celle-ci est assassinée à sa place. De retour à New York, Michael épouse Kay Adams
+                et se prépare à devenir le successeur de son père... </p>
+            <span>Réalisateur: Francis Ford Coppola</span>
             <span>Acteurs Principaux : Al Pacino - Robert De Niro - Marlon Brando</span>
             <a href="#">Voir Plus</a>
+        </div>
     </div>
-</div>
+</article>
