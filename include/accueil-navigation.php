@@ -37,7 +37,7 @@
                         Voluptatum atque qui labore. Tempora quos cum nihil animi, fuga accusamus voluptate dolor at!
 
                     </p>
-                    <button class="btn_show"><a href="news.php">Voir les news</a></button>
+                    <a href="news.php" class="btn_show">Voir les news</a>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                         Voluptatum atque qui labore. Tempora quos cum nihil animi, fuga accusamus voluptate dolor at!
 
                     </p>
-                    <button class="btn_show"><a href="global_critique.php">Voir les critiques</a></button>
+                    <a href="global_critique.php" class="btn_show">Voir les critiques</a>
                 </div>
                 <div class="critique_contentRight">
                     <!--Photo by Corina Rainer on Unsplash-->
@@ -116,7 +116,7 @@
                     </p>
 
                     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-                    <button class="btn_show"> <a href="#partage_content" data-toggle="modal" data-target="#comuUp_modal">Voir les vidéos partagées</a></button>
+                    <a href="#partage_content" data-toggle="modal" data-target="#comuUp_modal" class="btn_show">Voir les vidéos partagées</a>
 
                 </div>
             </div>
@@ -139,7 +139,7 @@
                         Voluptatum atque qui labore. Tempora quos cum nihil animi, fuga accusamus voluptate dolor at!
 
                     </p>
-                    <button class="btn_show"> <a href="#partage_content" data-toggle="modal" data-target="#comuUp_modal">Voir les articles</a></button>
+                    <a href="#partage_content" data-toggle="modal" data-target="#comuUp_modal" class="btn_show">Voir les articles</a>
                 </div>
                 <div class="commerce_contentRight">
                     <!--PPhoto by Cytonn Photography on Unsplash-->

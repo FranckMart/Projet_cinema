@@ -59,6 +59,10 @@ a {
     color: rgba(255, 255, 255, 0.952);
 }
 
+a:hover {
+    color: white;
+}
+
 li {
     font-family: 'Archivo Narrow', sans-serif;
     color: rgba(255, 255, 255, 0.952);

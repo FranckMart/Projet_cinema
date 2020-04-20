@@ -92,6 +92,12 @@
     padding: 4%;
     width: 50%;
 }
+.news_contentRight p,
+.critique_contentLeft p,
+.partage_contentRight p,
+.commerce_contentLeft p {
+margin-bottom: 10%;
+}
 
 .news_contentLeft img,
 .critique_contentRight img,
@@ -117,8 +123,7 @@
 }
 
 .btn_show {
-    margin-top: 5%;
-    padding: 0.5%;
+    padding: 2%;
     width: 150px;
     background-color: #026173;
     border: 0.5px solid white;

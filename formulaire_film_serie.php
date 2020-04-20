@@ -14,20 +14,20 @@
 
 <body>
 
-<?php include("include/modal.php"); ?>
+    <?php include("include/modal.php"); ?>
 
     <header>
 
-        <?php include("include/header_nav.php"); ?> 
-        
+        <?php include("include/header_nav.php"); ?>
+
     </header>
-<!-- j'ouvre mon formulaire -->
+    <!-- j'ouvre mon formulaire -->
     <form action="" method="" class="ffs">
 
         <?php include("include/ffs_1.php"); ?>
         <?php include("include/ffs_2.php"); ?>
         <?php include("include/ffs_3.php"); ?>
-        
+
     </form>
 
     <?php include("include/script_js.php"); ?>

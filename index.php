@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/accueil.css">
     <title></title>
 </head>
-   
+
 <body>
-            
+
 
     <?php include("include/modal.php"); ?>
     <?php include("include/modal_comeUp.php"); ?>
@@ -25,14 +25,14 @@
     </header>
     <section>
 
-    <?php include("include/accueil-navigation.php"); ?>
+        <?php include("include/accueil-navigation.php"); ?>
 
     </section>
 
 
 
     <?php include("include/script_js.php"); ?>
-   
+
 </body>
 
 </html>

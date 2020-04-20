@@ -60,7 +60,7 @@ input#recherche {
    opacity: 0.75;
 }
 
-input#recherche:hover {
+input#recherche:hover,input#recherche:focus {
    opacity: 1;
 }
 .burger {

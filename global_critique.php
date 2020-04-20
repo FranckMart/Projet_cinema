@@ -23,45 +23,7 @@
 
     </header>
     <section>
-        <div id="choice_content">
-            <div class="movie_choice_content">
-                <div class="movie_choice_textarea">
-                    <a href="#">
-                        <h2>Film</h2>
-                    </a>
-                    <div class="arrow_content">
-                        <a href="#news_section">
-                            <svg class="arrows">
-                                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="serie_choice_content">
-                <div class="serie_choice_textarea">
-                    <a href="#">
-                        <h2>Série</h2>
-                    </a>
-                    <div class="arrow_content">
-                        <a href="#news_section">
-                            <svg class="arrows">
-                                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div id="title-intro-critique">
-            <h2>Tout les films</h2>
-            <p>Retrouver ici toutes les critiques de films et séries disponible
-            </p>
-        </div>
-
-
-
+        <?php include("include/global_critique_content.php"); ?>
     </section>
 
 

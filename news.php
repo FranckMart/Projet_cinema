@@ -25,10 +25,10 @@
   </header>
 
   <article>
-<div id="titleTop">
-    <h2>Les news de la journée</h2>
-  </div>
-</article>
+    <div id="titleTop">
+      <h2>Les news de la journée</h2>
+    </div>
+  </article>
   <section id="carousel-section">
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -85,7 +85,7 @@
   </div>
   <section id="news_section">
     <div class="news_content">
-    <?php include("include/news_content.php"); ?>
+      <?php include("include/news_content.php"); ?>
     </div>
   </section>
 
