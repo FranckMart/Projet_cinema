@@ -135,5 +135,8 @@ $Genre = $requeteGenre->fetchAll(PDO::FETCH_OBJ);
             et tue Sollozzo et le chef de la police, en représailles.
             Michael part alors en Sicile, où il épouse Apollonia, mais celle-ci est assassinée à sa place. De retour à New York, Michael épouse Kay Adams
             et se prépare à devenir le successeur de son père... </p>
+            <span>Réalisateur:  Francis Ford Coppola</span>
+            <span>Acteurs Principaux : Al Pacino - Robert De Niro - Marlon Brando</span>
+            <a href="#">Voir Plus</a>
     </div>
 </div>

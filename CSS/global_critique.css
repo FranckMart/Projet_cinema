@@ -233,6 +233,7 @@
 
 .col-12 {
     text-align: center;
+    margin-top: 5%;
     padding: 2%;
     border: none;
 }
@@ -263,6 +264,8 @@
 /* trie Sélction */
 
 #selection_content {
+    margin-top: 10%;
+    margin-bottom: 10%;
     width: 100%;
 }
 
@@ -271,12 +274,15 @@
     margin: auto;
 }
 
+select#selection_film {
+padding: 2%;
+}
+
 /* Movie Content */
 #movies_content {
     width: 90%;
     display: flex;
     margin: auto;
-    margin-top: 5%;
 }
 
 .movieLeft {
@@ -289,9 +295,32 @@
 }
 
 .movieRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
     width: 60%;
-    padding: 2%;
+    padding: 1%;
     text-align: center;
+}
+
+.movieRight p {
+    font-size: 1.3rem;
+    line-height: 1.65;
+    padding: 2%;
+}
+
+.movieRight a {
+    margin: auto;
+    width: 20%;
+    padding: 1%;
+    background-color: #026173;
+}
+
+.movieRight span {
+    font-size: 1rem;
+    margin-bottom: 2%;
+    color: #026173;
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
