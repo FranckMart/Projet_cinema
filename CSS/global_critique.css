@@ -22,7 +22,7 @@
 
 }
 
-.movie_choice_content {
+#movie_choice_content {
 
     position: absolute;
     transition: all 300ms ease-in;
@@ -57,7 +57,7 @@
     z-index: 1;
 }
 
-.serie_choice_content {
+#serie_choice_content {
     position: absolute;
     width: 100%;
     height: 1000px;
@@ -275,7 +275,7 @@
 }
 
 select#selection_film {
-padding: 2%;
+    padding: 2%;
 }
 
 /* Movie Content */
@@ -329,17 +329,17 @@ padding: 2%;
         height: 600px;
     }
 
-    .movie_choice_content {
+    #movie_choice_content {
         height: 600px;
     }
 
 
 
-    .movie_choice_textarea {
+    #movie_choice_textarea {
         margin-left: 10%;
     }
 
-    .serie_choice_content {
+    #serie_choice_content {
 
         height: 600px;
 
@@ -357,7 +357,7 @@ padding: 2%;
         height: 600px;
     }
 
-    .movie_choice_content {
+    #movie_choice_content {
         height: 600px;
     }
 
@@ -367,7 +367,7 @@ padding: 2%;
         margin-left: 10%;
     }
 
-    .serie_choice_content {
+    #serie_choice_content {
 
         height: 600px;
 

@@ -41,13 +41,13 @@ $Genre = $requeteGenre->fetchAll(PDO::FETCH_OBJ);
 <?php
 ?>
 <div id="choice_content">
-    <div class="movie_choice_content">
+    <div id="movie_choice_content">
         <div class="movie_choice_textarea">
             <a href="#">
                 <h2>Film</h2>
             </a>
             <div class="arrow_content">
-                <a href="#news_section">
+                <a href="#title-intro-critique">
                     <svg class="arrows">
                         <path class="a1" d="M0 0 L30 32 L60 0"></path>
                     </svg>
@@ -55,13 +55,13 @@ $Genre = $requeteGenre->fetchAll(PDO::FETCH_OBJ);
             </div>
         </div>
     </div>
-    <div class="serie_choice_content">
+    <div id="serie_choice_content">
         <div class="serie_choice_textarea">
             <a href="#">
                 <h2>Série</h2>
             </a>
             <div class="arrow_content">
-                <a href="#news_section">
+                <a href="#title-intro-critique">
                     <svg class="arrows">
                         <path class="a1" d="M0 0 L30 32 L60 0"></path>
                     </svg>
@@ -72,8 +72,8 @@ $Genre = $requeteGenre->fetchAll(PDO::FETCH_OBJ);
     </div>
 </div>
 <div id="title-intro-critique">
-    <h2>Tout les films</h2>
-    <p>Retrouver ici toutes les critiques de films et séries disponible
+    <a href="#choice_content"><h2>Veuillez choisir le type de vidéo</h2></a>
+    
     </p>
 </div>
 <nav id="content-nav-genre">

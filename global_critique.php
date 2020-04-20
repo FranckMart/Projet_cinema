@@ -30,6 +30,7 @@
 
     <?php include("include/script_js.php"); ?>
 
+    <script src="JS/choice_film_serie.js"></script>
 </body>
 
 </html>
