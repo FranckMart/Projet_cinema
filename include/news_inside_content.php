@@ -1,6 +1,7 @@
 <?php
-require_once("include/bdd.php");
-try {
+try{
+    require_once("include/bdd.php");
+
     // je stocke ma requete dans une variable que je vais utiliser plus tard 
     //$sqlApprenants = "SELECT * FROM `stagiaire` AS s JOIN `utilisateur` AS u ON (s.`stagiaire_utilisateur_id` = u.`utilisateur_id`) WHERE s.`stagiaire_formation_id` = 1 ORDER BY s.`stagiaire_prenom` ASC LIMIT ".$offset.",".$nbCardPerPage.";";
     $sqlNews = $bdd->prepare("SELECT news_id ,news_image ,news_titre ,news_texte ,news_date FROM news WHERE news_id = ?");
@@ -10,10 +11,7 @@ try {
     $News = $sqlNews->fetch();
 
     // $apprenants avec un s contient la totalité des résultats tandis que $apprenant sans s, lui ne contient qu'un seul résultat, une seule ligne de la bdd 
-?>
-<?php
-    // maintenant j'affiche les apprenants que je veux avec les limit 
-} catch (PDOException $e) {
+} catch(PDOException $e){
     // en cas d'erreur
     echo $e->getMessage();
 }

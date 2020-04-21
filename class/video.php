@@ -1,47 +1,104 @@
 <?php
 
     class formulaireFS {
-        protected $titre;
-        protected $genre;
-        protected $duree;
-        protected $boxoffice;
-        protected $realisateur;
-        protected $couleur;
-        protected $description;
-        protected $acteur;
-        protected $note;
-        protected $origine;
-        protected $distributeur;
+        protected $_id;
+        protected $_titre;
+        protected $_type;
+        protected $_genre;
+        protected $_couleur;
+        protected $_realisateur;
+        protected $_acteurP;
+        protected $_casting;
+        protected $_duree;
+        protected $_origine;
+        protected $_note;
+        protected $_dateSortie;
+        protected $_distributeur;
+        protected $_boxoffice;
+        protected $_synopsis;
+
 
         #le constructeur
-        public function __construct($a, $b, $c, $d, $e){
-            $this->titre = $a;
-            $this->genre = $b;
-            $this->duree = $c;
-            $this->boxoffice = $d;
-            $this->realisateur = $e;
+        public function __construct($id, $titre, $type, $genre, $couleur, $realisateur, $acteurP, $casting, $duree, $origine, $note, $dateSortie, $distributeur, $boxoffice, $synopsis){
+            $this->titre = $id;
+            $this->titre = $titre;
+            $this->type = $type;
+            $this->genre = $genre;
+            $this->couleur = $couleur; 
+            $this->realisateur = $realisateur;
+            $this->acteurP = $acteurP;
+            $this->casting = $casting;
+            $this->duree = $duree;
+            $this->origine = $origine;
+            $this->note = $note;
+            $this->dateSortie = $dateSortie;
+            $this->distributeur = $distributeur;
+            $this->boxoffice = $boxoffice;
+            $this->synopsis = $synopsis;
         }
 
         #les getters
+        public function getId(){
+            return $this->id;
+        }
+
         public function getTitre(){
             return $this->titre;
+        }
+
+        public function getType(){
+            return $this->type;
         }
 
         public function getGenre(){
             return $this->genre;
         }
 
+        public function getCouleur(){
+            return $this->couleur;
+        }
+
+        public function getRealisateur(){
+            return $this->realisateur;
+        }
+
+        public function getActeurP(){
+            return $this->acteurP;
+        }
+
+        public function getCasting(){
+            return $this->casting;
+        }
+
         public function getduree(){
             return $this->duree;
+        }
+
+        public function getOrigine(){
+            return $this->origine;
+        }
+
+        public function getNote(){
+            return $this->note;
+        }
+
+        public function getDateSortie(){
+            return $this->dateSortie;
+        }
+        public function getDistributeur(){
+            return $this->distributeur;
         }
 
         public function getBoxOffice(){
             return $this->boxoffice;
         }
 
-        public function getRealisateur(){
-            return $this->realisateur;
+        public function getSynopsis(){
+            return $this->synopsis;
         }
+
+
+
 
         #les setters
 

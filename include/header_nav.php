@@ -31,10 +31,11 @@
                     </div>
 
                 </div>
-                <li><a href="formfilmSerie.php">Formulaire</a>
+                <li><a href="formFilmSerie.php">Formulaire</a>
                 <li><a href="annonces.php">Nous contacter</a></li>
-                <li><a href="critique_film.php">test</a></li>
-                <li><input type="search" name="recherche" id="recherche" placeholder="...Search"></li>
+
+                <li class="search_content"><a href="#"><img src="IMG/search.png" alt="Recherche"></a><input type="search" name="recherche" id="recherche" placeholder="...Search"></li>
+
                 <div class="login">
                     <!-- Button trigger modal -->
                     <li>
