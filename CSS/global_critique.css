@@ -25,8 +25,7 @@
 #movie_choice_content {
 
     position: absolute;
-    transition: all 300ms ease-in;
-    transform: scale(1);
+    transition: all 600ms ease-in;
     z-index: 1;
     width: 100%;
     height: 1000px;
@@ -38,6 +37,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    opacity: 0.7;
 }
 
 .movie_choice_textarea h2,
@@ -53,11 +53,11 @@
     margin-left: 20%;
     width: 20%;
     transition: all 300ms ease-in;
-    transform: scale(1);
     z-index: 1;
 }
 
 #serie_choice_content {
+    transition: all 600ms ease-in;
     position: absolute;
     width: 100%;
     height: 1000px;
@@ -69,6 +69,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    opacity: 0.7;
 
 }
 
@@ -78,12 +79,13 @@
 
 }
 
+
+
 .serie_choice_textarea {
     margin-left: 70%;
     margin-top: 10%;
     width: 20%;
     transition: all 300ms ease-in;
-    transform: scale(1);
     z-index: 1;
 }
 
@@ -94,6 +96,16 @@
     transition: all 600ms ease-in;
     transform: scale(1.08);
     z-index: 1;
+
+}
+
+#serie_choice_content:hover,#movie_choice_content:hover {
+    -webkit-transition: opacity 1.5s ease-in-out;
+    -moz-transition: opacity 1.5s ease-in-out;
+    -ms-transition: opacity 1.5s ease-in-out;
+    -o-transition: opacity 1.5s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 1;
 }
 
 
