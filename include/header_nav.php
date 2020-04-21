@@ -32,7 +32,7 @@
 
                 </div>
                 <li><a href="formFilmSerie.php">Formulaire</a>
-                <li><a href="annonces.php">Nous contacter</a></li>
+                <li><a href="contact.php">Nous contacter</a></li>
 
                 <li class="search_content"><a href="#"><img src="IMG/search.png" alt="Recherche"></a><input type="search" name="recherche" id="recherche" placeholder="...Search"></li>
 

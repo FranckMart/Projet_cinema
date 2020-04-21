@@ -1,0 +1,118 @@
+#bloc_global {
+
+    min-height: 100vh;
+    display: block;
+    position: relative;
+
+}
+
+#bloc_global::after {
+    /* Photo by James Pond on Unsplash */
+    background: url(../IMG/contact.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    content: "";
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+
+}
+
+
+#title_content {
+    text-align: center;
+    padding-top: 2.5%;
+}
+
+#title_content h4 {
+    padding-top: 2%;
+    font-size: 1.7rem;
+}
+
+.form-group {
+    padding: 5%;
+}
+
+input#mail.form-control,
+textarea#message {
+    opacity: 0.35;
+}
+
+input#mail.form-control:hover,
+textarea#message:hover,
+.btn-submit:hover {
+    opacity: 0.8;
+}
+
+input#mail.form-control:focus,
+textarea#message:focus {
+    opacity: 0.8;
+}
+
+.textarea_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_content {
+    padding: 2.5%;
+}
+
+.btn-submit {
+    display: block;
+    margin: auto;
+    opacity: 0.7;
+    width: 50%;
+    background-color: #026173;
+    border: none;
+}
+
+.btn-submit:hover {
+    opacity: 1;
+    border: 1px solid white;
+    background-color: #026173;
+}
+
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+    #title_content h2,
+    #title_content h3,
+    #title_content h4 {
+        font-size: 1.5rem;
+    }
+
+
+    #title_content h4 {
+        padding-top: 2%;
+    }
+
+    .form-group {
+        padding: 1.25%;
+    }
+
+
+
+}
+
+@media screen and (max-width:1024px) {
+
+    #title_content h2,
+    #title_content h3 {
+        font-size: 1.3rem;
+    }
+
+    #title_content h4 {
+        font-size: 1.1rem;
+    }
+
+    .form-group {
+        padding: 10%;
+    }
+}

@@ -5,5 +5,5 @@
 $host = "localhost";
 $dbname = "cinematest";
 $userBdd = "root";
-$passBdd = "";
+$passBdd = "root";
 $optionBdd = [];
