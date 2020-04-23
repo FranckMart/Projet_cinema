@@ -8,26 +8,34 @@
         <div class="wrapper-mid-ffs3">            
             <div class="form-group">
                 <label for="realisateur" class="margin1">Réalisateur : </label>
-                <input type="text" class="form-control margin3" id="realisateur_nom" name="realisateur" placeholder="Nom : Kurosawa">
-                <!-- <input type="text" class="form-control margin3" id="realisateur_prenom" name="realisateur" placeholder="Prénom : Akira"> -->
+                <input type="text" class="form-control margin3" id="realisateur_nom" name="realisateur" placeholder="Nom :Akira Kurosawa">
             </div>
         </div>
             <!--  choix acteur -->
         <div class="wrapper-acteur">
             <div class="form-group">
                 <label for="acteurPrincipal" class="margin1">Acteurs Principaux : </label>
-                <input type="text" class="form-control margin3" id="acteurPrincipal" name="acteurPrincipal" placeholder="Nom :  Will">
-                <!-- <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith"> -->
+                <input type="text" class="form-control margin3" id="acteurPrincipal" name="acteurPrincipal" placeholder="Nom : Will Smith">
+
             </div>
 
         </div>
         <!-- choix du casting -->
         <div class="wrapper-acteur">
-        
+      
             <div class="form-group">
                 <label for="casting" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="casting" name="casting" placeholder="Nom :  Will">
-                <!-- <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith"> -->
+                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
+            </div>
+
+            <div class="form-group">
+                <label for="casting" class="margin1">casting : </label>
+                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
+            </div>
+
+            <div class="form-group">
+                <label for="casting" class="margin1">casting : </label>
+                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
             </div>
 
         </div>

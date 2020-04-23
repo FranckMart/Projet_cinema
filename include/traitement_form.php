@@ -2,17 +2,17 @@
 // je veux recevoir mon formulaire, une fois reçu il faut que mes valeurs récupère aille dans mon objet,
 
 // si ma var n'est pas vide
-if (!empty($_POST['genre'])) {
+if (!empty($_POST['titre'])) {
     // tu te connecte a bdd.php
     require_once("bdd.php");
+
     if(isset($_POST['genre'])){
-        // implode rassemble les éléments d'un tableau dans une chaine
-        $genre = implode(", ", $_POST['genre']);
+        $genre = implode(",", $_POST['genre']);
+        $casting = implode(", ", $_POST['casting']."<br>");
+        var_dump($_POST['genre']);
+        var_dump($_POST['casting']);
     }
 
-    var_dump($_POST['genre']);
-
-    // tu insert la requête
     $req = "INSERT INTO `video`(`video_titre`,`video_genre`, `video_synopsis`, `video_dateSortie`, `video_duree`, `video_boxOffice`, `video_realisateur`, `video_acteurPrincipal`, `video_note`, `video_origine`, `video_distributeur`, `video_casting`) 
             VALUES (:video_titre, :video_genre, :video_synopsis, :video_dateSortie, :video_duree, :video_boxOffice, :video_realisateur, :video_acteurPrincipal, :video_note, :video_origine, :video_distributeur, :video_casting) ";
 
@@ -31,21 +31,16 @@ $form->bindValue(":video_origine", $_POST['origine']);
 // $form->bindValue(":couleur", $_POST['couleur']);
 $form->bindValue(":video_distributeur", $_POST['distributeur']);
 //$form->bindValue(":media", $_POST['media']);
-$form->bindValue(":video_casting", $_POST['casting']);
+$form->bindValue(":video_casting", $casting);
 
     if($form->execute()){
         echo "insert reussi";
     }else{
         echo "insertion échoué";
-        //header('Location : formFilmSerie.php?erreur=mdpvide');
     }
-
-    
-
-
 } else {
     header('Location : formFilmSerie.php?erreur=mdpvide');
 }
 
-?>
+
 
