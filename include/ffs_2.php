@@ -8,61 +8,26 @@
         <div class="wrapper-mid-ffs3">            
             <div class="form-group">
                 <label for="realisateur" class="margin1">Réalisateur : </label>
-                <input type="text" class="form-control margin3" id="realisateur_nom" name="realisateur_nom" placeholder="Nom : Kurosawa">
-                <input type="text" class="form-control margin3" id="realisateur_prenom" name="realisateur_prenom" placeholder="Prénom : Akira">
+                <input type="text" class="form-control margin3" id="realisateur_nom" name="realisateur" placeholder="Nom : Kurosawa">
+                <!-- <input type="text" class="form-control margin3" id="realisateur_prenom" name="realisateur" placeholder="Prénom : Akira"> -->
             </div>
         </div>
             <!--  choix acteur -->
         <div class="wrapper-acteur">
             <div class="form-group">
-                <label for="acteur" class="margin1">Acteurs Principaux : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
+                <label for="acteurPrincipal" class="margin1">Acteurs Principaux : </label>
+                <input type="text" class="form-control margin3" id="acteurPrincipal" name="acteurPrincipal" placeholder="Nom :  Will">
+                <!-- <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith"> -->
             </div>
-
-            <!-- <div class="form-group">
-                <label for="acteur" class="margin1">Acteurs Principaux : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
-            </div>
-
-            <div class="form-group">
-                <label for="acteur" class="margin1">Acteurs Principaux : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
-            </div>
-
-            <div class="form-group">
-                <label for="acteur" class="margin1">Acteurs Principaux : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
-            </div> -->
 
         </div>
         <!-- choix du casting -->
         <div class="wrapper-acteur">
+        
             <div class="form-group">
-                <label for="acteur" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
-            </div>
-
-            <div class="form-group">
-                <label for="acteur" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
-            </div>
-
-            <div class="form-group">
-                <label for="acteur" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
-            </div>
-
-            <div class="form-group">
-                <label for="acteur" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="acteur_nom" name="acteur_nom" placeholder="Nom :  Will">
-                <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith">
+                <label for="casting" class="margin1">casting : </label>
+                <input type="text" class="form-control margin3" id="casting" name="casting" placeholder="Nom :  Will">
+                <!-- <input type="text" class="form-control margin3" id="acteur_prenom" name="acteur_prenom" placeholder="Prénom :  Smith"> -->
             </div>
 
         </div>
@@ -96,8 +61,8 @@
             </div>
             <!-- choix box office -->
             <div class="form-group">
-                <label for="boxoffice" class="margin1">Box-Office : </label>
-                <input type="number" class="form-control" id="boxoffice" name="boxoffice" placeholder="ex : 20 758 841 ">
+                <label for="boxOffice" class="margin1">Box-Office : </label>
+                <input type="number" class="form-control" id="boxOffice" name="boxOffice" placeholder="ex : 20 758 841 ">
             </div>
         </div>
         <!-- btn fermer le modal -->
