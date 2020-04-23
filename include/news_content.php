@@ -29,7 +29,7 @@ if ($offset > sizeof($allNews)) {
 
 // je stocke ma requete dans une variable que je vais utiliser plus tard 
 //$sqlApprenants = "SELECT * FROM `stagiaire` AS s JOIN `utilisateur` AS u ON (s.`stagiaire_utilisateur_id` = u.`utilisateur_id`) WHERE s.`stagiaire_formation_id` = 1 ORDER BY s.`stagiaire_prenom` ASC LIMIT ".$offset.",".$nbCardPerPage.";";
-$sqlNews = "SELECT news_id,news_image,news_titre, news_micro, news_editeur, news_date FROM news ORDER BY news_date DESC LIMIT " . $offset . "," . $nbCardPerPage . ";";
+$sqlNews = "SELECT news_id, news_image, news_titrePresentation, news_micro, news_editeur, news_date FROM news ORDER BY news_date DESC LIMIT " . $offset . "," . $nbCardPerPage . ";";
 // j'envoie la requete au serveur et je stocke son retour dans une autre variable
 $requeteNews = $bdd->query($sqlNews);
 // dans la variable $apprenants je vais stocker un tableau d'objet correspondant à ma requete
@@ -65,7 +65,7 @@ foreach ($News as $newsOK) {
       <img src="IMG_news/<?php echo $newsOK->news_image; ?>.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <div class="card-text-top">
-          <h5 class="card-title"><?php echo $newsOK->news_titre; ?></h5>
+          <h5 class="card-title"><?php echo $newsOK->news_titrePresentation; ?></h5>
         </div>
         <p class="card-text"><?php echo $newsOK->news_micro; ?></p>
         <div class="footer_card_content">
