@@ -13,7 +13,8 @@
     <title></title>
 </head>
 <body>
-    <?php include("include/modal.php"); ?>
+    <?php include("include/modal.php"); ?>    
+    <?php include('class/video.php') ?>
 
 <header>
     <?php include("include/header_nav.php"); ?>
@@ -22,26 +23,34 @@
     <?php include("include/modal.php"); ?>
 
     <section class="topCritique flex">
-        <h2 class="h2top">Titre de la vidéo : </h2>
         <article class="wrapCrittop flex">
-            <p class="infoCritTop flex">nympho 1</p>
-            <p class="infoCritTop flex">nympho 2</p>
-            <p class="infoCritTop flex">nympho 3</p>
-            <p class="infoCritTop flex">nympho 4</p>
-            <p class="infoCritTop flex">nympho 5</p>
+            <h2 class="titreNone">titre : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</h2>
+            <p class="infoTop flex">type : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
+            <p class="infoTop flex">genre : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
+            <p class="infoTop flex">durée : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
+            <p class="infoTop flex">Date de sortie : Berlin Alexanderplatz</p>
+            <p class="infoTop flex">Pays : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
+            <p class="infoTop flex">couleur : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
+            <a href="#" class="bandeAnnonce">Lien vers annonce</a>
         </article>
-        <div class="baCritique flex">
+        <div class="wrapperHCrit flex">
+            <h2 class="h2top">titre : </h2>
+            <div class="baCritique flex">
+            </div>
         </div>
     </section>
 
     <section class="wrapCritique flex">
         <article class="midCritiLeft flex">
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="infoMid">Réalisateur : </p>
+            <p class="infoMid">Acteur principal : </p>
+            <p class="infoMid">Casting : </p>
+            <p class="infoMid">synopsis : </p>
+            <p class="infoMid">Box-office : </p>
+            <p class="infoMid">Box-Distributeur : </p>
         </article>
         <article class="midCritiRight flex">
-            <p></p>
+            <p>note : </p>
             <p></p>
             <p></p>
         </article>

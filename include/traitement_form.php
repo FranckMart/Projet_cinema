@@ -3,15 +3,23 @@
 
 // si ma var n'est pas vide
 if (!empty($_POST['titre'])) {
-    // tu te connecte a bdd.php
     require_once("bdd.php");
 
     if(isset($_POST['genre'])){
-        $genre = implode(",", $_POST['genre']);
-        $casting = implode(", ", $_POST['casting']."<br>");
-        var_dump($_POST['genre']);
-        var_dump($_POST['casting']);
+        $genre = implode(", ", $_POST['genre']);
+        $casting = implode(", ", $_POST['casting']);
+        // $couleur = implode(",", $_POST['couleur']);
+
+
     }
+
+?>
+<pre>
+    <?=var_dump($_POST['genre'])."<br>";?>
+    <?=var_dump($_POST['casting'])."<br>";?>
+    <!-- <?=var_dump($_POST['couleur']);?> -->
+</pre>
+<?php
 
     $req = "INSERT INTO `video`(`video_titre`,`video_genre`, `video_synopsis`, `video_dateSortie`, `video_duree`, `video_boxOffice`, `video_realisateur`, `video_acteurPrincipal`, `video_note`, `video_origine`, `video_distributeur`, `video_casting`) 
             VALUES (:video_titre, :video_genre, :video_synopsis, :video_dateSortie, :video_duree, :video_boxOffice, :video_realisateur, :video_acteurPrincipal, :video_note, :video_origine, :video_distributeur, :video_casting) ";
@@ -28,9 +36,8 @@ $form->bindValue(":video_realisateur", $_POST['realisateur']);
 $form->bindValue(":video_acteurPrincipal", $_POST['acteurPrincipal']);
 $form->bindValue(":video_note", $_POST['note']);
 $form->bindValue(":video_origine", $_POST['origine']);
-// $form->bindValue(":couleur", $_POST['couleur']);
+// $form->bindValue(":video_couleur", $_POST['couleur']);
 $form->bindValue(":video_distributeur", $_POST['distributeur']);
-//$form->bindValue(":media", $_POST['media']);
 $form->bindValue(":video_casting", $casting);
 
     if($form->execute()){

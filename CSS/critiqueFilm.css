@@ -7,56 +7,98 @@
     width: 98%;
     margin: 20px;
     justify-content: center;
-    background-color: chocolate;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 .wrapCritique{
-    height: 65vh;
+    height: 50vh;
     width: 98%;
     margin: 20px;
-    background-color: red;
+
 }
 .bottomCritique{
     height: 25vh;
     width: 98%;
     margin: 20px;
-    background-color: blue;
+}
+.wrapperHCrit{
+    height: 100%;
+    width: 65%;
 }
 .h2top{
     height: 10%;
     width: 100%;
     margin: 0px;
-    text-align: center;
-    background-color: saddlebrown;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 .wrapCrittop{
-    height: 90%;
+    height: 100%;
     width: 35%;
     justify-content: flex-start;
     align-items: center;
-    background-color: seagreen;
 }
 .baCritique{
     height: 90%;
-    width: 65%;
-    background-color: slategray;
+    width: 100%;
+    background-color: #fff;
 }
-.infoCritTop{
-    height: 20%;
+.infoTop, .infoMid{
+    height: 16.7%;
     width: 100%;
     margin: 0px;
-    padding: 5px 0px 0px 5px;
+    padding-left: 5px;
+}
+.infoTop{
     justify-content: flex-start;
     align-items: center;
 }
+
 .midCritiLeft{
     height: 100%;
     width: 70%;
-    background-color: steelblue;
+    background-color: rgba(255, 255, 255, 0.4);
 }
+
 .midCritiRight{
     height: 100%;
     width: 30%;
-    background-color: tomato;
+    background-color: rgba(255, 255, 255, 0.4);
 }
-
+.bandeAnnonce{
+    display: none;
+}
+.titreNone{
+    display: none;
+}
+@media screen and (min-width: 360px) and (max-width: 1024px){
+    .topCritique{
+        height: 50vh;
+        width: 100%;
+        margin: 0px;
+        justify-content: center;
+      }
+    .h2top{
+        display: none;
+        width: 100%;
+        height: 15%;
+    }
+    .wrapCritique, .wrapCrittop, .bottomCritique{
+        width: 100%;
+        margin: 0px;
+    }
+    .bandeAnnonce{
+        display: flex;
+        width: 100%;
+        height: 13%;
+        width: 100%;
+    }
+    .infoTop{
+        height: 13%;
+    }
+    .titreNone{
+        display: flex;
+        margin: 0px;
+        height: 10%;
+        width: 100%;
+    }
+}
 

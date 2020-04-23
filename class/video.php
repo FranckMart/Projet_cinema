@@ -37,68 +37,13 @@
         //     $this->synopsis = $synopsis;
         // }
 
-        public static function setElement(){
-
-            
+        public static function getVideo(){
+            // je récupère graçe à une requête une ligne de ma table
+            $req = "SELECT * FROM `video`; ";
+            $req = $GLOBALS['bdd']->prepare($req);
+            $req->execute();
         }
     }
-
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         #les getters
         // public function getId(){
