@@ -14,23 +14,26 @@
 </head>
 <body>
     <?php include("include/modal.php"); ?>    
-    <?php include('class/video.php') ?>
+    <?php include('class/media.php') ?>
 
 <header>
     <?php include("include/header_nav.php"); ?>
 </header>
 
-    <?php include("include/modal.php"); ?>
+    <?php include("include/modal.php");
+   $informations = media :: getVideo($video_id = 1);
+   foreach ($informations as $information){
+       var_dump($information->video_titre); ?>
 
     <section class="topCritique flex">
         <article class="wrapCrittop flex">
-            <h2 class="titreNone">titre : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</h2>
-            <p class="infoTop flex">type : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
-            <p class="infoTop flex">genre : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
-            <p class="infoTop flex">durée : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
-            <p class="infoTop flex">Date de sortie : Berlin Alexanderplatz</p>
-            <p class="infoTop flex">Pays : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
-            <p class="infoTop flex">couleur : dsfiohsdiljfilhsidhflsdhfilsdhfhsdfukshd</p>
+            <h2 class="titreNone">titre : <?php echo $information->video_titre; ?></h2>
+            <p class="infoTop flex">type : <?php echo $information->video_genre; ?></p>
+            <p class="infoTop flex">genre : <?php echo $information->video_genre; ?></p>
+            <p class="infoTop flex">durée : <?php echo $information->video_genre; ?></p>
+            <p class="infoTop flex">Date de sortie : <?php echo $information->video_genre; ?></p>
+            <p class="infoTop flex">Pays : <?php echo $information->video_genre; ?></p>
+            <p class="infoTop flex">couleur : <?php echo $information->video_genre; ?></p>
             <a href="#" class="bandeAnnonce">Lien vers annonce</a>
         </article>
         <div class="wrapperHCrit flex">
@@ -61,6 +64,6 @@
         
     </div>
 </section>
-
+<?php } ?>
 </body>
 </html>

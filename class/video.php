@@ -1,5 +1,7 @@
 <?php
 
+require_once("include/bdd.php");
+
     class formulaireFS {
         protected $_id;
         protected $_titre;
@@ -37,11 +39,13 @@
         //     $this->synopsis = $synopsis;
         // }
 
-        public static function getVideo(){
+        public static function getVideo($video_id = 1){
             // je récupère graçe à une requête une ligne de ma table
-            $req = "SELECT * FROM `video`; ";
+            $req = "SELECT * FROM `video` WHERE video_id = :video_id; ";
             $req = $GLOBALS['bdd']->prepare($req);
+            $req->bindValue(":video_id", $video_id);
             $req->execute();
+            return $req->fetchAll(PDO::FETCH_OBJ);
         }
     }
 
