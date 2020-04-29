@@ -22,14 +22,14 @@
 
     </header>
     <!-- j'ouvre mon formulaire -->
-    <form action="include/traitement_form.php" method="POST" class="ffs">
+    <form action="include/traitement_form.php" method="POST" class="ffs flex center">
         <!-- premier partie du formulaire -->
         <?php include("include/ffs_1.php"); ?>
         <!-- deuxième partie du formulaire -->
         <?php include("include/ffs_2.php"); ?>
         <!-- troisième partie du formulaire -->
         <?php include("include/ffs_3.php"); ?>
-
+        <input class="btn-form-film-serie" type="submit" name="submit" value="Envoyez">
     </form>
 
     <?php include("include/script_js.php"); ?>

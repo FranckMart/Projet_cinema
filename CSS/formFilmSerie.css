@@ -1,29 +1,23 @@
-form{
-    width: 100%;
-    height: 80%;
+.flex{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+}
+.center{
     align-items: center;
     justify-content: center;
 }
+
+/* modal */
 .a-modal{
     width: 55%;
     height: 10%;
     margin: 40px;
     background-color: white;
-    border-radius: 20px;
     color: black;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
 }
 .modal-content{ /*page de mon modal */
     position: fixed;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,37 +31,28 @@ form{
     max-height: calc(100vw - 20px);
     max-width: calc(100vw - 20px);
     padding: 20px;
-    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.4);
-    display: flex;
-    flex-wrap: wrap;
+}
+/* formulaire */
+form{
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
 }
 .h3{
     height: 10%;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
     background-color: #5C5C5C;
 }
 .wrapper-elements-ffs{ /* wrapper des inputs */
     width: 35%;
     height: 50%;
-    margin: 5px;
     padding: 2px;
-    border-radius: 20px;
-    /* background-color: tomato; */
 }
 .wrapper-checkbox{
     width: 30%;
     height: 50%;
-    margin: 5px;
     padding: 2px;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    /* background-color: turquoise; */
 }
 .titre-checkbox{
     width: 100%;
@@ -78,71 +63,83 @@ form{
 .margin1{
     margin-left: 5px;
 }
-
-.colonne{
-    width: 50%;
-    height: 95%;
-}
-.colonne2{
+.colonne, .colonne2{
     width: 50%;
     height: 95%;
 }
 .wrapper-elements-ffs-2{ /* wrapper des inputs */
     width: 30%;
     height: 50%;
-    margin: 5px;
-    border-radius: 20px;
-    /* background-color: red; */
 }
 .margin2{
     margin-left: 20px;
 }
-
-/*
-* Deuxième partie du formulaire
-*/
-
 .wrapper-mid-ffs2{
     width: 30%;
     height: 50%;
-    margin: 5px;
-    border-radius: 20px;
-
 }
-.wrapper-mid-ffs3{
+.wrapper-mid-ffs3, .wrapper-acteur{
     width: 100%;
     height: 25%;
-    margin: 5px;
-    border-radius: 20px;
-
 }
 .wrapper-acteur{
-    width: 100%;
-    height: 25%;
-    margin: 5px;
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-
 }
 .wrapper-midBottom{
     width: 100%;
     height: 45%;
-    margin: 5px;
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-
 }
 .submit{
     width: 100%;
-    height: 7%;
+    height: 6%;
     margin: 20px;
     display: flex;
     justify-content: center;
 }
 .margin3{
     margin: 2px;
+}
+.wrapper-elements-ffs, .wrapper-elements-ffs-2,.wrapper-acteur, .wrapper-mid-ffs2, .wrapper-mid-ffs3, .wrapper-checkbox, .wrapper-midBottom, .a-modal, .h3 {
+    border-radius: 20px;
+}
+.wrapper-elements-ffs, .wrapper-elements-ffs-2,.wrapper-acteur, .wrapper-mid-ffs2, .wrapper-mid-ffs3, .wrapper-checkbox {
+    margin: 5px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px){
+    .modal-wrapper {
+        width: 100%;
+        height: 97%;
+        max-height: none;
+    }
+    .h3 {
+        height: 11%;
+        margin: 5px;
+        text-align: center;
+    }
+    .wrapper-elements-ffs {
+        width: 100%;
+        height: 25%;
+    }
+    .wrapper-checkbox {
+        width: 100%;
+        height: 30%;
+    }
+    .wrapper-elements-ffs-2 {
+        width: 100%;
+        height: 5%;
+        margin: 5px;
+        display: inherit;
+    
+    }
+    .wrapper-mid-ffs3 {
+        width: 100%;
+        height: 11%;
+        margin: 5px;
+    }
+    .wrapper-midBottom {
+        width: 100%;
+        display: none;
+    }
 }
