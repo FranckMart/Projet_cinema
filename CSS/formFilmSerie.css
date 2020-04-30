@@ -109,22 +109,18 @@ form{
 .wrapP{
     height: 35%;
     width: 100%;
-    background-color: tomato;
 }
 .wrapC{
     height: 55%;
     width: 100%;
-    background-color: red;
 }
 .wrapI1{
     height: 70%;
     width: 100%;
-    background-color:blue;
 }
 .wrapI2{
     height: 35%;
     width: 100%;
-    background-color: yellow;
 }
 
 @media screen and (min-width: 360px) and (max-width: 1024px){
