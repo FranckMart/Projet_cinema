@@ -64,45 +64,41 @@
 
 <section class="bottomCritique">
 
-	<div class="js-slider isystkSlider">
-    <p class="next-btn"><a href="#"><img src="./images/btn-next.png" alt="Next" ></a></p>
-	  <div class="view-layer">
-	    <ul class="parent">
-	      <li class="child">
-	        <p>
-	          <img src="IMG/partage.jpg" />
-	        </p>
-	      </li>
-	      <li class="child">
-	        <p>
-	          <img src="IMG/partage.jpg" />
-	        </p>
-	      </li>
-	      <li class="child">
-	        <p>
-	          <img src="IMG/serie_choice.jpg" />
-	        </p>
-	      </li>
-	    </ul>
-      </div>
+  <div class="js-slider isystkSlider">
+    <div class="view-layer">
+      <p class="next-btn"><a href="#"><img src="./images/btn-next.png" alt="Next" ></a></p>
+        <ul class="parent paging dot">
+          <li class="active child" data-pageno="1">
+            <p>
+              <img class="IMG-c" src="IMG/partage.jpg" />
+            </p>
+          </li>
+
+          <li class="active child" data-pageno="2">
+            <p>
+              <img class="IMG-c" src="IMG/partage.jpg" />
+            </p>
+          </li>
+
+          <li class="active child" data-pageno="3">
+            <p>
+              <img class="IMG-c" src="IMG/partage.jpg" />
+            </p>
+          </li>
+        </ul>
       <p class="prev-btn"><a href="#"><img src="./images/btn-prev.png" alt="Prev" ></a></p>
     </div>
-    
-    <!-- <div>
-
-
-	  <ul class="paging dot">
-	    <li class="active" data-pageno="1"></li>
-	    <li data-pageno="2"></li>
-	    <li data-pageno="3"></li>
-	  </ul>
-	</div> -->
+  </div>
 
 </section>
+
 </main>
 <?php } ?>
 
-<script src="/path/to/cdn/jquery.js"></script>
-<script src="/path/to/js/jquery-isystkSlider.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="/path/to/cdn/jquery.js"></script> -->
+<script src="JS/jquery-isystkSlider.js"></script>
+<script src="JS/carousel.js"></script>
+
 </body>
 </html>
