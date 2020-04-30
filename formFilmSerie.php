@@ -16,11 +16,10 @@
 
     <?php include("include/modal.php"); ?>
 
-    <header>
+    
 
         <?php include("include/header_nav.php"); ?>
 
-    </header>
     <!-- j'ouvre mon formulaire -->
     <form action="include/traitement_form.php" method="POST" class="ffs flex center">
         <!-- premier partie du formulaire -->

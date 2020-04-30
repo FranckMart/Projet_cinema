@@ -27,3 +27,7 @@
       
     <?php include("include/news_inside_content.php"); ?>
   </section>
+
+
+<?php include("include/script_js.php"); ?>
+</body>

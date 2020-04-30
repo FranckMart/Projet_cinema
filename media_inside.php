@@ -15,9 +15,9 @@
     <?php include("include/modal.php"); ?>    
     <?php include('class/media.php') ?>
 
-<header>
+
     <?php include("include/header_nav.php"); ?>
-</header>
+
 
     <?php include("include/modal.php");
    $informations = media::getMedia($video_id = 1);

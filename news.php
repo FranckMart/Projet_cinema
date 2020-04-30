@@ -38,21 +38,21 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="IMG_news/batman_2021.jpg" class="d-block w-100" alt="image news">
+          <img src="uploads/batman_2021.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="IMG_news/soul_pixar.jpg" class="d-block w-100" alt="image news">
+          <img src="uploads/soul_pixar.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="IMG_news/dune_2021.jpg" class="d-block w-100" alt="image news">
+          <img src="uploads/dune_2021.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -84,6 +84,10 @@
     </div>
   </div>
   <section id="news_section">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn_addNews" data-toggle="modal" data-target="#news_modal">
+      Ajouter une News
+    </button>
     <div class="news_content">
       <?php include("include/news_content.php"); ?>
     </div>

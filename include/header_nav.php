@@ -1,4 +1,4 @@
-
+<header>
     <nav id="header_nav">
         <div id="logo">
             <a href="index.php"><img src="../img/logo.png" alt="logo myIMMO"></a>
@@ -31,12 +31,8 @@
                     </div>
 
                 </div>
-                <li><a href="formFilmSerie.php">Formulaire</a>
-                <li><a href="critique_film.php">critique</a>
                 <li><a href="contact.php">Nous contacter</a></li>
-
-                <li class="search_content"><a href="#"><img src="IMG/search.png" alt="Recherche"></a><input type="search" name="recherche" id="recherche" placeholder="...Search"></li>
-
+                <li class="search_global"><?php include("include/suggest.php");?></li>
                 <div class="login">
                     <!-- Button trigger modal -->
                     <li>
@@ -54,3 +50,4 @@
             </div>
         </div>
     </nav>
+</header>

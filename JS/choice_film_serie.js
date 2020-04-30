@@ -1,3 +1,7 @@
+
+
+
+
 function choice() {
     $("#movie_choice_content").click(function () {
 
@@ -15,12 +19,24 @@ function choice() {
         showContent();
 
     })
+
 }
 
 
 function showContent() {
 
-    $("#global_content_center").css("display", "block");
+    $("#selection_content").css("display", "flex");
+    $("#movies_content").css("display", "flex");
 
 }
+
+/*
+function getGenre(){
+    $(".genre").click(function(){
+        alert($(this).text());
+    })
+}
+*/
+
 choice();
+//getGenre();

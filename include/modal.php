@@ -11,16 +11,18 @@
             <div class="modal-body">
                 <form class="formModal" method="POST" action="login.php">
                     <div class="form-group form-group-modal">
-                        <label for="utilisateur_mail">Email</label>
-                        <input type="email" class="form-control" id="utilisateur_mail" name="utilisateur_mail" required="">
+                    <input type="hidden" name="user_droit" value="<?php echo $_SESSION['user']->user_droit; ?>">
+                        <label for="user_mail">Email</label>
+                        <input type="email" class="form-control" id="user_mail" name="user_mail" required="">
                     </div>
                     <div class="form-group form-group-modal">
-                        <label for="utilisateur_mdp">Mot de passe</label>
-                        <input type="password" class="form-control" id="utilisateur_mdp" name="utilisateur_mdp" required="">
+                        <label for="user_password">Mot de passe</label>
+                        <input type="password" class="form-control" id="user_password" name="user_password" required="">
                     </div>
+                    
                     <div class="form-group form-group-modal">
                         <br>
-                        <button type="submit" class="btn btn-primary btn-modal">Envoyer</button>
+                        <button type="submit" class="btn btn-primary btn-modal">Se connecter</button>
                     </div>
                 </form>
             </div>

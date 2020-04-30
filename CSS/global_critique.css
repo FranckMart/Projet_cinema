@@ -99,7 +99,8 @@
 
 }
 
-#serie_choice_content:hover,#movie_choice_content:hover {
+#serie_choice_content:hover,
+#movie_choice_content:hover {
     -webkit-transition: opacity 1.5s ease-in-out;
     -moz-transition: opacity 1.5s ease-in-out;
     -ms-transition: opacity 1.5s ease-in-out;
@@ -274,11 +275,29 @@
 
 
 /* trie Sélction */
+.btn_addMedia {
+    display: block;
+    margin: auto;
+    width: 20%;
+    background-color: #026173;
+    border: none;
+    opacity: 0.9;
+    margin-top: 2.5%;
+    padding: 2%;
+}
+
+.btn_addMedia:hover {
+
+    opacity: 1;
+    background-color: #026173;
+    border: 1px solid white;
+}
 
 #selection_content {
     margin-top: 10%;
     margin-bottom: 10%;
     width: 100%;
+    display: none;
 }
 
 .content_selection_trie {
@@ -293,7 +312,7 @@ select#selection_film {
 /* Movie Content */
 #movies_content {
     width: 90%;
-    display: flex;
+    display: none;
     margin: auto;
 }
 

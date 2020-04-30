@@ -11,18 +11,15 @@
     <link rel="stylesheet" href="css/accueil.css">
     <title></title>
 </head>
-
 <body>
 
 
     <?php include("include/modal.php"); ?>
     <?php include("include/modal_comeUp.php"); ?>
 
-    <header>
 
         <?php include("include/header_nav.php"); ?>
 
-    </header>
     <section>
 
         <?php include("include/accueil-navigation.php"); ?>

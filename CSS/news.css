@@ -139,10 +139,24 @@
     border: none;
     opacity: 0.9;
 }
-
+.btn_addNews{
+    display: block;
+    margin: auto;
+    width: 20%;
+    background-color: #026173;
+    border: none;
+    opacity: 0.9;
+}
 .news .btn-primary:hover {
 
     opacity: 1;
+    border: 1px solid white;
+}
+
+.btn_addNews:hover {
+
+    opacity: 1;
+    background-color: #026173;
     border: 1px solid white;
 }
 

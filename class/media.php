@@ -1,6 +1,6 @@
 <?php
 
-require_once('include/bdd.php');
+require_once("/Applications/MAMP/htdocs/Repository-gitKraken/projet_cinema/include/bdd.php");
 
     class media {
         protected $_id;
