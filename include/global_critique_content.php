@@ -164,7 +164,7 @@ try {
                     et se prépare à devenir le successeur de son père... </p>
                 <span>Réalisateur: Francis Ford Coppola</span>
                 <span>Acteurs Principaux : Al Pacino - Robert De Niro - Marlon Brando</span>
-                <a href="#">Voir Plus</a>
+                <a href="media_inside.php">Voir Plus</a>
             </div>
         </div>
     </article>
