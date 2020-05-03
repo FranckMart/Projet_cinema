@@ -1,27 +1,30 @@
-
-
-
-
+// Fonction de choix entre Film ou Série
 function choice() {
+    // évenement click sur le bloc Movie 
     $("#movie_choice_content").click(function () {
 
+        // Changement du texte de l'id
         $("#title-intro-critique h2").text("Tout les Films");
         $("#title-intro-critique p").text("Retrouver ici toutes les critiques de film");
+        // Affichage de tout les films
         showContent();
 
 
     })
 
+    // évenement click sur le bloc Série
     $("#serie_choice_content").click(function () {
-
+        // Changement du texte de l'id
         $("#title-intro-critique h2").text("Toutes les Séries");
         $("#title-intro-critique p").text("Retrouver ici toutes les critiques de série");
+        // Affichage de tout les films
         showContent();
 
     })
 
 }
 
+// Fonction qui me permet d'afficher le contenus des Film/Série
 
 function showContent() {
 

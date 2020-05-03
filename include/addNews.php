@@ -2,26 +2,37 @@
 require_once("bdd.php");
 
 
+// Traitement d'ajout d'une image dans la table news 
 if(!empty($_FILES)){
+    // $_Files est une requete qui permet de traiter un fichier présent lors de l'envoie du formulaire
     $file = $_FILES['news_image'];
 
+    // Je récupère toutes les informations utiles au traitement de l'ajout d'une image dans la table
     $fileName = $_FILES['news_image']['name'];
     $fileTmpName = $_FILES['news_image']['tmp_name'];
     $fileSize = $_FILES['news_image']['size'];
     $fileError = $_FILES['news_image']['error'];
     $fileType = $_FILES['news_image']['type'];
 
+    // Je vérifie le type de fichier 
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
 
+    // j'ajoute un tableau comprenant les types de fichier valide à l'insertion
     $allowed = array('jpg', 'jpeg', 'png');
 
+    // Si le type de fichier correspond à une valeur du tableau alors on fais l'insertion
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0) {
+            // Si la taille de l'image à un taille inférieur à 10mo alors on traite l'insertion de l'image dans un dossier destiné à l'insertion des img 
             if ($fileSize < 1000000) {
+                // On génrére un idifiant unique à une image
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
+                // On ajoute l'image au dossier voulu 
                 $fileDestination = '../uploads/'.$fileNameNew;
+                // S'assure que le fichier filename est un fichier téléchargé par HTTP POST. Si le fichier est valide, il est déplacé jusqu'à destination. //
                 move_uploaded_file($fileTmpName, $fileDestination);
+            
                 header("location: news.php?uploadsuccess");
             } else {
                 echo "Fichier trop gros.";
@@ -35,18 +46,18 @@ if(!empty($_FILES)){
 
 }
 
-    
-
-
 
 ?>
 <?php
+  // J'insère les informations dans la table news
     $req = "INSERT INTO `news`(`news_titrePresentation`,`news_titreContenu`, `news_titreConclusion`, `news_micro`, `news_textPresentation`, `news_textContenu`, `news_textConclusion`, `news_editeur` ,`news_image`) 
             VALUES (:news_titrePresentation, :news_titreContenu, :news_titreConclusion, :news_micro, :news_textPresentation, :news_textContenu, :news_textConclusion, :news_editeur,  :news_image) ";
 
 
 
 $form = $bdd->prepare($req);
+// Pour question de sécurité la requete est préparé pour éviter une injection SQL 
+// On récupère les informations
 $form->bindValue(":news_titrePresentation", $_POST['news_titrePresentation']);
 $form->bindValue(":news_titreContenu", $_POST['news_titreContenu']);
 $form->bindValue(":news_titreConclusion", $_POST['news_titreConclusion']);

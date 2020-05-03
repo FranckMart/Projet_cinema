@@ -11,6 +11,7 @@
             <div class="modal-body">
                 <form class="formModal" method="POST" action="login.php">
                     <div class="form-group form-group-modal">
+                        <!-- Face de test je souahite connaitre le droit d'un utilisateur-->
                     <input type="hidden" name="user_droit" value="<?php echo $_SESSION['user']->user_droit; ?>">
                         <label for="user_mail">Email</label>
                         <input type="email" class="form-control" id="user_mail" name="user_mail" required="">

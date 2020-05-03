@@ -3,7 +3,7 @@
 
     <?php
 
-    /*
+    /* Code à adapter (modifier) vérifiaction des droits utilisateur
 if(!empty($_POST['user_droit'])){
 
     require_once("include/bdd.php");

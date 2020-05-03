@@ -6,7 +6,9 @@ function WordSearch($word)
 {
 
 
+    // On sélectionne les titres des videos avec une ressemblance au titre écrit dans la barre de recherche 
     $resultatsVideo = $GLOBALS["bdd"]->prepare('SELECT `video_titre` FROM `video` WHERE `video_titre` LIKE "%' . $word . '%"');
+    // On sélectionne les titres des news avec une ressemblance au titre écrit dans la barre de recherche 
     $resultatsNews = $GLOBALS["bdd"]->prepare('SELECT `news_titrePresentation`FROM `news` WHERE `news_titrePresentation` LIKE "%' . $word . '%"');
 
     //var_dump($resultats);
@@ -16,11 +18,13 @@ function WordSearch($word)
     $resultatsNews->execute();
 
 
+    // On stocke les informations dans un tableau d'objet 
     $resultats["video"] = $resultatsVideo->fetchAll(PDO::FETCH_OBJ);
     $resultats["news"] =  $resultatsNews->fetchAll(PDO::FETCH_OBJ);
 
     //$showResultats = implode(",", $resultats);
 
+    // On return le résultat des 2 tableaux 
     return $resultats;
 }
 ?>

@@ -2,12 +2,13 @@
 
 require_once("class/news.php");
 
-
+// Ici on fais appel à la class News et on appel la fonction getNews(avec comme paramétre la requette $Get pour récupérer la news voulu)
 $news = News::getNews($_GET['news_id']);
 
 
 ?>
 
+<!-- Mise en page de la news on récupère les information de la table News-->
 <section>
     <div id="TopTitle">
         <h2><?php echo $news->news_titrePresentation; ?></h2>

@@ -1,12 +1,12 @@
 <?php
 require_once("include/bdd.php");
 
-// combien d'apprenants je veux sur une page
-// je vais le stocker das une variable afin de pouvoir m'adapter quelque soit le nb d'apprenants par promotion, le nb d'apprenants totals et de fait le nb d'apprenants à afficher
+// combien de genre je veux sur une page
+// je vais le stocker dans une variable afin de pouvoir m'adapter quelque soit le nb de genre total voulu sur la page
 $nbCardPerPage = 5;
 
 try {
-    // je récupère ici tous les apprenants de la promotion
+    // je récupère ici tous les genres 
     // la requete
     $sqlAllGenre = "SELECT * FROM `genre`";
     // que j'envoie au serveur
@@ -23,20 +23,19 @@ try {
 
     // je calcul ici le point de départ pour ma requete SQL future
     $offset = ($p - 1) * $nbCardPerPage;
-    // Si l'offset est superieur aux nombres d'apprenants, alors je met l'offset à 0 afin d'éviter la page blanche sans apprenant
+    // Si l'offset est superieur aux nombres de genre, alors je met l'offset à 0 afin d'éviter la page blanche sans genre
     if ($offset > sizeof($allGenre)) {
         $offset = 0;
     }
 
     // je stocke ma requete dans une variable que je vais utiliser plus tard 
-    //$sqlApprenants = "SELECT * FROM `stagiaire` AS s JOIN `utilisateur` AS u ON (s.`stagiaire_utilisateur_id` = u.`utilisateur_id`) WHERE s.`stagiaire_formation_id` = 1 ORDER BY s.`stagiaire_prenom` ASC LIMIT ".$offset.",".$nbCardPerPage.";";
     $sqlGenre = "SELECT genre_id,genre_nom FROM genre ORDER BY genre_nom ASC LIMIT " . $offset . "," . $nbCardPerPage . ";";
     // j'envoie la requete au serveur et je stocke son retour dans une autre variable
     $requeteGenre = $bdd->query($sqlGenre);
-    // dans la variable $apprenants je vais stocker un tableau d'objet correspondant à ma requete
+    // dans la variable $Genre je vais stocker un tableau d'objet correspondant à ma requete
     $Genre = $requeteGenre->fetchAll(PDO::FETCH_OBJ);
 
-    // $apprenants avec un s contient la totalité des résultats tandis que $apprenant sans s, lui ne contient qu'un seul résultat, une seule ligne de la bdd 
+    
 ?>
 
     <?php
@@ -84,7 +83,7 @@ try {
             <div class="col-12">
                 <?php
                 // Je vais générer les boutons mais de combien en ai-je besoin ?
-                // autant que de page or le nb de page = au nombre toal d'apprenants divisé par le nombre d'apprenants qu'on veux sur une page le tout arrondi à l'unité supérieure
+                // autant que de page or le nb de page = au nombre total de genre divisé par le nombre de genre qu'on veux sur une page le tout arrondi à l'unité supérieure
                 $nbPage = ceil(sizeof($allGenre) / $nbCardPerPage);
                 // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
                 // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
@@ -100,10 +99,10 @@ try {
             <div id="genre_content">
                 <?php
 
-                // maintenant j'affiche les apprenants que je veux avec les limit 
+                // maintenant j'affiche les genres que je veux avec les limit 
                 foreach ($Genre as $genre) {
                     # code...
-                    // pour récupérer les apprenants j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un objet dans $apprenant d'où les -> pour appeler les champs de la table
+                    // pour récupérer les genre j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un objet dans $genre d'où les -> pour appeler les champs de la table
                 ?>
                     <div class="genre">
                         <a href="#genre=<?php echo $genre->genre_id ?>"><?php echo $genre->genre_nom ?></a>
@@ -149,6 +148,7 @@ try {
                 </select>
             </div>
         </div>
+        <!-- Affichage par défaut on requete SQL est à prévoir pour récupérer tous les films-->
         <div id="movies_content">
             <div class="movieLeft">
                 <img src="IMG_Movie/LeParrain.jpg" alt="image le parrain">
