@@ -40,22 +40,22 @@
         <div class="carousel-item active">
           <img src="uploads/batman_2021.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h5>Batman est de retour !</h5>
+            <p>Le film batman va étre dans toutes les salles en 2021</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="uploads/soul_pixar.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5>Le nouveau pixar aura du retard ! </h5>
+            <p>C'est un fais le covid-19 change les plans de l'industrie du cinéma le film n'a pas encore de nouvelle date </p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="uploads/dune_2021.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h5>Dune est de retour !</h5>
+            <p>Voici une des premières images de Dune, le film sera dans nos salles en 2021</p>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 #TopTitle,
-#centerTitle {
+#centerTitle,
+#conclusionTitle {
     width: 100%;
     padding: 3%;
     background-color: #026173;
@@ -15,7 +16,8 @@
 }
 
 #TopTitle h2,
-#centerTitle h2 {
+#centerTitle h2,
+#conclusionTitle h2{
     font-size: 1.7rem;
 }
 
@@ -45,7 +47,13 @@
     font-size: 1.3rem;
 }
 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 
+#news_img_content {
+    width: 62.5%;
+}
+
+}
 @media screen and (max-width:1024px) {
     
     #TopTitle,

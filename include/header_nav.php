@@ -1,7 +1,7 @@
 <header>
     <nav id="header_nav">
         <div id="logo">
-            <a href="index.php"><img src="../img/logo.png" alt="logo myIMMO"></a>
+            <a href="index.php"><h1>Movie<span class="second_title_logo">Dvice</span></h1></a>
         </div>
         <div id="content-header-right">
             <ul class="nav_categorie">

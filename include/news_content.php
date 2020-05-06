@@ -116,7 +116,7 @@ $News = $requeteNews->fetchAll(PDO::FETCH_OBJ);
 -->
           <div class="form-group form-group-modal">
             <br>
-            <button type="submit" class="btn btn-primary btn-modal" name="btn_value" >Intégrer</button>
+            <button type="submit" class="btn btn-primary btn-modal" name="btn_value">Intégrer</button>
           </div>
         </form>
       </div>
@@ -150,7 +150,7 @@ foreach ($News as $newsOK) {
 
         <a href="news_inside.php?news_id=<?php echo $newsOK->news_id; ?>" class="btn btn-primary">Voir la news</a>
         <div class="content_date_news">
-          <h5 class="date_news"><?php echo "16 Avril" ?></h5>
+          <h5 class="date_news"><span>6 Mai</span><!--?php echo "6 mai" ?>--></h5>
         </div>
       </div>
     </div>

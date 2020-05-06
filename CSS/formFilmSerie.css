@@ -1,21 +1,24 @@
-.flex{
+.flex {
     display: flex;
     flex-wrap: wrap;
 }
-.center{
+
+.center {
     align-items: center;
     justify-content: center;
 }
 
 /* modal */
-.a-modal{
+.a-modal {
     width: 55%;
     height: 10%;
     margin: 40px;
     background-color: white;
     color: black;
 }
-.modal-content{ /*page de mon modal */
+
+.modal-content {
+    /*page de mon modal */
     position: fixed;
     flex-wrap: wrap;
     top: 0;
@@ -24,7 +27,9 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
 }
-.modal-wrapper{ /* la boite qui contient les parties de mon formulaire*/
+
+.modal-wrapper {
+    /* la boite qui contient les parties de mon formulaire*/
     width: 60%;
     height: 60%;
     overflow: auto;
@@ -33,141 +38,206 @@
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.4);
 }
+
 /* formulaire */
-form{
+form {
     width: 100%;
     height: 80%;
     flex-direction: column;
 }
-.h3{
+
+.h3 {
     height: 10%;
     width: 100%;
     background-color: #5C5C5C;
 }
-.wrapper-elements-ffs{ /* wrapper des inputs */
+
+.wrapper-elements-ffs {
+    /* wrapper des inputs */
     width: 35%;
     height: 50%;
     padding: 2px;
 }
-.wrapper-checkbox{
+
+.wrapper-checkbox {
     width: 30%;
     height: 50%;
     padding: 2px;
 }
-.titre-checkbox{
+
+.titre-checkbox {
     width: 100%;
     height: 12%;
     margin: 0;
     padding: 0;
 }
-.margin1{
+
+.margin1 {
     margin-left: 5px;
 }
-.colonne, .colonne2{
+
+.colonne,
+.colonne2 {
     width: 50%;
     height: 95%;
 }
-.wrapper-elements-ffs-2{ /* wrapper des inputs */
+
+.wrapper-elements-ffs-2 {
+    /* wrapper des inputs */
     width: 30%;
     height: 50%;
 }
-.margin2{
+
+.margin2 {
     margin-left: 20px;
 }
-.wrapper-mid-ffs2{
+
+.wrapper-mid-ffs2 {
     width: 30%;
     height: 50%;
 }
-.wrapper-mid-ffs3, .wrapper-acteur{
+
+.wrapper-mid-ffs3,
+.wrapper-acteur {
     width: 100%;
     height: 25%;
 }
-.wrapper-acteur{
+
+.wrapper-acteur {
     justify-content: space-around;
 }
-.wrapper-midBottom{
+
+.wrapper-midBottom {
     width: 100%;
     height: 45%;
     justify-content: space-around;
 }
-.submit{
+
+.submit {
     width: 100%;
     height: 6%;
     margin: 20px;
     display: flex;
     justify-content: center;
 }
-.margin3{
+
+.margin3 {
     margin: 2px;
 }
-.wrapper-elements-ffs, .wrapper-elements-ffs-2,.wrapper-acteur, .wrapper-mid-ffs2, .wrapper-mid-ffs3, .wrapper-checkbox, .wrapper-midBottom, .a-modal, .h3 {
+
+.wrapper-elements-ffs,
+.wrapper-elements-ffs-2,
+.wrapper-acteur,
+.wrapper-mid-ffs2,
+.wrapper-mid-ffs3,
+.wrapper-checkbox,
+.wrapper-midBottom,
+.a-modal,
+.h3 {
     border-radius: 20px;
 }
-.wrapper-elements-ffs, .wrapper-elements-ffs-2,.wrapper-acteur, .wrapper-mid-ffs2, .wrapper-mid-ffs3, .wrapper-checkbox {
+
+.wrapper-elements-ffs,
+.wrapper-elements-ffs-2,
+.wrapper-acteur,
+.wrapper-mid-ffs2,
+.wrapper-mid-ffs3,
+.wrapper-checkbox {
     margin: 5px;
 }
-.wrapP{
-    height: 35%;
-    width: 100%;
-}
-.wrapC{
-    height: 55%;
-    width: 100%;
-}
-.wrapI1{
-    height: 70%;
-    width: 100%;
-}
-.wrapI2{
+
+.wrapP {
     height: 35%;
     width: 100%;
 }
 
-@media screen and (min-width: 360px) and (max-width: 1024px){
+.wrapC {
+    height: 55%;
+    width: 100%;
+}
+
+.wrapI1 {
+    height: 70%;
+    width: 100%;
+}
+
+.wrapI2 {
+    height: 35%;
+    width: 100%;
+}
+
+
+.btn-media-validate{
+    width: 10%;
+    text-align: center;
+    height: 50px;
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+
+    .wrapP,.wrapC,.wrapI1,.wrapI2 {
+        height: auto;
+    }
+}
+
+
+
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
     .modal-wrapper {
         width: 100%;
         height: 97%;
         max-height: none;
     }
+
     .h3 {
         height: 11%;
         margin: 5px;
         text-align: center;
     }
+
     .wrapper-elements-ffs {
         width: 100%;
         height: 25%;
     }
+
     .wrapper-checkbox {
         width: 100%;
         height: 30%;
     }
+
     .wrapper-elements-ffs-2 {
         width: 100%;
         height: 5%;
         margin: 5px;
         display: inherit;
-    
+
     }
+
     .wrapper-mid-ffs3 {
         width: 100%;
         height: 11%;
         margin: 5px;
     }
+
     .wrapper-midBottom {
         width: 100%;
         display: none;
     }
-    .wrapP{
+
+    .wrapP {
         height: 25%;
     }
-    .wrapC{
+
+    .wrapC {
         height: 40%;
     }
-    .wrapI1{
+
+    .wrapI1 {
         height: 53%;
     }
-    .wrapI2{
+
+    .wrapI2 {
         height: 28%;
 
     }

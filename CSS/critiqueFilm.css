@@ -20,21 +20,26 @@
 }
 .topCritique, .wrapCritique, .bottomCritique{
     width: 98%;
-    margin-top: 20px;
+}
+
+.topCritique {
+  margin-top: 2%;
+}
+.wrapCritique{
+  margin-top: 5%;
 }
 .wrapperHResp{
     height: 100%;
     width: 65%;
 }
 .h2top{
-    height: 10%;
+
     width: 100%;
-    margin: 0px;
-    background-color: rgba(255, 255, 255, 0.1);
-}
+    text-align: center;
+  }
 .wrapCrittop{
-    height: 100%;
     width: 35%;
+    margin-top: 4%;
     justify-content: space-between;
     align-items: center;
 }
@@ -73,12 +78,11 @@
 
 .midCritiLeft{
     width: 35%;
-    height: 100%;
     border-radius: 5px;
 }
 
 .h2top, .midCritiLeft{
-    letter-spacing: 0.5px;
+    /*letter-spacing: 0.5px;*/
 }
 
 .midCritiRight{
@@ -181,7 +185,7 @@
 }
 .IMG-c{
   width: 240px;
-  height: 240px;
+  background-size: contain;
 }
 
 

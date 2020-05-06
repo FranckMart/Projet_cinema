@@ -8,7 +8,7 @@ $news = News::getNews($_GET['news_id']);
 
 ?>
 
-<!-- Mise en page de la news on récupère les information de la table News-->
+<!-- Mise en page de la news on récupère les informations de la table News-->
 <section>
     <div id="TopTitle">
         <h2><?php echo $news->news_titrePresentation; ?></h2>
@@ -24,10 +24,19 @@ $news = News::getNews($_GET['news_id']);
     <div id="centerTitle">
         <h2><?php echo $news->news_titreContenu; ?></h2>
     </div>
-    <div id="text_bottom">
+    <div id="text_center">
         <div class="center_text">
             <p><?php echo $news->news_textContenu; ?></p>
         </div>
     </div>
+ <div id="conclusionTitle">
+        <h2><?php echo $news->news_titreConclusion; ?></h2>
+    </div>
+    <div id="text_conclusion">
+        <div class="center_text">
+            <p><?php echo $news->news_textConclusion; ?></p>
+        </div>
+    </div>
+
 </section>
 

@@ -11,13 +11,17 @@
 
 #logo {
     width: 15%;
+    padding: 1%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #logo img {
     width: 100%;
-    height: 100%;
 }
-
+.second_title_logo {
+    color: black;
+}
 .login {
     padding: 1%;
     margin-top: auto;

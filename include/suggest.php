@@ -36,12 +36,9 @@ function WordSearch($word)
         $tabRe = WordSearch($_GET["search"]);
         // Boucle par catégorie de recherche : news, video,..
         foreach ($tabRe as $key => $value) {
-            // Titre de la catégorie
-            // teste $key pour savoir quoi afficher avec switch
-            // il y aura une boucle différente pour chaque catégorie
             foreach ($value as $result) {
 
-                if (isset($result->news_titrePresentation)) { // mais si tu prefères tous faire en une seule boucle sans switch regarde du côté de la fonction isset pour ta condition 
+                if (isset($result->news_titrePresentation)) { 
 
                     echo "<option value='" . $result->news_titrePresentation . "'>";
                 }
