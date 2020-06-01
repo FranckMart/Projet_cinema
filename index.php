@@ -1,3 +1,11 @@
+<?php require_once("include/bddConfig/bdd.php"); 
+if (isset($_POST['deco'])) {
+    
+    session_destroy();
+    header("Location: index.php?deco=ok");
+    exit;
+}?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,18 +19,23 @@
     <link rel="stylesheet" href="css/accueil.css">
     <title></title>
 </head>
+
 <body>
 
 
-    <?php include("include/modal.php"); ?>
-    <?php include("include/modal_comeUp.php"); ?>
+    <?php include("include/modal/modal.php"); ?>
+    <?php include("include/modal/modal_deco.php"); ?>
+    <?php include("include/modal/modal_comeUp.php"); ?>
+   
 
+ 
 
         <?php include("include/header_nav.php"); ?>
 
+
     <section>
 
-        <?php include("include/accueil-navigation.php"); ?>
+        <?php include("include/showContent/accueil-navigation.php"); ?>
 
     </section>
 

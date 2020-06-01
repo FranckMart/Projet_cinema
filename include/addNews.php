@@ -1,5 +1,8 @@
 <?php
-require_once("bdd.php");
+require_once("../include/bddConfig/bdd.php");
+
+
+
 
 
 // Traitement d'ajout d'une image dans la table news 
@@ -29,11 +32,11 @@ if(!empty($_FILES)){
                 // On génrére un idifiant unique à une image
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
                 // On ajoute l'image au dossier voulu 
-                $fileDestination = '../uploads/'.$fileNameNew;
+                $fileDestination = '../include/uploads/'.$fileNameNew;
                 // S'assure que le fichier filename est un fichier téléchargé par HTTP POST. Si le fichier est valide, il est déplacé jusqu'à destination. //
                 move_uploaded_file($fileTmpName, $fileDestination);
             
-                header("location: news.php?uploadsuccess");
+                header("Location: ../news.php?uploadsuccess");
             } else {
                 echo "Fichier trop gros.";
             }
@@ -74,9 +77,9 @@ $form->bindValue(":news_image", $fileDestination);
 
     if($form->execute()){
        
-        header('Location:../news.php?insertion=réussi');
+        header("Location: ../news.php?insertion=réussi");
     }else{
-        header('Location:../news.php?insertion=échec');
+        header("Location: ../news.php?insertion=échec");
     }
 
 

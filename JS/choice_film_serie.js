@@ -1,3 +1,10 @@
+// Appel de la fonction lorsque la page est complétement chargé 
+$( document ).ready(function() {
+    choice();
+    // Affichage de tout les films/séries
+    showContent();
+});
+
 // Fonction de choix entre Film ou Série
 function choice() {
     // évenement click sur le bloc Movie 
@@ -6,8 +13,7 @@ function choice() {
         // Changement du texte de l'id
         $("#title-intro-critique h2").text("Tout les Films");
         $("#title-intro-critique p").text("Retrouver ici toutes les critiques de film");
-        // Affichage de tout les films
-        showContent();
+       
 
 
     })
@@ -17,8 +23,6 @@ function choice() {
         // Changement du texte de l'id
         $("#title-intro-critique h2").text("Toutes les Séries");
         $("#title-intro-critique p").text("Retrouver ici toutes les critiques de série");
-        // Affichage de tout les films
-        showContent();
 
     })
 
@@ -41,5 +45,5 @@ function getGenre(){
 }
 */
 
-choice();
+
 //getGenre();

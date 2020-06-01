@@ -1,8 +1,5 @@
-<?php
-require_once("/Applications/MAMP/htdocs/Repository-gitKraken/projet_cinema/include/bdd.php");
-/**
- * 
- */
+<?php include_once("include/bddConfig/bdd.php");
+
 class News
 {
     protected $news_id;

@@ -46,7 +46,6 @@
 .baCritique{
     height: 90%;
     width: 100%;
-    background-color: #fff;
 }
 
 .infoTop, .infoMid{
@@ -93,6 +92,9 @@
 .bandeAnnonce{
     display: none;
 }
+iframe {
+  width: 100%;
+}
 .titreNone{
     display: none;
 }
@@ -125,7 +127,6 @@
 .isystkSlider li.child p{
   margin:0 5px 0 0;
   border:solid 1px #dedede;
-  background:#fff;
   padding:3px;
 }
 

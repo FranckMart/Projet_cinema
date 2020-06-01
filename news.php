@@ -1,3 +1,11 @@
+<?php require_once("include/bddConfig/bdd.php"); 
+if (isset($_POST['deco'])) {
+    
+  session_destroy();
+  header("Location: index.php?deco=ok");
+  exit;
+}?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,14 +23,14 @@
 
 <body>
 
+  <?php include("include/modal/modal.php"); ?>
+  <?php include("include/modal/modal_deco.php"); ?>
+  <?php include("include/modal/modal_comeUp.php"); ?>
 
-  <?php include("include/modal.php"); ?>
 
-  <header>
 
-    <?php include("include/header_nav.php"); ?>
+  <?php include("include/header_nav.php"); ?>
 
-  </header>
 
   <article>
     <div id="titleTop">
@@ -38,21 +46,21 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="uploads/batman_2021.jpg" class="d-block w-100" alt="image news">
+          <img src="include/uploads/batman_2021.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
             <h5>Batman est de retour !</h5>
             <p>Le film batman va étre dans toutes les salles en 2021</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="uploads/soul_pixar.jpg" class="d-block w-100" alt="image news">
+          <img src="include/uploads/soul_pixar.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
             <h5>Le nouveau pixar aura du retard ! </h5>
             <p>C'est un fais le covid-19 change les plans de l'industrie du cinéma le film n'a pas encore de nouvelle date </p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="uploads/dune_2021.jpg" class="d-block w-100" alt="image news">
+          <img src="include/uploads/dune_2021.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
             <h5>Dune est de retour !</h5>
             <p>Voici une des premières images de Dune, le film sera dans nos salles en 2021</p>
@@ -84,12 +92,28 @@
     </div>
   </div>
   <section id="news_section">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn_addNews" data-toggle="modal" data-target="#news_modal">
-      Ajouter une News
-    </button>
+    <?php
+    // Vérification du droit d'accès à un certain contenu si le droit de l'utilisateur vaut 1 (admin) alors on affiche ce contenu
+
+    if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
+    ?>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn_addNews" data-toggle="modal" data-target="#news_modal">
+        Ajouter une News
+      </button>
+    <?php
+      include("include/formulaire/newsForm.php");
+    } else {
+    ?>
+      <button type="button" class="btn btn-primary btn_addNews" data-toggle="modal" data-target="#news_modal" style="display: none">
+        Ajouter une News
+      </button>
+    <?php
+    }
+
+    ?>
     <div class="news_content">
-      <?php include("include/news_content.php"); ?>
+      <?php include("include/showContent/news_content.php"); ?>
     </div>
   </section>
 

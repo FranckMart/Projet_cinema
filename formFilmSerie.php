@@ -1,3 +1,10 @@
+<?php require_once("include/bddConfig/bdd.php"); 
+if (isset($_POST['deco'])) {
+    
+    session_destroy();
+    header("Location: index.php?deco=ok");
+    exit;
+}?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,20 +21,23 @@
 
 <body>
 
-    <?php include("include/modal.php"); ?>
-
-    
+    <?php include("include/modal/modal.php"); ?>
+    <?php include("include/modal/modal_deco.php"); ?>
+    <?php include("include/modal/modal_comeUp.php"); ?>
+   
+   
 
         <?php include("include/header_nav.php"); ?>
 
+    
     <!-- j'ouvre mon formulaire -->
-    <form action="include/traitement_form.php" method="POST" class="ffs flex center">
+    <form action="include/formulaire/traitement_form.php" method="POST" class="ffs flex center" enctype="multipart/form-data">
         <!-- premier partie du formulaire -->
-        <?php include("include/ffs_1.php"); ?>
+        <?php include("include/formulaire/ffs_1.php"); ?>
         <!-- deuxième partie du formulaire -->
-        <?php include("include/ffs_2.php"); ?>
+        <?php include("include/formulaire/ffs_2.php"); ?>
         <!-- troisième partie du formulaire -->
-        <?php include("include/ffs_3.php"); ?>
+        <?php include("include/formulaire/ffs_3.php"); ?>
         <input class="btn-form-film-serie" type="submit" name="submit" value="Envoyez">
     </form>
 

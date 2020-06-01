@@ -1,8 +1,6 @@
-<?php
+<?php include_once("include/bddConfig/bdd.php"); 
 
-require_once("../include/bdd.php");
-
-    class media {
+    class Video {
         protected $_id;
         protected $_titre;
         protected $_type;
@@ -19,7 +17,7 @@ require_once("../include/bdd.php");
         protected $_boxoffice;
         protected $_synopsis;
 
-        public static function getVideo($video_id = 1){
+        public static function getVideo($video_id){
             // je récupère graçe à une requête une ligne de ma table
             $req = "SELECT * FROM `video` WHERE video_id = :video_id; ";
             $req = $GLOBALS['bdd']->prepare($req);

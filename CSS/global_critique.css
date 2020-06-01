@@ -314,11 +314,17 @@ select#selection_film {
     width: 90%;
     display: none;
     margin: auto;
+    flex-wrap: wrap;
 }
-
+.movie_content_inside {
+    display: flex;
+    padding: 10%;
+    width: 100%;
+}
 .movieLeft {
-    width: 20%;
+    width: 30%;
     margin-right: 5%;
+    margin-top: 3.5%;
 }
 
 .movieLeft img {
@@ -330,7 +336,7 @@ select#selection_film {
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
-    width: 60%;
+    width: 70%;
     padding: 1%;
     text-align: center;
 }

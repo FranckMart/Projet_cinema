@@ -1,11 +1,12 @@
 <?php
+
 // je teste si les champs existe et et si aucun n'est vide
-if (!empty($_POST['user_mail']) && !empty($_POST['user_password'] && !empty($_POST['user_droit']))) {
+if (!empty($_POST['user_mail']) && !empty($_POST['user_password'])) {
     // je teste si le mail est bien formé (pas s'il existe)
     if (filter_var($_POST['user_mail'], FILTER_VALIDATE_EMAIL)) {
         // echo "ok";
         // j'intègre ma connexion à la bdd
-        require_once("include/bdd.php");
+        require_once("include/bddConfig/bdd.php");
 
         // si les mdp sont cryptés
         try {
@@ -30,12 +31,13 @@ if (!empty($_POST['user_mail']) && !empty($_POST['user_password'] && !empty($_PO
             } else {
                 // je récupère les infos nottamment le mot de passe que je stocke dans la variable
                 $utilisateur = $reqprepare->fetch(PDO::FETCH_OBJ);
+                $admin = $utilisateur->user_droit;
+                
 
                 // ensuite je test si les mdp correspondent entre eux
                 if (password_verify($_POST['user_password'], $utilisateur->user_password)) {
+                    $_SESSION["user"] = $utilisateur;
                     // lorsque l'utilisateur se connecte, rempli une variable de session qui sera accessible de partout
-                    $_SESSION['user'] = $utilisateur;
-
                     // Je redirige vers la page d'accueil. Cette page devient totalement invisible pour celui qui navigue sur le site
                     header("Location: index.php?login=ok");
                     exit;
@@ -43,21 +45,32 @@ if (!empty($_POST['user_mail']) && !empty($_POST['user_password'] && !empty($_PO
                     header("Location: index.php?errorLogin=mdp");
                     exit;
                     //echo "Le mdp est faux";
+                    /* tu écrases le contenu de $_SESSION['user'] s'il est admin donc ligne 47 
+                    de ferait un truc du genre $_SESSION['user']->admin = true;  
+                    et un else avec  $_SESSION['user']->admin = false; */
                 }
-            }
+                // TEST
 
+
+
+            }
         } catch (PDOException $exception) {
             echo $exception->getMessage();
         }
     } else {
         header("Location: index.php?errorLogin=mailInvalide");
         exit;
-        //echo "entrez un email valide : ".$_POST['utilisateur_mail']." est pourri !";
     }
-} else {
+}
+if (isset($_POST['deco'])) {
+    
+    session_destroy();
+    unset($_SESSION);
+    header("Location: index.php?deco=ok");
+    exit;
+}
+else {
     header("Location: index.php?errorLogin=noData");
     exit;
-    //echo "erreur<br>tu recomence trouduc";
 
-    
 }

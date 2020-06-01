@@ -1,7 +1,9 @@
 <header>
     <nav id="header_nav">
         <div id="logo">
-            <a href="index.php"><h1>Movie<span class="second_title_logo">Dvice</span></h1></a>
+            <a href="index.php">
+                <h1>Movie<span class="second_title_logo">Dvice</span></h1>
+            </a>
         </div>
         <div id="content-header-right">
             <ul class="nav_categorie">
@@ -32,14 +34,35 @@
 
                 </div>
                 <li><a href="contact.php">Nous contacter</a></li>
-                <li class="search_global"><?php include("include/suggest.php");?></li>
+                <li class="search_global"><?php include("include/suggest.php"); ?></li>
                 <div class="login">
-                    <!-- Button trigger modal -->
                     <li>
-                        <a href="" data-toggle="modal" data-target="#exampleModal">
-                            <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-                            <img src="IMG/login.png" alt="login">
-                        </a>
+                        <?php
+                        if (!empty($_SESSION) && $_SESSION['user']->user_droit >= 0) {
+                        ?>
+                            <a href="" data-toggle="modal" data-target="#decoModal">
+                                <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+                                <img src="IMG/login.png" alt="login">
+                            </a>
+                        <?php
+                        }
+                        if(isset($_POST['deco'])) {
+                            session_destroy();
+                            header("Location: index.php?deco=ok");
+                            exit;
+                            ?>
+                            
+                        <?php
+                        }
+                        if (empty($_SESSION['user']) || (isset($_POST['deco']))) {
+                        ?>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+                                <img src="IMG/login.png" alt="login">
+                            </a>
+                        <?php
+                        }
+                        ?>
                     </li>
                 </div>
             </ul>
