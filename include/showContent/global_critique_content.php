@@ -43,11 +43,11 @@ try {
     <div id="choice_content">
         <div id="movie_choice_content">
             <div class="movie_choice_textarea">
-                <a href="global_critique.php?choice=<?php echo "Film"; ?>#genre_content">
+                <a href="global_critique.php?choice=<?php echo "Film"; ?>#movies_content">
                     <h2>Film</h2>
                 </a>
                 <div class="arrow_content">
-                    <a href="global_critique.php?choice=<?php echo "Film"; ?>#genre_content">
+                    <a href="global_critique.php?choice=<?php echo "Film"; ?>#movies_content">
                         <svg class="arrows">
                             <path class="a1" d="M0 0 L30 32 L60 0"></path>
                         </svg>
@@ -57,11 +57,11 @@ try {
         </div>
         <div id="serie_choice_content">
             <div class="serie_choice_textarea">
-                <a href="global_critique.php?choice=<?php echo "Série"; ?>#genre_content">
+                <a href="global_critique.php?choice=<?php echo "Série"; ?>#movies_content">
                     <h2>Série</h2>
                 </a>
                 <div class="arrow_content">
-                    <a href="global_critique.php?choice=<?php echo "Série"; ?>#genre_content">
+                    <a href="global_critique.php?choice=<?php echo "Série"; ?>#movies_content">
                         <svg class="arrows">
                             <path class="a1" d="M0 0 L30 32 L60 0"></path>
                         </svg>
@@ -73,10 +73,10 @@ try {
     </div>
     <div id="title-intro-critique">
         <a href="#choice_content">
-            <h2>Tout les Films</h2>
+            <h2>Veuillez choisir un type de média </h2>
         </a>
         <p>
-            Retrouver ici toutes les critiques de film
+           En haut de la page 
         </p>
     </div>
     <article id="global_content_center">

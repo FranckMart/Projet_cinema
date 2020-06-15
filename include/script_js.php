@@ -6,3 +6,4 @@
 <script src="JS/modal.js"></script>
 <script src="JS/modal_form_film_serie.js"></script>
 <script src="JS/showSearch.js"></script>
+<script src="JS/paginationAJAX.js"></script>

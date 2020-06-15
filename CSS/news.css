@@ -54,6 +54,12 @@
     width: 100%;
 }
 
+#news_fullContent {
+    width: 100%;
+    display: flex;
+
+}
+
 .news_content {
     width: 100%;
     display: flex;
@@ -63,11 +69,11 @@
 .news {
     margin: auto;
     padding: 2%;
-    width: 35%;
-    min-width: 667px;
+    min-width: 585px;
     min-height: 742px;
-    max-width: 667px;
+    max-width: 585px;
     max-height: 742px;
+
 }
 
 .card {
@@ -77,10 +83,8 @@
     transition: all 300ms ease-in;
     transform: scale(1);
     z-index: 1;
-    min-width: 591px;
-    min-height: 666px;
-    max-width: 591px;
-    max-height: 666px;
+    min-height: 670px;
+    max-height: 670px;
 }
 
 .card:hover {
@@ -120,6 +124,10 @@
 .footer_card_content {
     width: 100%;
     display: grid;
+    display: flex;
+    align-content: flex-start;
+    align-self: flex-end;
+    justify-content: flex-end;
 }
 
 .autor_content {
@@ -361,7 +369,7 @@
 
     .autor_content img {
         min-width: 40px;
-
+        margin-right: 5%;
     }
 
     .news .btn-primary {
@@ -425,6 +433,7 @@
     .card-text {
         font-size: 0.8rem;
     }
+
     .carousel-inner {
         width: 100%;
     }
@@ -432,9 +441,9 @@
     .news {
         width: 90%;
         padding: 7%;
-        min-width: 100%;
+        min-width: 50.5%;
         min-height: 100%;
-        max-width: 100%;
+        max-width: 70.5%;
         max-height: 100%;
     }
 
@@ -450,7 +459,7 @@
         position: absolute;
         bottom: 10%;
         right: 0;
-        width: 50%;
+        width: 45%;
     }
 
     .autor_content img {
@@ -463,17 +472,27 @@
         width: 90%;
     }
 
+    .news .btn-primary {
+        left: 0;
+        right: 0;
+    }
+
+
 }
 
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media screen and (max-width: 640px) {
 
+    #news_fullContent {
+
+        flex-direction: column;
+    }
 
     .news {
-        min-width: 82.5%;
-        min-height: 100%;
-        max-width: 82.5%;
-        max-height: 100%;
+        min-width: 100%;
+        min-height: 50%;
+        max-width: 100%;
+        max-height: 50%;
     }
 
     .card {
@@ -482,13 +501,19 @@
         max-width: 82.5%;
         max-height: 500px;
     }
+
     .autor_content {
-        width: 30%;
+        width: 50%;
         margin-right: 0;
     }
 
     .autor_content img {
         max-width: 40px;
+    }
+
+    .news .btn-primary {
+        left: 0;
+        right: 0;
     }
 
 }

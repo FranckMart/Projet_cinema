@@ -16,6 +16,10 @@
     
 }
 
+#comeUp-content p, #intro-content p  {
+    padding: 2%;
+}
+
 #intro-content>h2,
 #intro-content>p,
 #comeUp-content>h2,
@@ -98,6 +102,7 @@
 .partage_contentRight p,
 .commerce_contentLeft p {
 margin-bottom: 10%;
+padding: 4%;
 }
 
 .news_contentLeft img,

@@ -51,7 +51,7 @@ $News = $requeteNews->fetchAll(PDO::FETCH_OBJ);
   }
   ?>
 </div>
-
+<div id="news_fullContent">
 <?php
 // maintenant j'affiche les news que je veux avec les limit 
 foreach ($News as $newsOK) {
@@ -81,7 +81,9 @@ foreach ($News as $newsOK) {
       </div>
     </div>
   </div>
+
 <?php
 }
 
 ?>
+</div>

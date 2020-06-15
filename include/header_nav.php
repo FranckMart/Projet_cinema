@@ -46,12 +46,18 @@
                             </a>
                         <?php
                         }
-                        if(isset($_POST['deco'])) {
+                        if (isset($_POST['deco'])) {
                             session_destroy();
                             header("Location: index.php?deco=ok");
+                        ?>
+                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+                                <img src="IMG/login.png" alt="login">
+                            </a>
+                            <?php
                             exit;
                             ?>
-                            
+
                         <?php
                         }
                         if (empty($_SESSION['user']) || (isset($_POST['deco']))) {

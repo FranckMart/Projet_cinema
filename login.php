@@ -62,15 +62,4 @@ if (!empty($_POST['user_mail']) && !empty($_POST['user_password'])) {
         exit;
     }
 }
-if (isset($_POST['deco'])) {
-    
-    session_destroy();
-    unset($_SESSION);
-    header("Location: index.php?deco=ok");
-    exit;
-}
-else {
-    header("Location: index.php?errorLogin=noData");
-    exit;
 
-}

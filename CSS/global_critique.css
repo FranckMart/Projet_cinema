@@ -284,6 +284,7 @@
     opacity: 0.9;
     margin-top: 2.5%;
     padding: 2%;
+    font-size: 14px;
 }
 
 .btn_addMedia:hover {
@@ -316,11 +317,13 @@ select#selection_film {
     margin: auto;
     flex-wrap: wrap;
 }
+
 .movie_content_inside {
     display: flex;
     padding: 10%;
     width: 100%;
 }
+
 .movieLeft {
     width: 30%;
     margin-right: 5%;
@@ -352,6 +355,7 @@ select#selection_film {
     width: 20%;
     padding: 1%;
     background-color: #026173;
+    border: none;
 }
 
 .movieRight span {
@@ -420,9 +424,71 @@ select#selection_film {
         margin-top: 30%;
 
     }
+
+    .movie_content_inside {
+        flex-direction: column;
+    }
+
+    #genre_content {
+        width: 100%;
+    }
+
+    .btn_addMedia {
+        width: 50%;
+        font-size: 14px;
+    }
+    .content_selection_trie {
+        width: 35%;
+        margin: auto;
+    
+    }
+    .movieLeft {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 10%;
+    }
+
+    .movieRight {
+
+        margin: auto;
+        width: 100%;
+    }
+
+    .movieRight a {
+        width: 50%;
+        margin-top: 10%;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
+
+    #genre_content {
+        width: 100%;
+    }
+
+    .btn_addMedia {
+        width: 50%;
+        font-size: 14px;
+    }
+    .content_selection_trie {
+        width: 35%;
+        margin: auto;
+    
+    }
+
+    .movieRight {
+
+        margin: auto;
+        width: 100%;
+    }
+
+    .movieLeft {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10%;
+    }
+
     .movie_choice_textarea {
         margin-top: 90%;
 
@@ -431,5 +497,10 @@ select#selection_film {
     .serie_choice_textarea {
         margin-top: 30%;
 
+    }
+
+    .movieRight a {
+        width: 50%;
+        margin-top: 10%;
     }
 }

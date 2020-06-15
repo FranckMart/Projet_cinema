@@ -17,7 +17,7 @@ if (isset($_POST['deco'])) {
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/modal_user.css">
   <link rel="stylesheet" href="css/critiqueFilm.css">
-  <title></title>
+  <title>Media Inside</title>
 </head>
 
 <body>
