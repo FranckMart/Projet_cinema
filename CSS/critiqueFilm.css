@@ -166,14 +166,11 @@ iframe {
     height: 400px;
   }
 
-  .infoTop {
+  .infoTop,.infoMid {
     height: 13%;
     margin-top: 10px;
   }
-  .infoMid{
-    height: 20%;
-    margin-top: 10px;
-  }
+
   .titreNone {
     display: none;
   }
@@ -240,16 +237,14 @@ iframe {
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
+    height: 400px;
   }
 
-  .infoTop {
+  .infoTop,.infoMid {
     height: 13%;
     margin-top: 10px;
   }
-  .infoMid{
-    height: 20%;
-    margin-top: 10px;
-  }
+ 
 
   .titreNone {
     display: none;

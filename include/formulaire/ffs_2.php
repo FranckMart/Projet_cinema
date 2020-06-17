@@ -20,19 +20,8 @@
         <div class="wrapC">
             <div class="form-group">
                 <label for="casting" class="margin1">Acteur secondaires: </label>
-                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
+                <input type="text" class="form-control margin3" id="casting" name="casting" placeholder="Nom : Brad Pitt">
             </div>
-<!--
-            <div class="form-group">
-                <label for="casting" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
-            </div>
-
-            <div class="form-group">
-                <label for="casting" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
-            </div>
--->
         </div>
 
         <div class="wrapI1">
@@ -70,7 +59,7 @@
 
             <div class="form-group">
                 <label for="boxOffice" class="margin1">Box-Office : </label>
-                <input type="number" class="form-control" id="boxOffice" name="boxOffice" placeholder="ex : 20 758 841 ">
+                <input type="text" class="form-control" id="boxOffice" name="boxOffice" placeholder="ex : 20 758 841 ">
             </div>
         </div>
 

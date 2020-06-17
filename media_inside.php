@@ -61,6 +61,7 @@ if (isset($_POST['deco'])) {
           <p class="infoMid flex">Acteur principal : <?php echo $information->video_acteurPrincipal; ?></p>
           <p class="infoMid flex">Acteurs Secondaires : <?php echo $information->video_casting; ?></p>
           <p class="infoMid flex">Box-office : <?php echo $information->video_boxOffice; ?> </p>
+          <p class="infoMid flex">Distributeur : <?php echo $information->video_distributeur; ?> </p>
         </article>
         <article class="midCritiRight flex">
           <div class="flex infoUser">

@@ -4,9 +4,10 @@
 if (!empty($_POST['titre'])) {
     require_once("../bddConfig/bdd.php");
 
+   
     if (isset($_POST['genre'])) {
+   
         $genre = implode(", ", $_POST['genre']);
-        $casting = implode(", ", $_POST['casting']);
     }
     // Traitement d'ajout d'une image dans la table video
     if (!empty($_FILES)) {
@@ -61,19 +62,19 @@ if (!empty($_POST['titre'])) {
 
 
     $form = $GLOBALS['bdd']->prepare($req);
-    $form->bindValue(":video_titre", $_POST['titre']);
+    $form->bindValue(":video_titre", htmlspecialchars($_POST['titre']));
     $form->bindValue(":video_genre", $genre);
-    $form->bindValue(":video_synopsis", $_POST['synopsis']);
+    $form->bindValue(":video_synopsis", htmlspecialchars($_POST['synopsis']));
     $form->bindValue(":video_dateSortie", $_POST['dateSortie']);
-    $form->bindValue(":video_duree", $_POST['duree']);
-    $form->bindValue(":video_boxOffice", $_POST['boxOffice']);
-    $form->bindValue(":video_realisateur", $_POST['realisateur']);
-    $form->bindValue(":video_acteurPrincipal", $_POST['acteurPrincipal']);
+    $form->bindValue(":video_duree", htmlspecialchars($_POST['duree']));
+    $form->bindValue(":video_boxOffice", htmlspecialchars($_POST['boxOffice']));
+    $form->bindValue(":video_realisateur", htmlspecialchars($_POST['realisateur']));
+    $form->bindValue(":video_acteurPrincipal", htmlspecialchars($_POST['acteurPrincipal']));
     $form->bindValue(":video_note", $_POST['note']);
-    $form->bindValue(":video_origine", $_POST['origine']);
-    $form->bindValue(":video_distributeur", $_POST['distributeur']);
-    $form->bindValue(":video_casting", $casting);
-    $form->bindValue(":video_media", $_POST['media']);
+    $form->bindValue(":video_origine", htmlspecialchars($_POST['origine']));
+    $form->bindValue(":video_distributeur", htmlspecialchars($_POST['distributeur']));
+    $form->bindValue(":video_casting", htmlspecialchars($_POST['casting']));
+    $form->bindValue(":video_media", htmlspecialchars($_POST['media']));
     $form->bindValue(":video_image", $fileDestination);
     $form->bindValue(":video_trailer", $_POST['trailer']);
     $form->bindValue(":video_couleur", $_POST['couleur']);
