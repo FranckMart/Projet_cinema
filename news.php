@@ -1,10 +1,10 @@
-<?php require_once("include/bddConfig/bdd.php"); 
+<?php require_once("include/bddConfig/bdd.php");
 if (isset($_POST['deco'])) {
-    
+
   session_destroy();
   header("Location: index.php?deco=ok");
   exit;
-}?>
+} ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,6 +17,7 @@ if (isset($_POST['deco'])) {
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/modal_user.css">
   <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/footer.css">
   <title>News</title>
 </head>
 
@@ -116,9 +117,9 @@ if (isset($_POST['deco'])) {
       <?php include("include/showContent/news_content.php"); ?>
     </div>
   </section>
-
+  <?php include("include/footer.php"); ?>
   <?php include("include/script_js.php"); ?>
-
+  <script src="JS/modalFormNews.js"></script>
 </body>
 
 </html>

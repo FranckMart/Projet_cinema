@@ -16,6 +16,7 @@ if (isset($_POST['deco'])) {
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/modal_user.css">
     <link rel="stylesheet" href="css/inscription.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>Inscription</title>
 </head>
 
@@ -36,6 +37,7 @@ if (isset($_POST['deco'])) {
     <section>
         <?php include("include/inscription/inscription_content.php") ?>
     </section>
+    <?php include("include/footer.php"); ?>
     <?php include("include/script_js.php"); ?>
 </body>
 

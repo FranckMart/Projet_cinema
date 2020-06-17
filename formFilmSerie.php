@@ -1,10 +1,10 @@
-<?php require_once("include/bddConfig/bdd.php"); 
+<?php require_once("include/bddConfig/bdd.php");
 if (isset($_POST['deco'])) {
-    
+
     session_destroy();
     header("Location: index.php?deco=ok");
     exit;
-}?>
+} ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,6 +16,7 @@ if (isset($_POST['deco'])) {
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/modal_user.css">
     <link rel="stylesheet" href="css/formFilmSerie.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>Formumlaire Film/Série</title>
 </head>
 
@@ -24,14 +25,14 @@ if (isset($_POST['deco'])) {
     <?php include("include/modal/modal.php"); ?>
     <?php include("include/modal/modal_deco.php"); ?>
     <?php include("include/modal/modal_comeUp.php"); ?>
-   
-   
 
-        <?php include("include/header_nav.php"); ?>
 
-    
+
+    <?php include("include/header_nav.php"); ?>
+
+
     <!-- j'ouvre mon formulaire -->
-    <form action="include/formulaire/traitement_form.php" method="POST" class="ffs flex center" enctype="multipart/form-data">
+    <form action="include/formulaire/traitement_form.php" method="POST" id="formElt" class="ffs flex center" enctype="multipart/form-data" onsubmit="return validateForm()">
         <!-- premier partie du formulaire -->
         <?php include("include/formulaire/ffs_1.php"); ?>
         <!-- deuxième partie du formulaire -->
@@ -41,6 +42,7 @@ if (isset($_POST['deco'])) {
         <input class="btn-form-film-serie" type="submit" name="submit" value="Envoyez">
     </form>
 
+    <?php include("include/footer.php"); ?>
     <?php include("include/script_js.php"); ?>
     <script src="js/modalFormFS.js"></script>
 </body>

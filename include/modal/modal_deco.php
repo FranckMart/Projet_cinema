@@ -24,7 +24,7 @@
                         <input type="submit" class="btn btn-primary btn-modal" name="deco" value="Se déconnecter"></input>
                     </div>
                 </form>
-                <button type="button" class="btn btn-secondary btn-close-modal" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-secondary btn-close-modal btn_fermer" data-dismiss="modal">Fermer</button>
             </div>
         </div>
     </div>

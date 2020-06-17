@@ -7,17 +7,22 @@
 
         <div class="wrapP">
             <div class="form-group">
-                <label for="realisateur" class="margin1">Réalisateur : </label>
+                <label for="realisateur" class="margin1">Réalisateur : <span>*</span></label>
                 <input type="text" class="form-control" id="realisateur_nom" name="realisateur" placeholder="Nom :Akira Kurosawa">
             </div>
 
             <div class="form-group">
-                <label for="acteurPrincipal" class="margin1">Acteurs Principaux : </label>
+                <label for="acteurPrincipal" class="margin1">Acteurs Principaux : <span>*</span></label>
                 <input type="text" class="form-control" id="acteurPrincipal" name="acteurPrincipal" placeholder="Nom : Will Smith">
             </div>
         </div>
- 
+
         <div class="wrapC">
+            <div class="form-group">
+                <label for="casting" class="margin1">Acteur secondaires: </label>
+                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
+            </div>
+<!--
             <div class="form-group">
                 <label for="casting" class="margin1">casting : </label>
                 <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
@@ -27,37 +32,33 @@
                 <label for="casting" class="margin1">casting : </label>
                 <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
             </div>
-          
-            <div class="form-group">
-                <label for="casting" class="margin1">casting : </label>
-                <input type="text" class="form-control margin3" id="casting" name="casting[]" placeholder="Nom : Brad Pitt">
-            </div>
-        </div> 
+-->
+        </div>
 
         <div class="wrapI1">
             <div class="form-group">
 
-                <label for="duree" class="margin1">Durée : </label>
-                <input type="datetime-local" class="form-control" id="duree" name="duree" placeholder="ex : 1h 30min">
+                <label for="duree" class="margin1">Durée :  <span>*</span></label>
+                <input type="text" class="form-control" id="duree" name="duree" placeholder="ex : 1h 30min">
             </div>
 
             <div class="form-group">
-                <label for="origine" class="margin1">Origine : </label>
+                <label for="origine" class="margin1">Origine :  <span>*</span></label>
                 <input type="text" class="form-control" id="origine" name="origine" placeholder="ex : France">
 
             </div>
 
             <div class="form-group">
-                <label for="note" class="margin1">Note : </label>
+                <label for="note" class="margin1">Note :  <span>*</span></label>
                 <input type="number" class="form-control" id="note" name="note" min="0" max="5" placeholder="ex : 4">
             </div>
 
 
             <div class="form-group">
-                <label for="dateSortie" class="margin1">date de sortie : </label>
-                <input type="date" class="form-control" id="dateSortie" name="dateSortie" placeholder="ex : 03/06/1977" >
+                <label for="dateSortie" class="margin1">Date de sortie :  <span>*</span></label>
+                <input type="date" class="form-control" id="dateSortie" name="dateSortie" placeholder="ex : 03/06/1977">
             </div>
-        </div> 
+        </div>
 
         <div class="wrapI2">
 
@@ -77,5 +78,5 @@
         <div class="submit">
             <button class="js-modal-close">Fermer</button>
         </div>
-    </div>    
+    </div>
 </div>

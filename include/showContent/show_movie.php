@@ -35,7 +35,7 @@ try {
         // dans la variable $Genre je vais stocker un tableau d'objet correspondant à ma requete
         $Film = $requeteFilm->fetchAll(PDO::FETCH_OBJ);
     }
-    if (isset($_GET['choice']) && $_GET['choice'] == "Série") {
+    if (isset($_GET['choice']) && ($_GET['choice'] == "Série")) {
         // je récupère ici toutes les vidéo
         // la requete
         $sqlAllSerie = "SELECT * FROM video WHERE video_media = 'Série'";
@@ -72,7 +72,7 @@ try {
 <div class="col-12">
 
     <?php
-    if (isset($_GET['choice']) && $_GET['choice'] == "Film") {
+    if (isset($_GET['choice']) && ($_GET['choice'] == "Film" || $_GET['choice'] == "film")) {
         // Je vais générer les boutons mais de combien en ai-je besoin ?
         // autant que de page or le nb de page = au nombre toal de nws divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
         $nbPageV = ceil(sizeof($allFilm) / $nbCardPerPageV);
@@ -106,7 +106,7 @@ try {
     ?>
     <div id="movies_content">
         <?php
-        if (isset($_GET['choice']) && $_GET['choice'] == "Film") {
+        if (isset($_GET['choice']) && ($_GET['choice'] == "Film")) {
             foreach ($Film as $fullFilm) {
         ?>
 
@@ -120,7 +120,7 @@ try {
                         <h3><?php echo $fullFilm->video_titre; ?></h3>
                         <p><?php echo $fullFilm->video_synopsis; ?></p>
                         <span>Réalisateur: <?php echo $fullFilm->video_realisateur; ?></span>
-                        <span>Acteurs Principaux : <?php echo $fullFilm->video_acteurPrincipal; ?></span>
+                        <span>Acteur Principal : <?php echo $fullFilm->video_acteurPrincipal; ?></span>
                         <a href="media_inside.php?video_id=<?php echo $fullFilm->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ try {
             <?php
             }
         }
-        if (isset($_GET['choice']) && $_GET['choice'] == "Série") {
+        if (isset($_GET['choice']) && ($_GET['choice'] == "Série")) {
             foreach ($Serie as $fullSerie) {
             ?>
 
@@ -142,7 +142,7 @@ try {
                         <h3><?php echo $fullSerie->video_titre; ?></h3>
                         <p><?php echo $fullSerie->video_synopsis; ?></p>
                         <span>Réalisateur: <?php echo $fullSerie->video_realisateur; ?></span>
-                        <span>Acteurs Principaux : <?php echo $fullSerie->video_acteurPrincipal; ?></span>
+                        <span>Acteur Principal : <?php echo $fullSerie->video_acteurPrincipal; ?></span>
                         <a href="media_inside.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
                     </div>
                 </div>

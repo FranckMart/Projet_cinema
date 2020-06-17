@@ -1,0 +1,40 @@
+footer{
+   
+    padding: 1%;
+    width: 35%;
+    margin: auto;
+}
+
+#content_footer{
+    width: 100%;
+    display: flex;
+}
+
+.contentLeft {
+    width: 40%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contentLeft h2{
+    font-size: 1.5rem;
+}
+
+.contentRight{
+    width: 60%;
+    margin-left: 10%;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contentRight img{
+    width: 40px;
+}
+
+@media screen and (max-width: 640px) {
+footer{
+    width: 80%;
+}
+}

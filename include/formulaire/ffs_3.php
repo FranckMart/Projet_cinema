@@ -6,18 +6,18 @@
         <!-- synopsis -->
         <div class="wrapper-mid-ffs3">
             <div class="form-group">
-                <label for="synopsis" class="margin1">Synopsis : </label>
+                <label for="synopsis" class="margin1">Synopsis :  <span>*</span></label>
                 <input type="text" class="form-control margin3" id="synopsis" name="synopsis" placeholder="un résumé du film">
             </div>
         </div>
         <div class="wrapper-mid-ffs3">
-            <label for="movie_image">Insérer une image :</label>
+            <label for="movie_image">Insérer une image : <span>*</span></label>
             <input type="file" id="movie_image" name="movie_image">
         </div>
 
         
          <div class="form-group">
-                <label for="tailer" class="margin1">Vous pouvez rajouter ici une bande annonce en rapport avec le film : </label>
+                <label for="tailer" class="margin1">Vous pouvez rajouter ici une bande annonce en rapport avec le film :  <span>*</span></label>
                 <input type="text" class="form-control margin3" id="trailer" name="trailer" placeholder="rajouter la bande annonce">
             </div> 
 

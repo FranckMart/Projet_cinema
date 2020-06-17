@@ -207,7 +207,9 @@
     font-size: 1.2rem;
 
 }
-
+#news_textPresentation,#news_textContenu,#news_textConclusion{
+    height: 100px;
+}
 /* Arrow */
 .arrow_content {
     width: 100%;

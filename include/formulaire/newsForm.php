@@ -10,55 +10,44 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="formModal" method="POST" action="include/addNews.php" enctype="multipart/form-data" >
+        <form class="formModal" method="POST" id="formElt" action="include/addNews.php" enctype="multipart/form-data"  onsubmit="return validateFormNews()">
           <div class="form-group form-group-modal">
             <label for="titre_presentation">Titre Présentation</label>
-            <input type="text" class="form-control" id="titre_presentation" name="news_titrePresentation" required="">
+            <input type="text" class="form-control" id="titre_presentation" name="news_titrePresentation">
           </div>
           <div class="form-group form-group-modal">
             <label for="news_micro">Micro description</label>
-            <input type="text" class="form-control" id="news_micro" name="news_micro" required="">
+            <input type="text" class="form-control" id="news_micro" name="news_micro">
           </div>
           <div class="form-group form-group-modal">
             <label for="news_textPresentation">Texte Présentation</label>
-            <textarea type="text" class="form-control" id="news_textPresentation" name="news_textPresentation" required="" rows="5" cols="33">
-          texte Présentation
-          </textarea>
+            <input type="text" class="form-control" id="news_textPresentation" name="news_textPresentation">
           </div>
           <div class="form-group form-group-modal">
             <label for="news_titreContenu">Titre contenu</label>
-            <input type="text" class="form-control" id="news_titreContenu" name="news_titreContenu" required="">
+            <input type="text" class="form-control" id="news_titreContenu" name="news_titreContenu">
           </div>
           <div class="form-group form-group-modal">
             <label for="news_textContenu">Texte Contenu</label>
-            <textarea type="text" class="form-control" id="news_textContenu" name="news_textContenu" required="" rows="5" cols="33">
-          texte Contenu
-          </textarea>
+            <input type="text" class="form-control" id="news_textContenu" name="news_textContenu">
           </div>
           <div class="form-group form-group-modal">
             <label for="news_titreConclusion">Titre conclusion</label>
-            <input type="text" class="form-control" id="news_titreConclusion" name="news_titreConclusion" required="">
+            <input type="text" class="form-control" id="news_titreConclusion" name="news_titreConclusion">
           </div>
           <div class="form-group form-group-modal">
             <label for="news_textConclusion">Texte conclusion</label>
-            <textarea type="text" class="form-control" id="news_textConclusion" name="news_textConclusion" required="" rows="5" cols="33">
-          texte Contenu
-          </textarea>
+            <input type="text" class="form-control" id="news_textConclusion" name="news_textConclusion" rows="5" cols="33">
           </div>
           <div class="form-group form-group-modal">
             <label for="news_editeur">Editeur</label>
-            <input type="text" class="form-control" id="news_editeur" name="news_editeur" required="">
+            <input type="text" class="form-control" id="news_editeur" name="news_editeur">
           </div>
           <div class="form-group form-group-modal">
           <label for="news_image">Insérer une image :</label>
           <input type="file" id="news_image" name="news_image">
           </div>
-          <!-- La vidéo n'est pas encore pris en compte (Cela sera une amélioration)
-          <div class="form-group form-group-modal">
-          <label for="news_video">Insérer une video :</label>
-          <input type="file" id="news_video" name="news_video">
-          </div>
--->
+          
           <div class="form-group form-group-modal">
             <br>
             <button type="submit" class="btn btn-primary btn-modal" name="btn_value">Intégrer</button>

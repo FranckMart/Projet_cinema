@@ -7,15 +7,15 @@
             <div class="container">
                 <div class="form-group">
                     <label for="user_mail">Email</label>
-                    <input type="email" class="form-control" id="user_mail" aria-describedby="emailHelp" name="user_mail">
+                    <input type="email" class="form-control" id="user_mail" aria-describedby="emailHelp" name="user_mail" required>
                 </div>
                 <div class="form-group">
                     <label for="user_pseudo">Pseudo</label>
-                    <input type="text" class="form-control" id="user_pseudo" aria-describedby="emailHelp" name="user_pseudo">
+                    <input type="text" class="form-control" id="user_pseudo" aria-describedby="emailHelp" name="user_pseudo" required>
                 </div>
                 <div class="form-group">
                     <label for="user_password">Mot de passe</label>
-                    <input type="password" class="form-control" id="user_password" name="user_password">
+                    <input type="password" class="form-control" id="user_password" name="user_password" required>
                 </div>
                 <div class="form-group">
                     <label for="user_born">Date de naissance</label>

@@ -1,22 +1,27 @@
 <a href="#modal1" class="js-modal a-modal flex center">Ouvrir la boite modal</a>
 <aside id="modal1" class="modal-content center" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none">
     <div class="modal-wrapper js-modal-stop flex">
-    <h3 class="h3 flex center
+        <h3 class="h3 flex center
     ">Première partie du formulaire</h3>
 
         <div class="wrapper-elements-ffs">
             <div class="form-group">
-                <label for="titre" class="margin1">titre de la video : </label>
+                <label for="titre" class="margin1">Titre de la video : <span>*</span></label>
                 <input type="text" class="form-control" id="titre" name="titre" placeholder="ex : ghost dog">
             </div>
             <div class="form-group">
-                <label for="media" class="margin1">type de video : </label>
-                <input type="text" class="form-control" id="media" name="media" placeholder="ex : film">
-            </div>                 
+                <label for="media" class="margin1">Type de video : <span>*</span></label>
+                <!--<input type="text" class="form-control" id="media" name="media" placeholder="ex : film">-->
+                <select name="media" id="media">
+                    <option value=""> Veuillez séléctionner un media </option>
+                    <option value="Film">Film</option>
+                    <option value="Serie">Série</option>
+                </select>
+            </div>
         </div>
 
         <div class="wrapper-checkbox flex">
-            <p class="titre-checkbox">Genre :</p>
+            <p class="titre-checkbox">Genre :<span>*</span></p>
             <div class="colonne">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="comedie" name="genre[]" value="Comedie">
@@ -92,22 +97,22 @@
 
             </div>
 
-            </div>
+        </div>
 
-            <div class="wrapper-elements-ffs-2">
+        <div class="wrapper-elements-ffs-2">
             <p class="titre-checkbox">Couleur :</p>
-                <div class="custom-control custom-radio custom-control-inline margin2">
-                    <input type="radio" id="oui" name="couleur" value="oui" class="custom-control-input">
-                    <label class="custom-control-label" for="oui">oui</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline margin2">
-                    <input type="radio" id="non" name="couleur" value="non" class="custom-control-input">
-                    <label class="custom-control-label" for="non">non</label>
-                </div>
-            </div>  
-
-            <div class="submit">
-                <button class="js-modal-close">Fermer</button>
+            <div class="custom-control custom-radio custom-control-inline margin2">
+                <input type="radio" id="oui" name="couleur" value="oui" class="custom-control-input">
+                <label class="custom-control-label" for="oui">oui</label>
             </div>
-    </div>    
+            <div class="custom-control custom-radio custom-control-inline margin2">
+                <input type="radio" id="non" name="couleur" value="non" class="custom-control-input">
+                <label class="custom-control-label" for="non">non</label>
+            </div>
+        </div>
+
+        <div class="submit">
+            <button class="js-modal-close">Fermer</button>
+        </div>
+    </div>
 </aside>
