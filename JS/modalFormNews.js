@@ -1,25 +1,25 @@
-var titrePresentationElt = document.getElementById("titre_presentation");
-var microElt = document.getElementById("news_micro");
-var textPresentationElt = document.getElementById("news_textPresentation");
-var titreContenuElt = document.getElementById("news_titreContenu");
-var textContenuElt = document.getElementById("news_textContenu")
-var titreConclusionElt = document.getElementById("news_titreConclusion");
-var textConclusionElt = document.getElementById("news_textConclusion");
-var editeurElt = document.getElementById("news_editeur");
-var imageElt = document.getElementById("news_image");
+const titrePresentationElt = document.getElementById("titre_presentation");
+const microElt = document.getElementById("news_micro");
+const textPresentationElt = document.getElementById("news_textPresentation");
+const titreContenuElt = document.getElementById("news_titreContenu");
+const textContenuElt = document.getElementById("news_textContenu")
+const titreConclusionElt = document.getElementById("news_titreConclusion");
+const textConclusionElt = document.getElementById("news_textConclusion");
+const editeurElt = document.getElementById("news_editeur");
+const imageElt = document.getElementById("news_image");
 
 
 function validateFormNews() {
 
-    var titrePresentation = document.forms["formElt"]["titre_presentation"].value;
-    var micro = document.forms["formElt"]["news_micro"].value;
-    var textPresentation = document.forms["formElt"]["news_textPresentation"].value;
-    var titreContenu = document.forms["formElt"]["news_titreContenu"].value;
-    var textContenu = document.forms["formElt"]["news_textContenu"].value
-    var titreConclusion = document.forms["formElt"]["news_titreConclusion"].value;
-    var textConclusion = document.forms["formElt"]["news_textConclusion"].value;
-    var editeur = document.forms["formElt"]["news_editeur"].value;
-    var image = document.forms["formElt"]["news_image"].value;
+    const titrePresentation = document.forms["formElt"]["titre_presentation"].value;
+    const micro = document.forms["formElt"]["news_micro"].value;
+    const textPresentation = document.forms["formElt"]["news_textPresentation"].value;
+    const titreContenu = document.forms["formElt"]["news_titreContenu"].value;
+    const textContenu = document.forms["formElt"]["news_textContenu"].value
+    const  titreConclusion = document.forms["formElt"]["news_titreConclusion"].value;
+    const  textConclusion = document.forms["formElt"]["news_textConclusion"].value;
+    const  editeur = document.forms["formElt"]["news_editeur"].value;
+    const image = document.forms["formElt"]["news_image"].value;
 
 
 

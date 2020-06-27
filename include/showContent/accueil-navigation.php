@@ -1,3 +1,4 @@
+<!-- bloc intro Element parent -->
 <div id="intro-content">
     
     <h2>Pourquoi MovieDvice ?</h2>
@@ -16,12 +17,16 @@
 
     </p>
 </div>
+<!-- bloc news Element parent -->
 <div id="news_content">
+    <!-- bloc news qui contient différents blocs enfants -->
     <div class="news-content-body">
+        <!-- bloc news Gauche -->
         <div class="news_contentLeft">
             <!--Photo by Simone Daino on Unsplash-->
             <img src="IMG/Info_pic.jpg" alt="Photo news">
         </div>
+           <!-- bloc news Droite -->
         <div class="news_contentRight">
             <h2>Consulter toutes les news du 7éme art !</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro,

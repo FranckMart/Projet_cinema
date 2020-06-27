@@ -1,8 +1,6 @@
 // Appel de la fonction lorsque la page est complétement chargé 
 $( document ).ready(function() {
     choice();
-    // Affichage de tout les films/séries
-    showContent();
 });
 
 // Fonction de choix entre Film ou Série
@@ -25,7 +23,8 @@ function choice() {
         $("#title-intro-critique p").text("Retrouver ici toutes les critiques de série");
 
     })
-
+  // Affichage de tout les films/séries
+  showContent();
 }
 
 // Fonction qui me permet d'afficher le contenus des Film/Série
@@ -37,13 +36,3 @@ function showContent() {
 
 }
 
-/*
-function getGenre(){
-    $(".genre").click(function(){
-        alert($(this).text());
-    })
-}
-*/
-
-
-//getGenre();

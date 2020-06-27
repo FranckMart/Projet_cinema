@@ -1,3 +1,6 @@
+/* Modification de la div titleTop 
+(ajout d'une largeur, d'une margin auto qui me permet de center mon bloc au centre de la page,
+d'un padding qui me permet de modifier l'espacement interne d'un bloc) */
 #titleTop {
     width: 100%;
     margin: auto;
@@ -5,6 +8,9 @@
     background-color: #8d8d8d;
 }
 
+/* Modification de la div titleMiddle 
+(ajout d'une height qui me permet de définir la hauteur, d'une margin-top et 
+margin-bottom qui me permet de modifier l'espacement extérieur du bloc) */
 #titleMiddle {
     width: 100%;
     margin: auto;
@@ -15,6 +21,9 @@
     background-color: #8d8d8d;
 }
 
+/* Modification des titres h2 des div concernées
+(Ajout d'un text-align:center qui me permet de centrer le text dans un bloc, color qui me permet de modifier
+la couleur d'un texte et un font-size qui me permet de modifier la taille de la police) */
 #titleTop h2,
 #titleMiddle h2 {
     text-align: center;
@@ -34,11 +43,14 @@
     width: 90%;
 }
 
+/* Modification de la class carousel-item
+Ajout d'une transition qui me permet d'avoir un effet de mouvement et une durée d'animation de 0.6s */
 .carousel-item {
     transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
     transition-property: transform, transform;
 }
 
+/* Modifiaction du positionement aboslute des 2 class concernées */
 .carousel-control-prev {
     left: 10%;
 }
@@ -60,12 +72,16 @@
 
 }
 
+/* Ajout d'un display flex qui me permet de modifier la mise en forme du positionnement des éléments et
+flex-wrap permet de faire descendre un bloc lorsqu'il n'a plus l'espace nécessaire */
 .news_content {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
+/* Min width me permet de donner une largeur minimal aux blocs et Max width me permet de donner une largeur 
+maximal aux bloc même principe avec height*/
 .news {
     margin: auto;
     padding: 2%;
@@ -76,6 +92,8 @@
 
 }
 
+/* position relative me permet de définir la façon dont un élément est positionné dans un bloc 
+ transition et transform me permet de faire une transition avec un effet de sur-élevation */
 .card {
     position: relative;
     border: none;
@@ -87,6 +105,8 @@
     max-height: 670px;
 }
 
+/* hover est un propriété CSS qui me permet de modifier le style au moment du passage de la souris sur un 
+élément, box-shadow me permet d'ajouter une ombre à un bloc  */ 
 .card:hover {
     border: 2px solid white;
     transition: all 400ms ease-in;
@@ -123,13 +143,16 @@
 
 .footer_card_content {
     width: 100%;
-    display: grid;
     display: flex;
     align-content: flex-start;
     align-self: flex-end;
     justify-content: flex-end;
 }
 
+/* position absolute me permet de définir la façon dont un élément est positionné dans un bloc 
+ qui contient une position relative de préférence, align-items définement l'alignement sur un axe du bloc
+ ici il sera aligné à la fin du bloc parent, justify-self définit la façon dont une boîte 
+ est alignée sur l'axe en ligne du conteneur. */
 .autor_content {
     position: absolute;
     bottom: 7.5%;
@@ -142,6 +165,7 @@
     margin-right: 0;
 }
 
+/* modifie la taille de l'image contenu dans le bloc .autor_content */ 
 .autor_content img {
     width: 100%;
     max-width: 60px;
@@ -157,6 +181,8 @@
     text-align: center
 }
 
+/* display: block me permet de modifier le comportement inline du bouton pour pouvoir 
+le centrer avec une margin auto */
 .news .btn-primary {
     position: absolute;
     bottom: 2.5%;
@@ -224,6 +250,9 @@
     text-align: center;
 }
 
+/* stroke me permet d'ajouter un background-color au block , fill me permet de définir le 
+remplissage du bloc, animation me permet d'ajouter une animation créer grâçe à un keyframe
+*/
 .arrows path {
     stroke: #026173;
     fill: transparent;
@@ -232,6 +261,8 @@
     -webkit-animation: bounce arrow 2s infinite;
 }
 
+/* Le pourcentage défini le rendu que la flêche doit avoir à une certaine durée de l'animation
+*/
 @keyframes arrow {
     0% {
         opacity: 0
@@ -323,6 +354,7 @@
     /* Safari 和 Chrome */
 }
 
+/* Responsive MacBook écran rétina */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 
 
@@ -381,6 +413,7 @@
     }
 }
 
+/* Responsive Tablette */
 @media screen and (max-width:1024px) {
 
     #titleMiddle {
@@ -482,7 +515,7 @@
 
 }
 
-
+/* Responsive smartphone */
 @media screen and (max-width: 640px) {
 
     #news_fullContent {

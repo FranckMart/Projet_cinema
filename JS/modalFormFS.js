@@ -37,34 +37,41 @@ document.querySelectorAll(".js-modal").forEach(a => {
     a.addEventListener('click', openModal);
 })
 
-var titreElt = document.getElementById("titre");
-var mediaElt = document.getElementById("media");
-var realisateurElt = document.getElementById("realisateur_nom");
-var acteurPrincipalElt = document.getElementById("acteurPrincipal");
-var originElt = document.getElementById("origine")
-var castingElt = document.getElementById("casting");
-var dureeElt = document.getElementById("duree");
-var noteElt = document.getElementById("note");
-var dateSortieElt = document.getElementById("dateSortie");
-var synopsisElt = document.getElementById("synopsis");
-var movie_imageElt = document.getElementById("movie_image");
-var trailerElt = document.getElementById("trailer");
 
+// Récupération des éléments requis au bon fonctionnement de la BDD 
+const  titreElt = document.getElementById("titre");
+const  mediaElt = document.getElementById("media");
+const  realisateurElt = document.getElementById("realisateur_nom");
+const  acteurPrincipalElt = document.getElementById("acteurPrincipal");
+const  originElt = document.getElementById("origine")
+const  castingElt = document.getElementById("casting");
+const  dureeElt = document.getElementById("duree");
+const  noteElt = document.getElementById("note");
+const  dateSortieElt = document.getElementById("dateSortie");
+const  synopsisElt = document.getElementById("synopsis");
+const  movie_imageElt = document.getElementById("movie_image");
+const  trailerElt = document.getElementById("trailer");
+
+// Fonction qui me permet de vérifier les valeurs d'entrées 
 function validateForm() {
-    var titre = document.forms["formElt"]["titre"].value;
-    var media = document.forms["formElt"]["media"].value;;
-    var realisateur = document.forms["formElt"]["realisateur_nom"].value;
-    var acteurPrincipal = document.forms["formElt"]["acteurPrincipal"].value;
-    var origin = document.forms["formElt"]["origine"].value
-    var casting = document.forms["formElt"]["casting"].value;
-    var duree = document.forms["formElt"]["duree"].value;
-    var note = document.forms["formElt"]["note"].value;
-    var dateSortie = document.forms["formElt"]["dateSortie"].value;
-    var synopsis = document.forms["formElt"]["synopsis"].value;
-    var movie_image = document.forms["formElt"]["movie_image"].value;
-    var trailer = document.forms["formElt"]["trailer"].value;
+    // Récupération des valeurs des champs input voulus
+    const  titre = document.forms["formElt"]["titre"].value;
+    const  media = document.forms["formElt"]["media"].value;;
+    const  realisateur = document.forms["formElt"]["realisateur_nom"].value;
+    const  acteurPrincipal = document.forms["formElt"]["acteurPrincipal"].value;
+    const  origin = document.forms["formElt"]["origine"].value
+    const  casting = document.forms["formElt"]["casting"].value;
+    const  duree = document.forms["formElt"]["duree"].value;
+    const  note = document.forms["formElt"]["note"].value;
+    const  dateSortie = document.forms["formElt"]["dateSortie"].value;
+    const  synopsis = document.forms["formElt"]["synopsis"].value;
+    const  movie_image = document.forms["formElt"]["movie_image"].value;
+    const  trailer = document.forms["formElt"]["trailer"].value;
 
 
+    /* Condition de vérification de la valeur du champ input ou du nombre de caractères que contient le champ 
+    Si le champ n'est pas valide alors on alerte l'utilisateur et on n'envoie pas le formulaire
+    et change également la bordure de l'input */
     if (titre == "" || titre.length > 100) {
         titreElt.style.borderColor = "red";
         alert("Veuillez ajouter un titre inférieur à 100 caractères");
@@ -72,7 +79,7 @@ function validateForm() {
     }
     if (media == "" || media.length > 10 ) {
         mediaElt.style.borderColor = "red";
-        alert("Veuillez ajouter un type de média inférieur à 10 caractères");
+        alert("Veuillez ajouter un type de média film ou série");
         return false;
     }
     

@@ -1,10 +1,10 @@
-<?php require_once("include/bddConfig/bdd.php"); 
+<?php require_once("include/bddConfig/bdd.php");
 if (isset($_POST['deco'])) {
-    
+
   session_destroy();
   header("Location: index.php?deco=ok");
   exit;
-}?>
+} ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,15 +22,19 @@ if (isset($_POST['deco'])) {
 </head>
 
 <body>
+
   <?php include("include/modal/modal.php"); ?>
-  <?php include('class/video.php') ?>
+  <?php include("include/modal/modal_deco.php"); ?>
+
+  <?php include('class/video.php'); ?>
 
 
 
-    <?php include("include/header_nav.php"); ?>
+  <?php include("include/header_nav.php"); ?>
 
 
-  <?php 
+  <?php
+  
   $informations = Video::getVideo($_GET['video_id']);
   foreach ($informations as $information) { ?>
 
@@ -38,11 +42,11 @@ if (isset($_POST['deco'])) {
       <section class="topCritique flex">
 
         <article class="wrapCrittop flex">
-          <h2 class="titreNone"><?php echo $information->video_titre; ?></h2> <!-- responsive -->
+          <h2 class="titreNone"><?php echo $information->video_titre; ?></h2>
           <p class="infoTop flex">Type :<?php echo $information->video_media; ?></p>
           <p class="infoTop flex">Genre : <?php echo $information->video_genre; ?></p>
           <p class="infoTop flex">Durée : <?php echo $information->video_duree; ?></p>
-          <p class="infoTop flex">Date de sortie : <?php echo $information->video_dateSortie;?></p>
+          <p class="infoTop flex">Date de sortie : <?php echo $information->video_dateSortie; ?></p>
           <p class="infoTop flex">Pays : <?php echo $information->video_origine; ?></p>
           <p class="infoTop flex">couleur : <?php echo $information->video_couleur; ?></p>
         </article>
@@ -70,15 +74,12 @@ if (isset($_POST['deco'])) {
         </article>
       </section>
 
-     
+
     </main>
   <?php } ?>
 
   <?php include("include/footer.php"); ?>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <script src="/path/to/cdn/jquery.js"></script> -->
-  <script src="JS/jquery-isystkSlider.js"></script>
-  <script src="JS/carousel.js"></script>
+  <?php include("include/script_js.php"); ?>
 
 </body>
 

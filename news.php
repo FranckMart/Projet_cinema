@@ -98,14 +98,16 @@ if (isset($_POST['deco'])) {
 
     if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
     ?>
-      <!-- Button trigger modal -->
+      <!-- Affichage du bouton d'ajout de news (formulaire )-->
       <button type="button" class="btn btn-primary btn_addNews" data-toggle="modal" data-target="#news_modal">
         Ajouter une News
       </button>
     <?php
       include("include/formulaire/newsForm.php");
+      
     } else {
     ?>
+     <!-- Suppression  du bouton d'ajout de news (formulaire )-->
       <button type="button" class="btn btn-primary btn_addNews" data-toggle="modal" data-target="#news_modal" style="display: none">
         Ajouter une News
       </button>

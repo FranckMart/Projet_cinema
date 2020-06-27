@@ -3,9 +3,8 @@
 if(!empty($_POST['user_mail']) && !empty($_POST['user_password']) && !empty($_POST["user_pseudo"])){
     // je teste si le mail est bien formé (pas s'il existe)
     if(filter_var($_POST['user_mail'], FILTER_VALIDATE_EMAIL)){
-        // echo "ok";
         // j'intègre ma connexion à la bdd
-        require_once("include/bddConfig/bdd.php");
+        require_once("../bddConfig/bdd.php");
 
 try {
 
@@ -24,11 +23,11 @@ try {
     
     // Si la requete et exécuter alors on affiche un message d'insertion dans l'url 
     if ($reqPrepare->execute()) {
-        header("Location: ../index.php?insertion=réussi");
+        header("Location: ../../index.php?insertion=réussi");
         exit;
         // Sinon on affiche un message d'erreur
     } else {
-        header("Location: inscription.php?insertion=érreur");
+        header("Location: ../../index.php?insertion=érreur");
         exit;
     }
 }

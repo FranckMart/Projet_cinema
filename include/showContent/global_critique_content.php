@@ -43,7 +43,7 @@ try {
     <div id="choice_content">
         <div id="movie_choice_content">
             <div class="movie_choice_textarea">
-                <a href="global_critique.php?choice=<?php echo "Film"; ?>#movies_content">
+                <a href="global_critique.php?choice=<?php echo "Film"; ?>">
                     <h2>Film</h2>
                 </a>
                 <div class="arrow_content">
@@ -57,7 +57,7 @@ try {
         </div>
         <div id="serie_choice_content">
             <div class="serie_choice_textarea">
-                <a href="global_critique.php?choice=<?php echo "Série"; ?>#movies_content">
+                <a href="global_critique.php?choice=<?php echo "Série"; ?>">
                     <h2>Série</h2>
                 </a>
                 <div class="arrow_content">

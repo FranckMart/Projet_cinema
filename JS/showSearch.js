@@ -7,12 +7,13 @@ $(document).ready(function(){
    /*
 
                                     |         |             |
-                               Input_name  récupère    done permet 
-                                            valeur     de récupérer
-                                                      plusieurs valeurs 
+                               Recherche  récupère    done permet 
+                                    à   ->  valeur    de récupérer
+                                partir de           plusieurs valeurs 
    */
     $.get("include/suggest.php", {search: $(this).val()}).done(function(data){
-      // Je retourne les valeur (trouvé) *data*
+      // Je retourne les valeurs (trouvé) *data*
+      // Exemple <option value='Collateral'></option> 
       console.log(data)
       // à chaque sortie de la barre de recherche je vide les données
       $("datalist").empty();
@@ -21,4 +22,13 @@ $(document).ready(function(){
 
     });
   });
+
+  /*
+  $(".choice_video").each(function(){
+    $(this).click(function(){
+     alert($(this).attr("video_id"));
+    })
+  })
+  */
 });
+

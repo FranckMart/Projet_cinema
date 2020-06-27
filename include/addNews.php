@@ -1,8 +1,5 @@
 <?php
-require_once("../include/bddConfig/bdd.php");
-
-
-
+require_once("../include/bddConfig/bdd.php"); // Connexion à la bdd MovieDvice
 
 
 // Traitement d'ajout d'une image dans la table news 
@@ -11,29 +8,32 @@ if (!empty($_FILES)) {
     $file = $_FILES['news_image'];
 
     // Je récupère toutes les informations utiles au traitement de l'ajout d'une image dans la table
-    $fileName = $_FILES['news_image']['name'];
-    $fileTmpName = $_FILES['news_image']['tmp_name'];
-    $fileSize = $_FILES['news_image']['size'];
-    $fileError = $_FILES['news_image']['error'];
-    $fileType = $_FILES['news_image']['type'];
+
+    $fileName = $_FILES['news_image']['name']; // Le nom original du fichier, tel que sur la machine du client web. 
+    $fileTmpName = $_FILES['news_image']['tmp_name'];  // Le nom temporaire du fichier qui sera chargé sur la machine serveur. 
+    $fileSize = $_FILES['news_image']['size']; // La taille, en octets, du fichier téléchargé.
+    $fileError = $_FILES['news_image']['error']; // Le code d'erreur associé au téléchargement de fichier. 
+    $fileType = $_FILES['news_image']['type'];// Le type MIME du fichier, si le navigateur a fourni cette information. Par exemple, cela pourra être "image/gif"
 
     // Je vérifie le type de fichier 
-    $fileExt = explode('.', $fileName);
-    $fileActualExt = strtolower(end($fileExt));
+    $fileExt = explode('.', $fileName); // Ajout d'un point à la fin du nom de l'image intégré 
+    $fileActualExt = strtolower(end($fileExt)); //  modification du text de l'extention à la fin du nom du fichier (test.jpg) en miniscule 
 
     // j'ajoute un tableau comprenant les types de fichier valide à l'insertion
     $allowed = array('jpg', 'jpeg', 'png');
 
-    // Si le type de fichier correspond à une valeur du tableau alors on fais l'insertion
+    // Si le type de fichier correspond à une valeur du tableau $allowed alors on fais l'insertion
     if (in_array($fileActualExt, $allowed)) {
+        // Si le fichier ne comprends aucune erreur on test l'intégration
         if ($fileError === 0) {
-            // Si la taille de l'image à un taille inférieur à 10mo alors on traite l'insertion de l'image dans un dossier destiné à l'insertion des img 
+            // Si la taille de l'image à un taille inférieur à 1mo alors on traite l'insertion de l'image dans un dossier destiné à l'insertion des img 
             if ($fileSize > 100000) {
+                // Redirection avec message d'erreur 
                 header("Location: ../news.php?fichier trop gros");
                 exit;
                 // Si la taille de l'image à un taille inférieur à 1mo alors on traite l'insertion de l'image dans un dossier destiné à l'insertion des img
             } else if ($fileSize < 1000000) {
-                // On génrére un idifiant unique à une image
+                // On génrére un identifiant unique à une image
                 $fileNameNew = uniqid('', true) . "." . $fileActualExt;
                 // On ajoute l'image au dossier voulu 
                 $fileDestination = '../include/uploads/' . $fileNameNew;
@@ -41,8 +41,9 @@ if (!empty($_FILES)) {
                 move_uploaded_file($fileTmpName, $fileDestination);
             }
         }
+        // Si le type de fichier n'est pas valide alors on envoie une erreur dans l'url
     } else if ($fileType !== $allowed) {
-
+        // Redirection avec message d'erreur 
         header("Location: ../news.php?type de fichier incorrecte");
         exit;
     }

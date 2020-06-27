@@ -125,7 +125,7 @@ iframe {
 
 
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
 
   .main {
 
@@ -197,7 +197,7 @@ iframe {
   }
 }
 
-@media screen and (min-width: 680px) and (max-width: 1024px) {
+@media screen and (min-width: 681px) and (max-width: 1024px) {
 
   .main {
 
