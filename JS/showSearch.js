@@ -22,13 +22,5 @@ $(document).ready(function(){
 
     });
   });
-
-  /*
-  $(".choice_video").each(function(){
-    $(this).click(function(){
-     alert($(this).attr("video_id"));
-    })
-  })
-  */
 });
 

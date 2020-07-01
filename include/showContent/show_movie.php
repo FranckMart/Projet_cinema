@@ -74,22 +74,22 @@ try {
     <?php
     if (isset($_GET['choice']) && ($_GET['choice'] == "Film" || $_GET['choice'] == "film")) {
         // Je vais générer les boutons mais de combien en ai-je besoin ?
-        // autant que de page or le nb de page = au nombre toal de nws divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
+        // autant que de page or le nb de page = au nombre toal de news divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
         $nbPageV = ceil(sizeof($allFilm) / $nbCardPerPageV);
         // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
         // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
         for ($z = 1; $z <= $nbPageV; $z++) {
             # code...
             // Je génère donc un lien avec un numéro de page en variable dans l'url
-           
+
     ?>
-                <a href="global_critique.php?choice=<?php echo "Film&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
+            <a href="global_critique.php?choice=<?php echo "Film&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
         <?php
-            
+
         }
     }
     if (isset($_GET['choice']) && $_GET['choice'] == "Série") {
-         // Je vais générer les boutons mais de combien en ai-je besoin ?
+        // Je vais générer les boutons mais de combien en ai-je besoin ?
         // autant que de page or le nb de page = au nombre toal de nws divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
         $nbPageV = ceil(sizeof($allSerie) / $nbCardPerPageV);
         // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
@@ -97,12 +97,12 @@ try {
         for ($z = 1; $z <= $nbPageV; $z++) {
             # code...
             // Je génère donc un lien avec un numéro de page en variable dans l'url
-           
+
         ?>
-        <a href="global_critique.php?choice=<?php echo "Série&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
+            <a href="global_critique.php?choice=<?php echo "Série&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
     <?php
+        }
     }
-}
     ?>
     <div id="movies_content">
         <?php
@@ -123,6 +123,20 @@ try {
                         <span>Acteur Principal : <?php echo $fullFilm->video_acteurPrincipal; ?></span>
                         <a href="media_inside.php?video_id=<?php echo $fullFilm->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
                     </div>
+                    <?php
+                    if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
+                    ?>
+                        <div class="content_delete_video">
+                            <a href="include/deleteContent.php?video_id=<?php echo $fullFilm->video_id;; ?>" class="btn_suppression">Supprimer</a>
+                        </div>
+                    <?php
+                    } else {
+                    ?>
+                        <a href="include/deleteContent.php?news_id=<?php echo $fullFilm->video_id;; ?>" class="btn_suppresion" style="display: none;">Supprimer</a>
+                    <?php
+                    }
+
+                    ?>
                 </div>
 
             <?php
@@ -145,6 +159,20 @@ try {
                         <span>Acteur Principal : <?php echo $fullSerie->video_acteurPrincipal; ?></span>
                         <a href="media_inside.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
                     </div>
+                    <?php
+                    if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
+                    ?>
+                        <div class="content_delete_video">
+                            <a href="include/deleteContent.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn_suppression">Supprimer</a>
+                        </div>
+                    <?php
+                    } else {
+                    ?>
+                        <a href="include/deleteContent.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn_suppression" style="display: none;">Supprimer</a>
+                    <?php
+                    }
+
+                    ?>
                 </div>
 
         <?php

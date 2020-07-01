@@ -47,46 +47,62 @@ $News = $requeteNews->fetchAll(PDO::FETCH_OBJ);
     # code...
     // Je génère donc un lien avec un numéro de page en variable dans l'url
   ?>
-           <!-- information de la page cible ( accessible via l'url ) -->
+    <!-- information de la page cible ( accessible via l'url ) -->
     <a href="news.php?p=<?php echo $i; ?>#news_section" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $i; ?></a>
   <?php
   }
   ?>
 </div>
 <div id="news_fullContent">
-<?php
-// maintenant j'affiche les news que je veux avec les limit 
-// Boucle foreach qui me permet d'avoir une association à chaque entrée du tableau $newsOK correspond aux valeurs du tableaux 
-foreach ($News as $newsOK) {
-  // pour récupérer les news j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un tableau objet dans $News d'où les -> pour appeler les champs de la table
-?>
-  <div class="news">
-    <div class="card">
-                    <!-- Affichage du champs news_image de la table news -->
-      <img src="uploads/<?php echo $newsOK->news_image; ?>" class="card-img-top" alt="image news">
-      <div class="card-body">
-        <div class="card-text-top">
-          <h5 class="card-title"><?php echo $newsOK->news_titrePresentation; ?></h5>
-        </div>
-        <p class="card-text"><?php echo $newsOK->news_micro; ?></p>
-        <div class="footer_card_content">
-          <div class="autor_content">
-            <!--<a target="_blank" href="https://icones8.fr/icons/set/writer-male">Writer male icon</a> icône par <a target="_blank" href="https://icones8.fr">Icons8</a> -->
-            <img src="IMG/icone_createur_news.png" alt="écrit par créateur">
-            <span><?php echo $newsOK->news_editeur; ?></span>
+  <?php
+  // maintenant j'affiche les news que je veux avec les limit 
+  // Boucle foreach qui me permet d'avoir une association à chaque entrée du tableau $newsOK correspond aux valeurs du tableaux 
+  foreach ($News as $newsOK) {
+    // pour récupérer les news j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un tableau objet dans $News d'où les -> pour appeler les champs de la table
+  ?>
+    <div class="news">
+      <div class="card">
+        <!-- Affichage du champs news_image de la table news -->
+        <img src="uploads/<?php echo $newsOK->news_image; ?>" class="card-img-top" alt="image news">
+        <div class="card-body">
+          <div class="card-text-top">
+            <h5 class="card-title"><?php echo $newsOK->news_titrePresentation; ?></h5>
           </div>
-        </div>
+          <p class="card-text"><?php echo $newsOK->news_micro; ?></p>
+          <div class="footer_card_content">
+            <div class="autor_content">
+              <!--<a target="_blank" href="https://icones8.fr/icons/set/writer-male">Writer male icon</a> icône par <a target="_blank" href="https://icones8.fr">Icons8</a> -->
+              <img src="IMG/icone_createur_news.png" alt="écrit par créateur">
+              <span><?php echo $newsOK->news_editeur; ?></span>
+            </div>
+          </div>
 
-        <a href="news_inside.php?news_id=<?php echo $newsOK->news_id; ?>" class="btn btn-primary">Voir la news</a>
-        <div class="content_date_news">
-          <h5 class="date_news"><span>6 Mai</span><!--?php echo "6 mai" ?>--></h5>
+          <a href="news_inside.php?news_id=<?php echo $newsOK->news_id; ?>" class="btn btn-primary">Voir la news</a>
+            <?php
+            // Vérification du droit d'accès à un certain contenu si le droit de l'utilisateur vaut 1 (admin) alors on affiche ce contenu
+
+            if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
+            ?>
+            <div class="content_date_news">
+            <h5 class="date_news">
+              <!--<span>6 Mai</span>?php echo "6 mai" ?>-->
+            </h5>
+               <a href="include/deleteContent.php?news_id=<?php echo $newsOK->news_id; ?>" class="btn_suppression">Supprimer</a>
+               </div>
+            <?php
+            } else {
+            ?>
+               <a href="include/deleteContent.php?news_id=<?php echo $newsOK->news_id; ?>" class="btn_suppression" style="display: none;">Supprimer</a>
+            <?php
+            }
+
+            ?>
         </div>
       </div>
     </div>
-  </div>
 
-<?php
-}
+  <?php
+  }
 
-?>
+  ?>
 </div>
