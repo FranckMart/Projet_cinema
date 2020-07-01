@@ -376,15 +376,14 @@ select#selection_film {
 
 }
 
-
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-
+/* Laptop */ 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1700px){
     #choice_content {
-        height: 600px;
+        height: 700px;
     }
 
     #movie_choice_content {
-        height: 600px;
+        height: 700px;
     }
 
 
@@ -395,7 +394,33 @@ select#selection_film {
 
     #serie_choice_content {
 
-        height: 600px;
+        height: 700px;
+
+    }
+
+
+}
+
+/*Mackbook écran rétina*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+    #choice_content {
+        height: 650px;
+    }
+
+    #movie_choice_content {
+        height: 650px;
+    }
+
+
+
+    #movie_choice_textarea {
+        margin-left: 10%;
+    }
+
+    #serie_choice_content {
+
+        height: 650px;
 
     }
 

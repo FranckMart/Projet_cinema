@@ -59,6 +59,11 @@ Ajout d'une transition qui me permet d'avoir un effet de mouvement et une durée
     right: 10%;
 }
 
+.w-100{
+    width: 100% !important;
+    height: 800px;
+}
+
 
 /* Card  */
 
@@ -357,10 +362,17 @@ remplissage du bloc, animation me permet d'ajouter une animation créer grâçe 
     /* Safari 和 Chrome */
 }
 
-/* Responsive MacBook écran rétina */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 
+/* Laptop */ 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1700px){
+    .w-100{
+        width: 100% !important;
+        height: 600px;
+    }
 
+    #titleMiddle{
+        height: 15%;
+    }
     .news {
         min-width: 480px;
         min-height: 554px;
@@ -414,10 +426,79 @@ remplissage du bloc, animation me permet d'ajouter une animation créer grâçe 
         bottom: 2.5%;
         width: 90%;
     }
+
+}
+
+/* Responsive MacBook écran rétina */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+    .w-100{
+        width: 100% !important;
+        height: 600px;
+    }
+    #titleMiddle{
+        height: 25%;
+    }
+    .news {
+        min-width: 480px;
+        min-height: 554px;
+        max-width: 480px;
+        max-height: 554px;
+    }
+
+    .card {
+        min-width: 392px;
+        min-height: 501px;
+        max-width: 392px;
+        max-height: 501px;
+    }
+
+    .card-img-top {
+        min-width: 100%;
+        min-height: 225px;
+        max-width: 100%;
+        max-height: 225px;
+    }
+
+    .card-body {
+        padding: 5%;
+    }
+    .carousel-inner {
+        width: 90%;
+    }
+
+
+    .autor_content {
+        position: absolute;
+        bottom: 12%;
+        padding: 0%;
+        margin-right: 10%;
+        width: 20%;
+        opacity: 0.4;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .autor_content img {
+        min-width: 40px;
+        margin-right: 5%;
+    }
+
+    .news .btn-primary {
+        position: absolute;
+        bottom: 2.5%;
+        width: 90%;
+    }
 }
 
 /* Responsive Tablette */
 @media screen and (max-width:1024px) {
+    .w-100{
+        width: 100% !important;
+        height: 400px;
+    }
 
     #titleMiddle {
 
@@ -455,9 +536,9 @@ remplissage du bloc, animation me permet d'ajouter une animation créer grâçe 
 
     .card-img-top {
         min-width: 100%;
-        min-height: 225px;
+        min-height: 200px;
         max-width: 100%;
-        max-height: 225px;
+        max-height: 200px;
     }
 
     .card-title {
@@ -465,9 +546,8 @@ remplissage du bloc, animation me permet d'ajouter une animation créer grâçe 
     }
 
     .card-body {
-        padding: 1.25rem;
+        padding: 4%;
     }
-
     .card-text {
         font-size: 0.8rem;
     }
@@ -518,12 +598,48 @@ remplissage du bloc, animation me permet d'ajouter une animation créer grâçe 
 
 }
 
+  /* Styles tablette paysage */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+    .w-100{
+        width: 100% !important;
+        height: 600px;
+    }
+  
+    #titleMiddle {
+       
+        height: 25%;
+       
+    }
+
+    .card-img-top {
+        min-width: 100%;
+        min-height: 240px;
+        max-width: 100%;
+        max-height: 240px;
+    }
+    }
+
 /* Responsive smartphone */
 @media screen and (max-width: 640px) {
+
+    .w-100:active{
+        background-image: url('../include/uploads/Disney-plus-mobile.jpg');
+    }
+    .d-none {
+        display: inline !important;
+        position: absolute;
+        bottom: 0;
+    }
+    .w-100{
+        width: 100% !important;
+        height: 200px;
+    }
 
     #news_fullContent {
 
         flex-direction: column;
+        margin-bottom: 40%;
     }
 
     .news {

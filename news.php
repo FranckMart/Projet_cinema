@@ -47,24 +47,24 @@ if (isset($_POST['deco'])) {
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="include/uploads/batman_2021.jpg" class="d-block w-100" alt="image news">
+          <img src="include/uploads/disney+.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Batman est de retour !</h5>
-            <p>Le film batman va étre dans toutes les salles en 2021</p>
+            <h5>Disney+ enfin une date pour la 4K !</h5>
+            <p>la firme donne une date pour le retour de la 4K sur ses services</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="include/uploads/soul_pixar.jpg" class="d-block w-100" alt="image news">
+          <img src="include/uploads/peakyBlinders.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Le nouveau pixar aura du retard ! </h5>
-            <p>C'est un fais le covid-19 change les plans de l'industrie du cinéma le film n'a pas encore de nouvelle date </p>
+          <h5>Peaky Blinders : où reprendra la saison 6 ?</h5>
+            <p>Enfin un retour de la série culte ?</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="include/uploads/dune_2021.jpg" class="d-block w-100" alt="image news">
+          <img src="include/uploads/pedro-almodovar-penelope-cruz-antonio-banderas-oscars-2000.jpg" class="d-block w-100" alt="image news">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Dune est de retour !</h5>
-            <p>Voici une des premières images de Dune, le film sera dans nos salles en 2021</p>
+            <h5>Pedro Almodóvar retrouve sa muse Penélope Cruz </h5>
+            <p>Penélope Cruz retrouve Pedro Almodóvar pour son prochain film Madres Paralelas</p>
           </div>
         </div>
       </div>
