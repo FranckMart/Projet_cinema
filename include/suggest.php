@@ -48,7 +48,7 @@ function WordSearch($word)
         }
     }
     ?>
-    <li class="search_content"><a href="media_inside.php?video_id=<?php echo "50"; ?>"><img src="IMG/search.png" alt="Recherche"></a><input type="text" name="search" id="suggest" placeholder="...Search" list="MySuggest" autocomplete="off" value="<?php if(isset($titre)) { echo $titre; } ?>"></li>
+    <li class="search_content"><a href="media_inside.php?video_id=<?php echo "9"; ?>"><img src="IMG/search.png" alt="Recherche"></a><input type="text" name="search" id="suggest" placeholder="...Search" list="MySuggest" autocomplete="off" value="<?php if(isset($titre)) { echo $titre; } ?>"></li>
     <datalist id="MySuggest">
 
     </datalist>

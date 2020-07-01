@@ -27,7 +27,7 @@
             </div>
             <div class="modal-footer">
             <a href="inscription.php"class="btn btn-secondary btn-news-account" >Créer un compte </a>
-                <button type="button" class="btn btn-secondary btn-close-modal" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary btn-close-modal" data-dismiss="modal">Fermer</button>
             </div>
         </div>
     </div>

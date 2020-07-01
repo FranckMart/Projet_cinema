@@ -196,6 +196,7 @@ input#suggest:hover,input#recherche:focus {
 
 
 
+
 @media screen and (max-width:1024px) {
     body {
         overflow-x: hidden;
@@ -206,26 +207,22 @@ input#suggest:hover,input#recherche:focus {
     h3,
     h4,
     h5 {
-        font-family: 'Archivo Narrow', sans-serif;
         font-size: 2rem;
         color: rgba(255, 255, 255, 0.952);
     }
 
     p {
         font-size: 1rem;
-        font-family: "Geometria";
         color: rgba(255, 255, 255, 0.952);
     }
 
     a {
         font-size: 10px;
         text-decoration: none;
-        font-family: "Geometria";
         color: rgba(255, 255, 255, 0.952);
     }
 
     li {
-        font-family: "Geometria";
         font-size: 12px;
     }
 
@@ -282,6 +279,11 @@ input#suggest:hover,input#recherche:focus {
     .showMore:hover {
         color: white;
         text-decoration: underline;
+    }
+
+    /* Modal connexion */
+    .modal-content{
+        width: 300px;
     }
 
    
