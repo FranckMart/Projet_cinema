@@ -21,7 +21,7 @@
             <form class="formModal" method="POST" action="index.php">
                     <div class="form-group form-group-modal">
                         <br>
-                        <input type="submit" class="btn btn-primary btn-modal" name="deco" value="Se déconnecter"></input>
+                        <input type="submit" class="btn btn-primary btn-modal" name="deco" value="Se déconnecter">
                     </div>
                 </form>
                 <button type="button" class="btn btn-secondary btn-close-modal btn_fermer" data-dismiss="modal">Fermer</button>

@@ -31,7 +31,6 @@
                         </div>
                         <a href="global_critique.php" class="showMore">Voir Plus >></a>
                     </div>
-
                 </div>
                 <li><a href="contact.php">Nous contacter</a></li>
                 <li class="search_global"><?php include("include/suggest.php"); ?></li>

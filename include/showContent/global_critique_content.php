@@ -67,7 +67,6 @@ try {
                         </svg>
                     </a>
                 </div>
-                </a>
             </div>
         </div>
     </div>

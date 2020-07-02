@@ -104,6 +104,7 @@ try {
         }
     }
     ?>
+</div>
     <div id="movies_content">
         <?php
         if (isset($_GET['choice']) && ($_GET['choice'] == "Film")) {
