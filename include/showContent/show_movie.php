@@ -73,111 +73,192 @@ try {
 
     <?php
     if (isset($_GET['choice']) && ($_GET['choice'] == "Film" || $_GET['choice'] == "film")) {
-        // Je vais générer les boutons mais de combien en ai-je besoin ?
-        // autant que de page or le nb de page = au nombre toal de news divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
-        $nbPageV = ceil(sizeof($allFilm) / $nbCardPerPageV);
-        // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
-        // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
-        for ($z = 1; $z <= $nbPageV; $z++) {
-            # code...
-            // Je génère donc un lien avec un numéro de page en variable dans l'url
-
+        if (isset($_GET["genre"])) {
+            $genre = $_GET["genre"];
     ?>
-            <a href="global_critique.php?choice=<?php echo "Film&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
-        <?php
+            <?php
+            // je récupère ici toutes les vidéo
+            // la requete
+            $sqlAllFilm = "SELECT * FROM video WHERE video_media = 'Film' AND video_genre_id = $genre";
+            // que j'envoie au serveur
+            $requeteAllFilm = $bdd->query($sqlAllFilm);
+            // avant de récupérer les résultats
+            $allFilm = $requeteAllFilm->fetchAll(PDO::FETCH_OBJ);
+            // Je vais générer les boutons mais de combien en ai-je besoin ?
+            // autant que de page or le nb de page = au nombre toal de news divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
+            $nbPageV = ceil(sizeof($allFilm) / $nbCardPerPageV);
+            // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
+            // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
+            for ($z = 1; $z <= $nbPageV; $z++) {
+                # code...
+                // Je génère donc un lien avec un numéro de page en variable dans l'url
 
+            ?>
+                <a href="global_critique.php?choice=<?php echo "Film&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
+            <?php
+            }
+        } else {
+            // je récupère ici toutes les vidéo
+            // la requete
+            $sqlAllFilm = "SELECT * FROM video WHERE video_media = 'Film'";
+            // que j'envoie au serveur
+            $requeteAllFilm = $bdd->query($sqlAllFilm);
+            // avant de récupérer les résultats
+            $allFilm = $requeteAllFilm->fetchAll(PDO::FETCH_OBJ);
+            // Je vais générer les boutons mais de combien en ai-je besoin ?
+            // autant que de page or le nb de page = au nombre toal de news divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
+            $nbPageV = ceil(sizeof($allFilm) / $nbCardPerPageV);
+            // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
+            // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
+            for ($z = 1; $z <= $nbPageV; $z++) {
+                # code...
+                // Je génère donc un lien avec un numéro de page en variable dans l'url
+            ?>
+                <a href="global_critique.php?choice=<?php echo "Film&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
+            <?php
+            }
         }
     }
     if (isset($_GET['choice']) && $_GET['choice'] == "Série") {
-        // Je vais générer les boutons mais de combien en ai-je besoin ?
-        // autant que de page or le nb de page = au nombre toal de nws divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
-        $nbPageV = ceil(sizeof($allSerie) / $nbCardPerPageV);
-        // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
-        // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
-        for ($z = 1; $z <= $nbPageV; $z++) {
-            # code...
-            // Je génère donc un lien avec un numéro de page en variable dans l'url
+        if (isset($_GET["genre"])) {
+            $genre = $_GET["genre"];
+            ?>
+            <?php
+            // je récupère ici toutes les vidéo
+            // la requete
+            $sqlAllSerie = "SELECT * FROM video WHERE video_media = 'Série' AND video_genre_id = $genre";
+            // que j'envoie au serveur
+            $requeteAllSerie = $bdd->query($sqlAllSerie);
+            // avant de récupérer les résultats
+            $allSerie = $requeteAllSerie->fetchAll(PDO::FETCH_OBJ);
+            // Je vais générer les boutons mais de combien en ai-je besoin ?
+            // autant que de page or le nb de page = au nombre toal de news divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
+            $nbPageV = ceil(sizeof($allSerie) / $nbCardPerPageV);
+            // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
+            // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
+            for ($z = 1; $z <= $nbPageV; $z++) {
+                # code...
+                // Je génère donc un lien avec un numéro de page en variable dans l'url
 
+            ?>
+                <a href="global_critique.php?choice=<?php echo "Série&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
+            <?php
+            }
+        } else {
+            // je récupère ici toutes les vidéo
+            // la requete
+            $sqlAllSerie = "SELECT * FROM video WHERE video_media = 'Série'";
+            // que j'envoie au serveur
+            $requeteAllSerie = $bdd->query($sqlAllSerie);
+            // avant de récupérer les résultats
+            $allSerie = $requeteAllSerie->fetchAll(PDO::FETCH_OBJ);
+            // Je vais générer les boutons mais de combien en ai-je besoin ?
+            // autant que de page or le nb de page = au nombre toal de news divisé par le nombre de news qu'on veux sur une page le tout arrondi à l'unité supérieure
+            $nbPageV = ceil(sizeof($allSerie) / $nbCardPerPageV);
+            // J'ai le nombre max donc je fais une boucle pour les générer automatiquement la boucle for est tout indiquée puisqu'elle incrémente une variable ce qui m'interesse
+            // je part de 1 (le 0 ne m'interesse pas ici je ne vaux pas l'afficher)
+            for ($z = 1; $z <= $nbPageV; $z++) {
+                # code...
+                // Je génère donc un lien avec un numéro de page en variable dans l'url
+            ?>
+                <a href="global_critique.php?choice=<?php echo "Série&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
+    <?php
+            }
+        }
+    }
+    ?>
+</div>
+<div id="movies_content">
+    <?php
+    if (isset($_GET['choice']) && ($_GET['choice'] == "Film")) {
+        if (isset($_GET["genre"])) {
+            $genre = $_GET["genre"];
+            // je stocke ma requete dans une variable que je vais utiliser plus tard 
+            $sqlFilm = "SELECT * FROM video WHERE video_media = 'Film' AND video_genre_id = $genre ORDER BY video_titre ASC LIMIT " . $offsetV . "," . $nbCardPerPageV . ";";
+            // j'envoie la requete au serveur et je stocke son retour dans une autre variable
+            $requeteFilm = $bdd->query($sqlFilm);
+            // dans la variable $Genre je vais stocker un tableau d'objet correspondant à ma requete
+            $Film = $requeteFilm->fetchAll(PDO::FETCH_OBJ);
+        }
+        foreach ($Film as $fullFilm) {
+    ?>
+
+
+            <!-- Affichage par défaut on requete SQL est à prévoir pour récupérer tous les films-->
+            <div class="movie_content_inside">
+                <div class="movieLeft">
+                    <img src="include/uploads_movie/<?php echo $fullFilm->video_image; ?>" alt="image Vidéo">
+                </div>
+                <div class="movieRight">
+                    <h3><?php echo $fullFilm->video_titre; ?></h3>
+                    <p><?php echo $fullFilm->video_synopsis; ?></p>
+                    <span>Réalisateur: <?php echo $fullFilm->video_realisateur; ?></span>
+                    <span>Acteur Principal : <?php echo $fullFilm->video_acteurPrincipal; ?></span>
+                    <a href="media_inside.php?video_id=<?php echo $fullFilm->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
+                </div>
+                <?php
+                if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
+                ?>
+                    <div class="content_delete_video">
+                        <a href="include/deleteContent.php?video_id=<?php echo $fullFilm->video_id;; ?>" class="btn_suppression">Supprimer</a>
+                    </div>
+                <?php
+                } else {
+                ?>
+                    <a href="include/deleteContent.php?news_id=<?php echo $fullFilm->video_id;; ?>" class="btn_suppresion" style="display: none;">Supprimer</a>
+                <?php
+                }
+
+                ?>
+            </div>
+
+        <?php
+        }
+    }
+    if (isset($_GET['choice']) && ($_GET['choice'] == "Série")) {
+        if (isset($_GET["genre"])) {
+            $genre = $_GET["genre"];
+            // je stocke ma requete dans une variable que je vais utiliser plus tard 
+            $sqlSerie = "SELECT * FROM video WHERE video_media = 'Série' AND video_genre_id = $genre ORDER BY video_titre ASC LIMIT " . $offsetV . "," . $nbCardPerPageV . ";";
+            // j'envoie la requete au serveur et je stocke son retour dans une autre variable
+            $requeteSerie = $bdd->query($sqlSerie);
+            // dans la variable $Genre je vais stocker un tableau d'objet correspondant à ma requete
+            $Serie = $requeteSerie->fetchAll(PDO::FETCH_OBJ);
+        }
+        foreach ($Serie as $fullSerie) {
         ?>
-            <a href="global_critique.php?choice=<?php echo "Série&amp;" ?>p=<?php echo $z; ?>#movies_content" class="btn btn-outline-secondary" role="button" aria-pressed="true"><?php echo $z; ?></a>
+
+
+            <!-- Affichage par défaut on requete SQL est à prévoir pour récupérer tous les films-->
+            <div class="movie_content_inside">
+                <div class="movieLeft">
+                    <img src="include/uploads_movie/<?php echo $fullSerie->video_image; ?>" alt="image Vidéo">
+                </div>
+                <div class="movieRight">
+                    <h3><?php echo $fullSerie->video_titre; ?></h3>
+                    <p><?php echo $fullSerie->video_synopsis; ?></p>
+                    <span>Réalisateur: <?php echo $fullSerie->video_realisateur; ?></span>
+                    <span>Acteur Principal : <?php echo $fullSerie->video_acteurPrincipal; ?></span>
+                    <a href="media_inside.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
+                </div>
+                <?php
+                if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
+                ?>
+                    <div class="content_delete_video">
+                        <a href="include/deleteContent.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn_suppression">Supprimer</a>
+                    </div>
+                <?php
+                } else {
+                ?>
+                    <a href="include/deleteContent.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn_suppression" style="display: none;">Supprimer</a>
+                <?php
+                }
+
+                ?>
+            </div>
+
     <?php
         }
     }
     ?>
 </div>
-    <div id="movies_content">
-        <?php
-        if (isset($_GET['choice']) && ($_GET['choice'] == "Film")) {
-            foreach ($Film as $fullFilm) {
-        ?>
-
-
-                <!-- Affichage par défaut on requete SQL est à prévoir pour récupérer tous les films-->
-                <div class="movie_content_inside">
-                    <div class="movieLeft">
-                        <img src="include/uploads_movie/<?php echo $fullFilm->video_image; ?>" alt="image Vidéo">
-                    </div>
-                    <div class="movieRight">
-                        <h3><?php echo $fullFilm->video_titre; ?></h3>
-                        <p><?php echo $fullFilm->video_synopsis; ?></p>
-                        <span>Réalisateur: <?php echo $fullFilm->video_realisateur; ?></span>
-                        <span>Acteur Principal : <?php echo $fullFilm->video_acteurPrincipal; ?></span>
-                        <a href="media_inside.php?video_id=<?php echo $fullFilm->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
-                    </div>
-                    <?php
-                    if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
-                    ?>
-                        <div class="content_delete_video">
-                            <a href="include/deleteContent.php?video_id=<?php echo $fullFilm->video_id;; ?>" class="btn_suppression">Supprimer</a>
-                        </div>
-                    <?php
-                    } else {
-                    ?>
-                        <a href="include/deleteContent.php?news_id=<?php echo $fullFilm->video_id;; ?>" class="btn_suppresion" style="display: none;">Supprimer</a>
-                    <?php
-                    }
-
-                    ?>
-                </div>
-
-            <?php
-            }
-        }
-        if (isset($_GET['choice']) && ($_GET['choice'] == "Série")) {
-            foreach ($Serie as $fullSerie) {
-            ?>
-
-
-                <!-- Affichage par défaut on requete SQL est à prévoir pour récupérer tous les films-->
-                <div class="movie_content_inside">
-                    <div class="movieLeft">
-                        <img src="include/uploads_movie/<?php echo $fullSerie->video_image; ?>" alt="image Vidéo">
-                    </div>
-                    <div class="movieRight">
-                        <h3><?php echo $fullSerie->video_titre; ?></h3>
-                        <p><?php echo $fullSerie->video_synopsis; ?></p>
-                        <span>Réalisateur: <?php echo $fullSerie->video_realisateur; ?></span>
-                        <span>Acteur Principal : <?php echo $fullSerie->video_acteurPrincipal; ?></span>
-                        <a href="media_inside.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn btn-primary btn_video">Voir Plus</a>
-                    </div>
-                    <?php
-                    if (!empty($_SESSION) && $_SESSION['user']->user_droit == 1) {
-                    ?>
-                        <div class="content_delete_video">
-                            <a href="include/deleteContent.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn_suppression">Supprimer</a>
-                        </div>
-                    <?php
-                    } else {
-                    ?>
-                        <a href="include/deleteContent.php?video_id=<?php echo $fullSerie->video_id; ?>" class="btn_suppression" style="display: none;">Supprimer</a>
-                    <?php
-                    }
-
-                    ?>
-                </div>
-
-        <?php
-            }
-        }
-        ?>
-    </div>

@@ -1,3 +1,4 @@
+
 // Appel de la fonction lorsque la page est complétement chargé 
 $( document ).ready(function() {
     choice();

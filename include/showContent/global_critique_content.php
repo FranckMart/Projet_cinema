@@ -43,7 +43,7 @@ try {
     <div id="choice_content">
         <div id="movie_choice_content">
             <div class="movie_choice_textarea">
-                <a href="global_critique.php?choice=<?php echo "Film"; ?>">
+                <a href="global_critique.php?choice=<?php echo "Film"; ?>#movies_content">
                     <h2>Film</h2>
                 </a>
                 <div class="arrow_content">
@@ -57,7 +57,7 @@ try {
         </div>
         <div id="serie_choice_content">
             <div class="serie_choice_textarea">
-                <a href="global_critique.php?choice=<?php echo "Série"; ?>">
+                <a href="global_critique.php?choice=<?php echo "Série"; ?>#movies_content">
                     <h2>Série</h2>
                 </a>
                 <div class="arrow_content">
@@ -75,7 +75,7 @@ try {
             <h2>Veuillez choisir un type de média </h2>
         </a>
         <p>
-           En haut de la page 
+            En haut de la page
         </p>
     </div>
     <article id="global_content_center">
@@ -105,12 +105,33 @@ try {
                     // pour récupérer les genre j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un objet dans $genre d'où les -> pour appeler les champs de la table
                 ?>
                     <div class="genre">
-                        <a href="#genre=<?php echo $genre->genre_id ?>"><?php echo $genre->genre_nom ?></a>
+                        <?php if(!isset($_GET['choice'])){
+                            ?>
+                    <a href="global_critique.php?choice=<?php echo "Film&amp;" ?>genre=<?php echo $genre->genre_id ?>"><?php echo $genre->genre_nom ?></a>
+                    </div>
+                    <?php
+                        }
+                        ?>
+                        <?php
+                    if (isset($_GET['choice']) && ($_GET['choice'] == "Film")) {
+
+                        ?>
+                        <a href="global_critique.php?choice=<?php echo "Film&amp;" ?>genre=<?php echo $genre->genre_id ?>"><?php echo $genre->genre_nom ?></a>
                     </div>
 
             <?php
 
                 }
+                if (isset($_GET['choice']) && ($_GET['choice'] == "Série")) {
+
+                    ?>
+                    <a href="global_critique.php?choice=<?php echo "Série&amp;" ?>genre=<?php echo $genre->genre_id ?>"><?php echo $genre->genre_nom ?></a>
+                </div>
+
+        <?php
+
+            }
+            }
             } catch (PDOException $e) {
                 // en cas d'erreur
                 echo $e->getMessage();

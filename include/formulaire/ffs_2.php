@@ -1,13 +1,13 @@
 <!-- lien vers le modal -->
 <a href="#modal2" class="js-modal a-modal flex center">Ouvrir la boite modal</a>
 <!-- modalJs en display none -->
-<div id="modal2" class="modal-content center" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none ">
+<div id="modal2" class="modal-content center" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="modal2" style="display: none ">
     <div class="modal-wrapper js-modal-stop flex">
         <h3 class="h3">Deuxième partie du formulaire</h3>
 
         <div class="wrapP">
             <div class="form-group">
-                <label for="realisateur" class="margin1">Réalisateur : <span>*</span></label>
+                <label for="realisateur_nom" class="margin1">Réalisateur : <span>*</span></label>
                 <input type="text" class="form-control" id="realisateur_nom" name="realisateur" placeholder="Nom :Akira Kurosawa">
             </div>
 
@@ -45,7 +45,7 @@
 
             <div class="form-group">
                 <label for="dateSortie" class="margin1">Date de sortie :  <span>*</span></label>
-                <input type="date" class="form-control" id="dateSortie" name="dateSortie" placeholder="ex : 03/06/1977">
+                <input type="date" class="form-control" id="dateSortie" name="dateSortie">
             </div>
         </div>
 

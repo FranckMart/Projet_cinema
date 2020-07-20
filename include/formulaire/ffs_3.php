@@ -1,5 +1,5 @@
 <a href="#modal3" class="js-modal a-modal flex center">Ouvrir la boite modal</a>
-<div id="modal3" class="modal-content center" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none">
+<div id="modal3" class="modal-content center" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="modal3" style="display: none">
     <div class="modal-wrapper js-modal-stop flex">
         <h3 class="h3">Troisième partie du formulaire</h3>
 
@@ -17,7 +17,7 @@
 
         
          <div class="form-group">
-                <label for="tailer" class="margin1">Vous pouvez rajouter ici une bande annonce en rapport avec le film :  <span>*</span></label>
+                <label for="trailer" class="margin1">Vous pouvez rajouter ici une bande annonce en rapport avec le film :  <span>*</span></label>
                 <input type="text" class="form-control margin3" id="trailer" name="trailer" placeholder="rajouter la bande annonce">
             </div> 
 

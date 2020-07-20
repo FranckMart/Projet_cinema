@@ -1,100 +1,73 @@
-<a href="#modal1" class="js-modal a-modal flex center">Ouvrir la boite modal</a>
-<aside id="modal1" class="modal-content center" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="premierFormulaire" style="display: none">
-    <div class="modal-wrapper js-modal-stop flex">
-        <h3 class="h3 flex center
+<?php
+require_once("include/bddConfig/bdd.php");
+
+try {
+    // je récupère ici tous les genres 
+    // la requete
+    $sqlAllGenre = "SELECT * FROM `genre`";
+    // que j'envoie au serveur
+    $requeteAllGenre = $bdd->query($sqlAllGenre);
+    // avant de récupérer les résultats
+    $allGenre = $requeteAllGenre->fetchAll(PDO::FETCH_OBJ);
+
+    // je stocke ma requete dans une variable que je vais utiliser plus tard 
+    $sqlGenre = "SELECT genre_id,genre_nom FROM genre ORDER BY genre_nom";
+    // j'envoie la requete au serveur et je stocke son retour dans une autre variable
+    $requeteGenre = $bdd->query($sqlGenre);
+    // dans la variable $Genre je vais stocker un tableau d'objet correspondant à ma requete
+    $Genre = $requeteGenre->fetchAll(PDO::FETCH_OBJ);
+
+
+?>
+
+    <a href="#modal1" class="js-modal a-modal flex center">Ouvrir la boite modal</a>
+    <div id="modal1" class="modal-content center" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="modal1" style="display: none">
+        <div class="modal-wrapper js-modal-stop flex">
+            <h3 class="h3 flex center
     ">Première partie du formulaire</h3>
 
-        <div class="wrapper-elements-ffs">
-            <div class="form-group">
-                <label for="titre" class="margin1">Titre de la video : <span>*</span></label>
-                <input type="text" class="form-control" id="titre" name="titre" placeholder="ex : ghost dog">
-            </div>
-            <div class="form-group">
-                <label for="media" class="margin1">Type de video : <span>*</span></label>
-                <!--<input type="text" class="form-control" id="media" name="media" placeholder="ex : film">-->
-                <select name="media" id="media">
-                    <option value=""> Veuillez séléctionner un media </option>
-                    <option value="Film">Film</option>
-                    <option value="Serie">Série</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="wrapper-checkbox flex">
-            <p class="titre-checkbox">Genre :<span>*</span></p>
-            <div class="colonne">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="comedie" name="genre[]" value="Comedie">
-                    <label class="custom-control-label" for="comedie">Comédie</label>
+            <div class="wrapper-elements-ffs">
+                <div class="form-group">
+                    <label for="titre" class="margin1">Titre de la video : <span>*</span></label>
+                    <input type="text" class="form-control" id="titre" name="titre" placeholder="ex : ghost dog">
                 </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="drame" name="genre[]" value="Drame">
-                    <label class="custom-control-label" for="drame">Drame</label>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="action" name="genre[]" value="Action">
-                    <label class="custom-control-label" for="action">Action</label>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="historique" name="genre[]" value="Historique">
-                    <label class="custom-control-label" for="historique">Historique</label>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="western" name="genre[]" value="Western">
-                    <label class="custom-control-label" for="western">Western</label>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="aventure" name="genre[]" value="Aventure">
-                    <label class="custom-control-label" for="aventure">Aventure</label>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="thriller" name="genre[]" value="thriller">
-                    <label class="custom-control-label" for="thriller">Thriller</label>
+                <div class="form-group">
+                    <label for="media" class="margin1">Type de video : <span>*</span></label>
+                    <!--<input type="text" class="form-control" id="media" name="media" placeholder="ex : film">-->
+                    <select name="media" id="media">
+                        <option value=""> Veuillez séléctionner un media </option>
+                        <option value="Film">Film</option>
+                        <option value="Serie">Série</option>
+                    </select>
                 </div>
             </div>
 
-            <div class="colonne2">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="policier" name="genre[]" value="Policier">
-                    <label class="custom-control-label" for="policier">Policier</label>
-                </div>
+            <div class="wrapper-checkbox flex">
+                <p class="titre-checkbox">Genre :<span>*</span></p>
+                <div class="colonne">
 
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="fantastique" name="genre[]" value="Fantastique">
-                    <label class="custom-control-label" for="fantastique">Fantastique</label>
-                </div>
+                    <?php
 
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="science" name="genre[]" value="Science-Fiction">
-                    <label class="custom-control-label" for="science">Science-Fiction</label>
-                </div>
+                    // maintenant j'affiche les genres que je veux avec les limit 
+                    foreach ($Genre as $genre) {
+                        # code...
+                        // pour récupérer les genre j'ai opté pour PDO::FETCH_OBJ donc je vais avoir un objet dans $genre d'où les -> pour appeler les champs de la table
+                    ?>
+                    
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="<?php echo $genre->genre_nom ?>" name="genre[]" value="<?php echo $genre->genre_nom ?>">
+                            <label class="custom-control-label" for="<?php echo $genre->genre_nom ?>"><?php echo $genre->genre_nom ?></label>
+                        </div>
 
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="horreur" name="genre[]" value="Horreur">
-                    <label class="custom-control-label" for="horreur">Horreur</label>
-                </div>
+                <?php
 
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="documentaire" name="genre[]" value="Documentaire">
-                    <label class="custom-control-label" for="documentaire">Documentaire</label>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="Romance" name="genre[]" value="Romance">
-                    <label class="custom-control-label" for="Romance">Romance</label>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="comedieDramatique" name="genre[]" value="Comedie-Dramatique">
-                    <label class="custom-control-label" for="comedieDramatique">Comédie-Dramatique</label>
-                </div>
-
+                    }
+                } catch (PDOException $e) {
+                    // en cas d'erreur
+                    echo $e->getMessage();
+                }
+                ?>
+     
             </div>
 
         </div>
@@ -114,5 +87,5 @@
         <div class="submit">
             <button class="js-modal-close">Fermer</button>
         </div>
-    </div>
-</aside>
+        </div>
+            </div>

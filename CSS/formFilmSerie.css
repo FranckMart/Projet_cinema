@@ -34,8 +34,8 @@ input:focus {
 
 .modal-wrapper {
     /* la boite qui contient les parties de mon formulaire*/
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 95%;
     overflow: auto;
     max-height: calc(100vw - 20px);
     max-width: calc(100vw - 20px);
@@ -80,7 +80,17 @@ form {
     margin-left: 5px;
 }
 
-.colonne,
+.colonne {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    top: 0;
+    top: 10%;
+    
+}
+
 .colonne2 {
     width: 50%;
     height: 95%;
@@ -150,6 +160,9 @@ form {
     margin: 5px;
 }
 
+.wrapper-checkbox{
+    position: relative;
+}
 .wrapP {
     height: 35%;
     width: 100%;
@@ -175,6 +188,13 @@ form {
     width: 10%;
     text-align: center;
     height: 50px;
+}
+
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding: 5%;
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 
