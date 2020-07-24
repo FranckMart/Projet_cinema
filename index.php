@@ -17,11 +17,11 @@ if (isset($_POST['deco'])) {
     <!-- Intégration de bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Intégration du CSS -->
-    <link rel="stylesheet" href="css/kit_UI.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/modal_user.css">
-    <link rel="stylesheet" href="css/accueil.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="CSS/kit_UI.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/modal_user.css">
+    <link rel="stylesheet" href="CSS/accueil.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <title>MovieDvice</title>
     <!-- description du site pour améliorer le référencement -->
     <meta name="description" content="MovieDvice, le site de référence des critiques cinéma et séries ! Découvrez également nos news hébdomadaire pour vous tenir informé des nouvautés  ">
