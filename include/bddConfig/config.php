@@ -4,5 +4,5 @@
 $host = "localhost";
 $dbname = "moviedvice";
 $userBdd = "root";
-$passBdd = "root";
+$passBdd = "";
 $optionBdd = [];
