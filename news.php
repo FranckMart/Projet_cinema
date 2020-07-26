@@ -1,4 +1,5 @@
 <?php require_once("include/bddConfig/bdd.php");
+ini_set('display_errors','On');
 if (isset($_POST['deco'])) {
 
   session_destroy();
