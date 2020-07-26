@@ -35,6 +35,7 @@ if (isset($_POST['deco'])) {
 
     
     <section>
+    <h1>TEST</h1>
         <?php include('include/showContent/global_critique_content.php'); ?>
     </section>
 
