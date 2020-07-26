@@ -1,5 +1,5 @@
 <?php
-require_once("../include/bddConfig/bdd.php");
+require_once("include/bddConfig/bdd.php");
 
 // combien de genre je veux sur une page
 // je vais le stocker dans une variable afin de pouvoir m'adapter quelque soit le nb de genre total voulu sur la page
