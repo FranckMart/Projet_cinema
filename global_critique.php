@@ -34,7 +34,7 @@ if (isset($_POST['deco'])) {
 
     
     <section>
-        <?php include("include/showContent/global_critique_content.php"); ?>
+        <?php include('include/showContent/global_critique_content.php'); ?>
     </section>
 
 
