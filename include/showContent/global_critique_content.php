@@ -1,5 +1,5 @@
 <?php
-require_once('./bdd.php');
+require_once('include/bddConfig/bdd.php');
 
 // combien de genre je veux sur une page
 // je vais le stocker dans une variable afin de pouvoir m'adapter quelque soit le nb de genre total voulu sur la page
@@ -10,7 +10,7 @@ try {
     // la requete
     $sqlAllGenre = "SELECT * FROM `genre`";
     // que j'envoie au serveur
-    $requeteAllGenre = $bdd->query($sqlAllGenre);
+    $requeteAllGenre = $GLOBALS['bdd']->query($sqlAllGenre);
     // avant de récupérer les résultats
     $allGenre = $requeteAllGenre->fetchAll(PDO::FETCH_OBJ);
 
