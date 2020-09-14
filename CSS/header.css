@@ -2,7 +2,6 @@
 /* Header */
 
 #header_nav{
-
     display: flex;
     width: 100%;
     margin: auto;
@@ -62,6 +61,7 @@ input#suggest {
    border-radius: 100px;
    border: none;
    opacity: 0.75;
+  
 }
 
 input#suggest:hover,input#recherche:focus {

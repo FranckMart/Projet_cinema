@@ -10,7 +10,7 @@ try {
     // la requete
     $sqlAllGenre = "SELECT * FROM `genre`";
     // que j'envoie au serveur
-    $requeteAllGenre = $GLOBALS['bdd']->query($sqlAllGenre);
+    $requeteAllGenre = $bdd->query($sqlAllGenre);
     // avant de récupérer les résultats
     $allGenre = $requeteAllGenre->fetchAll(PDO::FETCH_OBJ);
 

@@ -33,7 +33,13 @@
                     </div>
                 </div>
                 <li><a href="contact.php">Nous contacter</a></li>
-                <li class="search_global"><?php include("include/suggest.php"); ?></li>
+                <li class="search_content"><a class="lien" href="media_inside.php?video_id=">
+                <img src="IMG/search.png" alt="Recherche"></a>
+                <input type="text" name="search" id="suggest" placeholder="...Search" list="test" autocomplete="off" >
+                <div id="test">
+
+                </div>
+</li>
                 <div class="login">
                     <li>
                         <?php

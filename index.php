@@ -1,5 +1,6 @@
 <?php require_once("include/bddConfig/bdd.php"); // Connexion à la base de données
 
+
 // Changement du modal si l'utilisateur souhaite se déconnecter
 if (isset($_POST['deco'])) {
     
